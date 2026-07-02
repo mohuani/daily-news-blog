@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年6月30日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  /* News Card */
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important {
+    background: #FEF3E2;
+    color: #B8792A;
+  }
+
+  .tag-policy {
+    background: #E8F0FE;
+    color: #3B6FB5;
+  }
+
+  .tag-data {
+    background: #E6F5F2;
+    color: #2D8B7A;
+  }
+
+  .tag-company {
+    background: #F3EEFA;
+    color: #6B5BA8;
+  }
+
+  .tag-breaking {
+    background: #FDE8E8;
+    color: #C44848;
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  /* Data Box */
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Focus Box */
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  /* Outlook Section */
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  /* Color Themes for Sections */
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.181</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年6月30日 · 星期二 · 涵盖2026年6月29日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<!-- Summary -->
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>6月29日，全球AI资本竞赛再升级</strong>——软银豪掷100亿美元投资OpenAI，Meta宣布进军云计算对外出售算力，Anthropic推出Claude Science正式将AI引入科研流水线。国内政策密集落地，<strong>电动汽车电池新国标</strong>强制实施被誉为"史上最严"，医保四项核心改革同步生效，《社会救助法》正式施行。金融市场方面，美联储9月加息概率升至80%，A股交易新规将于7月6日正式施行。全球电动汽车销量预计今年达2300万辆，国际能源署称市场进入加速增长新阶段。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">Meta筹建云服务业务，拟对外出售AI算力挑战AWS/Azure/谷歌云</div>
+      <div class="news-summary">Meta正评估向客户提供基于其基础设施托管的AI模型服务或直接出租原始算力，未来将与亚马逊AWS、微软Azure、谷歌云及CoreWeave等展开竞争。受消息提振，Meta股价当日收涨近9%。此举标志着AI算力竞争从模型层延伸至云服务商业化领域。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Cloudflare发布2026应用创新报告：现代化企业AI回报率高出3倍</div>
+      <div class="news-summary">报告显示，优先进行应用现代化的企业AI ROI高出3倍，93%的领导者认为更新软件是提升AI能力的最重要因素。安全与现代化协同的企业达到高级AI成熟度的概率高出4倍。96%的企业苦于复杂技术栈，85%的领先企业正积极整合冗余工具。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">Claude Code被曝内置隐秘检测机制，疑似针对中国用户实施功能限制</div>
+      <div class="news-summary">Anthropic旗下AI编程工具Claude Code被开发者曝光内置隐秘检测机制，可识别用户时区与代理身份。Claude团队随后公开承认并承诺新版本删除相关代码，事件引发社区"信任崩塌"讨论。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">SpaceX"造AI手机"传闻带飞高通股价，马斯克火速否认</div>
+      <div class="news-summary">有媒体报道SpaceX曾向投资者展示整合xAI技术、采用高通骁龙平台的AI设备原型。马斯克随后否认称"完全错误"。高通股价盘中一度上涨逾3%，辟谣后回落收跌1.55%。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">日本乐天与AST SpaceMobile合资布局6G卫星通信</div>
+      <div class="news-summary">双方将合作推进卫星直连手机通信技术，从"传输比特"迈向"支撑词元"，为6G时代的天地一体化网络铺路。</div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美联储9月加息概率升至80%，欧央行拟将银行最低准备金率翻倍</div>
+      <div class="news-summary">利率期货显示美联储9月加息概率升至80%。欧洲央行拟将银行最低准备金率从1%提升至2%，以减少自身利息支出。欧元区债券收益率小幅走低。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">QDII额度大扩容：上半年新增额度同比增幅近八成</div>
+      <div class="news-summary">截至6月末，全市场193家QDII累计获批额度达<em>1761.69亿美元</em>，上半年新增额度同比增幅近80%。17家保险公司合计新增13.2亿美元QDII额度。港股高股息资产、海外科技板块成为出海核心配置标的。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">A股交易新规7月6日起正式施行，主板ST股涨跌幅提至10%</div>
+      <div class="news-summary">新规优化基金收盘交易机制（最后三分钟仅可提交限价申报不可撤单）、扩展盘后固定价格交易适用品种、主板ST股涨跌幅提至10%。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">6月份债券ETF"吸金"逾600亿元，上半年银行理财规模增长6000亿</div>
+      <div class="news-summary">6月债券ETF合计流入超600亿元。上半年银行理财规模增至34.59万亿元，但平均年化收益率大降122BP。首批中证REITs全收益指数基金7月1日正式发售。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">特朗普2025年加密货币收入至少14亿美元</div>
+      <div class="news-summary">最新财务披露显示，特朗普2025年通过加密货币及迷因币相关业务获得至少14亿美元收入，其中World Liberty Financial销售逾5.88亿美元，迷因币业务CIC Digital LLC创造6.36亿美元。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">1761.69亿</div>
+          <div class="data-label">QDII累计获批额度（美元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">80%</div>
+          <div class="data-label">美联储9月加息概率</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">34.59万亿</div>
+          <div class="data-label">银行理财规模（元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">600亿+</div>
+          <div class="data-label">6月债券ETF净流入（元）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">软银向OpenAI豪掷100亿美元，2026年迄今全球AI领域最大单笔融资</div>
+      <div class="news-summary">软银集团正式宣布向OpenAI投资100亿美元，资金将用于下一代大模型训练、算力基础设施扩建及企业级AI Agent产品研发。孙正义表示AGI的实现速度"远超预期"。分析指出此举将加剧AI资本竞赛，进一步拉大头部玩家与追赶者的差距。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">Anthropic推出Claude Science，AI正式进入科研流水线</div>
+      <div class="news-summary">Claude Science深度整合60余个科学数据库与跨代理工作流，核心协调代理可调用超过60个预置技能和连接器，覆盖基因组学、蛋白质组学等领域。独立审核代理负责实时检查引文和计算，解决AI捏造数据的常见问题。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Claude Fable 5全面接入GitHub Copilot，押注长周期自主编程</div>
+      <div class="news-summary">此前因安全审查暂停开放，现已完成评估重新上线。Fable 5专为长周期自主编程和复杂软件开发任务设计，可处理大型代码库及多步骤编程任务，标志着前沿AI模型在安全监管框架下恢复商业化应用。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">美团发布LongCat-2.0万亿参数大模型，业界首个国产算力全流程训练</div>
+      <div class="news-summary">总参数规模1.6万亿，预训练数据覆盖超30T tokens，在五万卡国产算力集群上完成全流程训练与推理，即将开源。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">联合国秘书长呼吁各国加强人工智能治理</div>
+      <div class="news-summary">古特雷斯6月29日表示，AI在缺乏共同规则下发展越快，各国政府对其影响就越小。"AI独立国际科学小组"发布首份评估报告，首届全球AI治理对话会下周将在日内瓦举行。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">谷歌发布Nano Banana 2 Lite图像生成模型，4秒出图每千张仅0.034美元</div>
+      <div class="news-summary">同时发布Gemini Omni Flash视频生成模型，再次刷新AI图像生成性价比记录。</div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">🏥</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">医保四项核心改动7月1日同步生效，看病买药待遇大变</div>
+      <div class="news-summary">①居民医保逾期补缴成本暴涨，7月起全额自费1100元；②定点药店全面纳入门诊统筹，慢病买药可就近报销；③职工医保退休解绑养老金，异地缴够年限也能享受高待遇；④多地长期护理保险扩面，失能老人护理可报销。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">中药饮片将实现"一物一码"，全程可追溯</div>
+      <div class="news-summary">国家医保局公开征求《中药饮片追溯码编码要求》意见，以实现中药饮片"一物一码、全程可溯"，提升药品质量安全保障能力，强化医保基金使用监管效能。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美国Medicare GLP-1桥接计划7月1日启动，肥胖症药物月费降至50美元</div>
+      <div class="news-summary">CMS正式启动"Medicare GLP-1 Bridge"试点，面向Medicare Part D受益人，涵盖Eli Lilly的Foundatio/Zepbound及Novo Nordisk的Wegovy，月费仅50美元（原价超1000美元/月），为期18个月收集数据以决定是否制度化。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">澳大利亚Medicare福利计划7月1日更新：费用指数上调2.6%，新增儿科睡眠研究项目</div>
+      <div class="news-summary">MBS指数化因子为2.6%，新增3-18岁儿童及青少年多导睡眠监测项目，同步更新烧伤、结肠镜等医疗服务项目细则。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">8种医保谈判药品7月1日起停止报销</div>
+      <div class="news-summary">6个月过渡期结束，8种谈判药品医保不再报销，患者需全额自费。建议长期服药者咨询医生更换同等医保报销替代药品。同时职工医保家庭共济流程全国简化。</div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">电动汽车电池新国标7月1日强制实施，被誉为"史上最严"</div>
+      <div class="news-summary">核心升级：①热失控要求从"5分钟报警"升级为"不起火、不爆炸"，观察期延至2小时；②强制配备物理一键断电装置；③新增底部撞击测试（35km/h）；④新增300次快充循环后安全测试。宁德时代全系产品已通过新国标，比亚迪第二代刀片电池完成10倍余量验证。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">IEA：2026年全球电动汽车销量将达2300万辆，占新车销量近30%</div>
+      <div class="news-summary">国际能源署《全球电动汽车展望2026》报告预计，除中国以外的亚太地区销量预计增长50%以上，拉美增长45%，欧洲增长20%。IEA署长称全球电动汽车市场进入加速增长新阶段。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">优必选U1系列全尺寸人形机器人订单破万，9月16日启动交付</div>
+      <div class="news-summary">超仿生人形机器人U1系列全渠道订单已突破13361台，为全球人形机器人商业化里程碑。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">KKR与SK集团共建韩国最大可再生能源平台，估值约13亿美元</div>
+      <div class="news-summary">平台整合SK旗下风电、光伏和燃料电池资产，初期装机容量1.7吉瓦，未来扩展至10吉瓦，重点服务AI数据中心和半导体工厂等高耗能产业。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">日本八大车企5月全球销量同比减少2.6%，铃木逆势增长23.2%</div>
+      <div class="news-summary">丰田减7.2%、本田减4.9%、日产减10.3%。日系车企面临新能源转型节奏偏慢、竞品挤压压力，加速电动化已成必然选择。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">2300万</div>
+          <div class="data-label">2026年全球电动汽车预计销量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">~30%</div>
+          <div class="data-label">电动车占全球新车销量比例</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">13,361台</div>
+          <div class="data-label">优必选U1系列订单量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">10GW</div>
+          <div class="data-label">KKR-SK可再生能源平台目标装机</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">2026暑运开闸：铁路预计发送旅客10.1亿人次，民航预计1.42亿人次</div>
+      <div class="news-summary">7月1日全国铁路暑运正式启动，为期62天。民航暑运同步拉开，均创历史新高。携程数据显示暑期亲子游预订人次同比增长13.6%，马蜂窝"暑期出游"搜索热度环比上涨238%。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">快递包装强制国标7月1日实施，禁止多层套娃包装</div>
+      <div class="news-summary">普通商品包装层数最多2层，易碎品最高4层；封箱胶带宽度不超过45mm；优先使用简易、可降解包装。以后收快递不再出现一个小配件套三四个箱子的情况。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">离境退税2.0版7月1日实施，境外旅客办理退税更便捷</div>
+      <div class="news-summary">"小额抽检"和"无纸化办理"措施正式实施，境外旅客办理离境退税将更加高效便捷。商务部制作了离境退税指南，方便境外旅客"一图读懂"。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">前5月服务零售额增长5.4%，体验消费成内需增长新动能</div>
+      <div class="news-summary">国家统计局首次发布社会消费商品和服务零售总额指标，前5月整体增长2.8%，其中服务零售额增长5.4%，商品零售额仅增1.2%。国务院发布"6+3"路线图培育服务消费新增长点。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">前5月外贸进出口20.68万亿元，同比增长15.3%</div>
+      <div class="news-summary">在外部环境不确定因素明显增多背景下，中国外贸逆势增长。出口额11.91万亿元，增速较前4个月加快0.4个百分点，结构提质、市场多元。</div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">上半年百城新房价格累计上涨0.59%，二手房价累计下跌2.9%</div>
+      <div class="news-summary">6月百城新建住宅均价17184元/㎡，环比涨0.16%，同比涨2%。二手住宅均价12639元/㎡，环比跌0.42%，同比跌7.68%。核心城市出现积极信号：深圳二手房价6月环比转涨，上海连续四个月环比上涨。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">北京上半年二手房网签9.25万套，创近五年同期新高</div>
+      <div class="news-summary">6月北京二手房迎来"翘尾"行情，上半年二手住宅网签量同比增长5.7%。20城上半年二手住宅成交76.1万套，同比增长5.6%，北京、上海成交规模创近五年同期新高。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">重庆征求住房"十五五"规划意见，集成打造"住房消费"核心场景</div>
+      <div class="news-summary">重庆市住建委提出稳定商品住房消费，深化一区一策，发挥增贷、减税、公积金等政策集成效应，推动住房消费与家居家电家装消费联动。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">清远启动房产自媒体专项整治，为期三个月</div>
+      <div class="news-summary">四部门联合公告，覆盖抖音、微信视频号、小红书等平台，重拳整治房产网络虚假宣传、违规引流等乱象，保护购房者合法权益。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">新房成交向改善型房源集中：120㎡以上占比升至48%</div>
+      <div class="news-summary">前5月30个重点城市120㎡以上新房成交占比升至48%，较去年全年提高2.3个百分点；90㎡以下占比降至15%，新房品质提升推动改善需求持续释放。</div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">八部门联合发文：工业互联网核心产业增加值目标2.5万亿元</div>
+      <div class="news-summary">工信部等八部门联合印发《关于推动工业互联网高质量发展的实施意见》，目标到2030年工业互联网核心产业增加值突破2.5万亿元。6月土木工程建筑业商务活动指数升至55%以上，新订单指数升至51%以上。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">恒力重工上半年承接新船订单207艘，创行业纪录</div>
+      <div class="news-summary">订单涵盖集散油气全品类船型，其中散货船49艘、集装箱船56艘、油轮94艘，另有8艘超大型液氨运输船首次纳入。累计接单超500艘，交船计划排至2030年，订单储备稳居国内民营造船第一梯队。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">松下拟投资5000亿日元加码AI基础设施，裁员规模扩大至1.2万人</div>
+      <div class="news-summary">未来两个财年投资约5000亿日元布局电子材料、数据中心储能系统及电力设备等AI基础设施业务，计划三年实现相关业务销售额约1.4万亿日元。同时扩大裁员至最多1.2万人以优化成本结构。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">日月光先进封装报价最高涨超20%，AI芯片需求致封测产能吃紧</div>
+      <div class="news-summary">全球最大封测企业日月光调整先进封装报价，涉及CoWoS、扇出型封装等AI芯片关键工艺。涨价压力已从上游晶圆传导至后端封测，预计下半年将进一步推高AI服务器成本。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">拓荆科技收购无锡尚积半导体，补齐国产PVD与刻蚀短板</div>
+      <div class="news-summary">国产半导体设备龙头拓荆科技拟收购无锡尚积半导体控股权，从单一CVD/ALD优势领域扩展至PVD和刻蚀两大核心工艺环节，进一步突破美国对华设备出口限制。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">2.5万亿</div>
+          <div class="data-label">2030年工业互联网核心产业增加值目标</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">207艘</div>
+          <div class="data-label">恒力重工上半年新承接船舶订单</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">5000亿日元</div>
+          <div class="data-label">松下AI基础设施投资额</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">20%+</div>
+          <div class="data-label">日月光先进封装最高涨幅</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">教育部明确2026年全面推动AI"三进"：进课程、进课堂、进考试评价</div>
+      <div class="news-summary">国务院印发《教育发展"十五五"规划》，全面推进人工智能全学段普及教学。北京1400余所中小学已全面开设AI通识课程，长春等7大区域28所学校率先完成试点。高考命题同步转向考察思辨能力与综合素养。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">学而思学习机发布全新培优AI家教，获中国信通院AI家教最高等级认证</div>
+      <div class="news-summary">AI诊断规划与AI互动课堂深度融合，拍下作业即可精准诊断并生成千人千面学习路径。T6系列新品首发价6899-11999元，联合TCL华星打造行业首个SGS高自然光相似度认证护眼屏。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中华职业教育社发布50个产教融合创新实践案例</div>
+      <div class="news-summary">19个聚焦智能制造、集成电路、新能源等战略性新兴产业；22个案例共建中试基地、企业研发中心；超八成案例依托链主企业组建产教联合体，推动产业链、教育链、人才链紧密衔接。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">美国多州推进教育技术产品审查立法，佛蒙特州7月1日起要求注册认证</div>
+      <div class="news-summary">佛蒙特州教育技术产品注册法案7月1日生效，要求edtech供应商年检注册并满足课程合规、AI特征披露等认证标准。犹他州同步通过课堂技术修正案，禁止K-3年级使用电子设备。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">国内首个机器人学校开学：30台人形机器人接受系统化职业技能培训</div>
+      <div class="news-summary">首批30台来自不同厂商的人形机器人入学，接受装配、物流、巡检等工业场景的系统化训练，旨在建立标准化评测基准，推动行业从"能走"转向"能干"。</div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">暑期文旅消费热潮涌动，全国铁路新增106列旅客列车</div>
+      <div class="news-summary">7月1日全国铁路实行新列车运行图，安排图定旅客列车12174列较调图前增加106列。开行亲子游、研学游、红色游等特色旅游列车，交通工具正升级为"文旅体验空间"。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">沉浸式体验"全域开花"：从景区夜游到文博夜探</div>
+      <div class="news-summary">临沂琅琊古城四大国风剧目常态驻场，北京环球度假区"环球酷爽夏日"推出沉浸式演艺，上海博物馆携手动物园推出"美洲萌萌TA奇妙夜"，中国大运河博物馆上线AR智能眼镜导览——沉浸式体验成暑期文旅最鲜明底色。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">浙江暑期发放2645万元文旅消费券，全省300+景区推出学生专属优惠</div>
+      <div class="news-summary">浙江推出乡村避暑、嬉水乐园、夏日夜游等十大主题100个打卡点位，11个地市同步推出1100余场特色活动。携程、美团、同程三大平台累计投入2.19亿元补贴。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">清华大学艺术博物馆"陶融万象"中国现代民间陶瓷艺术展开幕</div>
+      <div class="news-summary">185件民间陶瓷展品包含炊煮器等生活器具，将"烟火气"捏进陶土，展现中国民间陶瓷的艺术魅力与生活温度。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">青藏高原首开直达北京动卧，西宁至北京实现全谱系列车覆盖</div>
+      <div class="news-summary">7月1日D102次动卧列车从西宁出发，标志着青藏高原首次开启直达首都城市群动卧列车，西宁至北京实现"G/D/Z/T"全谱系列车全覆盖。</div>
+    </div>
+  </div>
+
+  <!-- 重点关注汇总 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 6月29日重大动态</div>
+    <div class="focus-item"><strong>【重大政策】</strong>电动汽车电池新国标强制实施，"不起火不爆炸"取代"5分钟报警"，安全门槛全面升级</div>
+    <div class="focus-item"><strong>【重大政策】</strong>《社会救助法》正式施行，救助范围扩展至"刚性支出困难家庭"，八类困难人群法定享有帮扶</div>
+    <div class="focus-item"><strong>【重大政策】</strong>医保四项核心改革同步生效，药店统筹、医保退休解绑、长护险扩面</div>
+    <div class="focus-item"><strong>【重大政策】</strong>快递包装强制国标实施，禁止多层套娃包装，限塑令落地</div>
+    <div class="focus-item"><strong>【重大项目】</strong>软银100亿美元投资OpenAI，2026年全球AI领域最大单笔融资</div>
+    <div class="focus-item"><strong>【重大项目】</strong>KKR与SK集团共建韩国最大可再生能源平台，估值约13亿美元</div>
+    <div class="focus-item"><strong>【龙头企业】</strong>Meta宣布进军云计算出售算力，股价收涨近9%</div>
+    <div class="focus-item"><strong>【龙头企业】</strong>优必选人形机器人订单破万，9月启动交付</div>
+    <div class="focus-item"><strong>【龙头企业】</strong>恒力重工上半年接单207艘，创行业纪录</div>
+  </div>
+
+  <!-- 市场观察与看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与本周看点</h2>
+    <div class="outlook-sub">Market Outlook & Key Watchpoints</div>
+
+    <div class="outlook-item">
+      <strong>AI资本竞赛白热化：</strong>软银100亿美元投资OpenAI、Meta进军云计算出售算力、松下5000亿日元押注AI基础设施——全球AI产业链正从"模型竞赛"向"算力基础设施+云服务商业化"全方位延伸。AI投资已不仅是技术竞争，更是资本密集型的基础设施博弈。
+    </div>
+    <div class="outlook-item">
+      <strong>7月新政密集落地影响深远：</strong>电动汽车电池新国标、医保改革、社会救助法、快递限塑令——7月1日成为2026年最重要的政策落地节点之一，直接影响新能源汽车产业链格局、医疗体系改革方向和社会民生保障底线。
+    </div>
+    <div class="outlook-item">
+      <strong>全球货币政策走向关键窗口：</strong>美联储9月加息概率升至80%，欧央行调整准备金率，中国QDII大幅扩容——全球央行政策分化加剧，7月将是观察各经济体货币政策路径的关键月份。
+    </div>
+    <div class="outlook-item">
+      <strong>房地产分化格局持续：</strong>新房与二手房价走势持续背离，核心城市（深圳、上海）率先回暖，但整体市场仍在筑底。7月需关注二手房挂牌量变化及政策组合拳的累积效应。
+    </div>
+    <div class="outlook-item">
+      <strong>本周重点事件：</strong>①7月6日A股交易新规正式施行；②7月7-9日巴黎RAISE峰会及MACHINA物理AI峰会；③7月7-10日日内瓦全球AI治理对话会及WSIS论坛；④7月20-24日法恩伯勒国际航展——全球工业AI与先进制造风向标。
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>
