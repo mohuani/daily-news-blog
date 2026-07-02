@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -15%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.12) 0%, transparent 70%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.08) 0%, transparent 70%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-brand {
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px auto;
+  }
+
+  /* Latest Section */
+  .latest-section {
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .latest-card {
+    background: var(--bg-secondary);
+    border-radius: 14px;
+    padding: 40px 44px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+
+  .latest-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  }
+
+  .latest-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-teal-light) 100%);
+    color: #FFFFFF;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .latest-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .latest-date {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  .latest-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  .latest-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .latest-summary strong {
+    color: var(--text-primary);
+  }
+
+  .latest-arrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .latest-arrow .arrow {
+    transition: transform 0.2s;
+  }
+
+  .latest-card:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* Archive Section */
+  .archive-section {
+    margin-top: 48px;
+  }
+
+  .archive-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .archive-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .archive-count {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .archive-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 18px 24px;
+    border: 1px solid var(--border-light);
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+
+  .archive-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .archive-item-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .archive-item-date {
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    min-width: 120px;
+  }
+
+  .archive-item-title {
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .archive-item-arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .archive-item:hover .archive-item-arrow {
+    color: var(--accent-teal);
+    transform: translateX(3px);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 48px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-brand {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 28px; }
+    .latest-card { padding: 28px 24px; }
+    .latest-title { font-size: 18px; }
+    .archive-item { padding: 14px 18px; }
+    .archive-item-left { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .archive-item-date { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-brand">Global Daily Briefing</div>
+    <h1>全球每日资讯简报</h1>
+    <div class="hero-subtitle">每日精选 · 结构化呈现 · 十大行业全覆盖</div>
+    <div class="divider"></div>
+  </div>
+</header>
+
+<!-- Latest -->
+<div class="container latest-section">
+  <a href="daily/2026-07-02.html" class="latest-card">
+    <div class="latest-badge"><span class="dot"></span> 最新一期</div>
+    <div class="latest-date">2026年7月2日 · 星期四</div>
+    <div class="latest-title">软银百亿投资OpenAI / 电动汽车电池新国标落地 / 医保四项改革同步生效</div>
+    <div class="latest-summary">
+      <strong>7月1日全球AI资本竞赛再升级</strong>——软银豪掷100亿美元投资OpenAI，Meta宣布进军云计算出售算力，Anthropic推出Claude Science将AI引入科研。国内政策密集落地：电动汽车电池新国标"史上最严"强制实施，医保四项核心改革同步生效，《社会救助法》正式施行。IEA预计2026年全球电动汽车销量达2300万辆，美联储9月加息概率升至80%。
+    </div>
+    <div class="latest-arrow">阅读完整简报 <span class="arrow">→</span></div>
+  </a>
+</div>
+
+<!-- Archive -->
+<div class="container archive-section">
+  <div class="archive-header">
+    <div class="archive-title">历史资讯</div>
+    <div class="archive-count" id="archive-count"></div>
+  </div>
+  <div class="archive-list" id="archive-list">
+    <!-- Archive items will be dynamically populated -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">全球每日资讯简报</div>
+    <div class="footer-text">每日精选 · 信息准确 · 来源可靠</div>
+  </div>
+</footer>
+
+<script>
+  // Archive data - add new entries as daily briefings are created
+  const archives = [
+    {
+      date: '2026-07-02',
+      title: '软银百亿投资OpenAI / 电动汽车电池新国标落地 / 医保四项改革同步生效',
+      url: 'daily/2026-07-02.html'
+    }
+  ];
+
+  const archiveList = document.getElementById('archive-list');
+  const archiveCount = document.getElementById('archive-count');
+
+  // Don't show the latest one in archive (it's already in the latest card)
+  const archiveItems = archives.slice(1);
+
+  archiveCount.textContent = `共 ${archives.length} 期`;
+
+  if (archiveItems.length === 0) {
+    archiveList.innerHTML = '<div class="empty-state">更多历史资讯将随每日更新陆续归档</div>';
+  } else {
+    archiveItems.forEach(item => {
+      const el = document.createElement('a');
+      el.href = item.url;
+      el.className = 'archive-item';
+      el.innerHTML = `
+        <div class="archive-item-left">
+          <div class="archive-item-date">${item.date}</div>
+          <div class="archive-item-title">${item.title}</div>
+        </div>
+        <div class="archive-item-arrow">→</div>
+      `;
+      archiveList.appendChild(el);
+    });
+  }
+</script>
+
+</body>
+</html>
