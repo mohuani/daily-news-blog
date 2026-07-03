@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年7月1日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  /* News Card */
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important {
+    background: #FEF3E2;
+    color: #B8792A;
+  }
+
+  .tag-policy {
+    background: #E8F0FE;
+    color: #3B6FB5;
+  }
+
+  .tag-data {
+    background: #E6F5F2;
+    color: #2D8B7A;
+  }
+
+  .tag-company {
+    background: #F3EEFA;
+    color: #6B5BA8;
+  }
+
+  .tag-breaking {
+    background: #FDE8E8;
+    color: #C44848;
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  /* Data Box */
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Focus Box */
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  /* Outlook Section */
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  /* Color Themes for Sections */
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.182</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年7月1日 · 星期三 · 涵盖2026年6月30日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<!-- Summary -->
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>6月30日，A股上半年行情收官，科创50年涨近54%领跑全球</strong>——上证指数上半年累计涨3.16%，创业板指涨35.58%，科创综指飙涨53.99%，电子通信行业领涨，362只股票翻倍。美国大型银行全部通过美联储压力测试，高盛大涨股价创历史新高，数十亿美元分红回购在望。AI领域亚马逊豪掷68亿元设立AI部门，甲骨文云业务签约300亿美元大单股价飙涨。国内方面，6月制造业PMI升至50.3%重返扩张区间，八部门印发工业互联网高质量发展意见，星核聚变完成8.3亿元首轮融资创国内纪录。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">甲骨文云业务签下300亿美元超级大单，股价一度大涨超8%</div>
+      <div class="news-summary">甲骨文CEO萨夫拉·卡兹表示，公司2026财年开局强劲，云业务继续保持稳健增长，已签署多项大型云服务协议，其中一项重大协议预计将从2028财年开始每年贡献超过300亿美元收入。MultiCloud数据库收入继续保持超过100%的增长。受此消息提振，甲骨文股价一度大涨超8%，总市值突破6200亿美元。Stifel将其投资评级上调至"买入"，目标价从180美元上调至250美元。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">八部门联合印发工业互联网高质量发展实施意见，核心产业增加值目标2.5万亿</div>
+      <div class="news-summary">工业和信息化部等八部门印发《关于推动工业互联网高质量发展的实施意见》，提出到2030年工业互联网核心产业增加值突破2.5万亿元。意见明确推动工业互联网基础设施与智算、超算设施一体规划同步建设，探索构建工业算力网络体系，加强端边云多层级算力动态协同，深度赋能工业大模型训练、工业元宇宙实时交互等场景。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">亚马逊云科技投入10亿美元设立AI部门，数千名工程师驻场协助客户</div>
+      <div class="news-summary">亚马逊云科技宣布投入10亿美元（约合68亿元人民币）设立全新的人工智能部门，专门协助客户搭建并落地人工智能系统。预计将配置数千名前线部署工程师，与客户业务、研发、安全部门深度协作，仅需数周就能帮助客户搭建可自主运维的技术团队，交付完整AI解决方案。此举使亚马逊成为首家推出该类驻场工程师专项业务的超大规模云厂商。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">加拿大命令海康威视停止运营，120天内关停加拿大业务</div>
+      <div class="news-summary">加拿大政府以所谓"国家安全"为由，命令海康威视加拿大有限公司停止在加拿大运营并关闭其加拿大业务，限120天内关停。海康威视强烈反对该决定，称加拿大政府基于对中国法律的错误解读，在没有任何证据的情况下无端指控，是针对中国企业的歧视和打压。中国驻加拿大使馆发言人表示中方对此强烈不满和坚决反对。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国信通院启动"算力词元出海生态计划"，破解跨境合规难题</div>
+      <div class="news-summary">为促进我国算力词元出海高质量、规范化发展，破解跨境合规、标准体系、生态协同等产业共性难题，中国信息通信研究院联合产业链上下游多家核心单位，共同启动"算力词元（Token）出海生态计划"，将在标准制定、合规指引、生态对接等方面提供支撑。</div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">A股上半年行情收官：科创综指涨53.99%领跑，362只股票翻倍</div>
+      <div class="news-summary">6月30日，A股上半年行情正式收官。上半年，上证指数、深证成指、创业板指、科创综指分别累计上涨<em>3.16%、19.82%、35.58%、53.99%</em>。电子、通信行业领涨，362只股票实现翻倍上涨，涨幅最大的中船特气涨逾760%。6月当月制造业PMI升至50.3%重返扩张区间，经济景气水平有所回升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美国大型银行全部通过压力测试，高盛大涨创历史新高</div>
+      <div class="news-summary">美联储年度压力测试结果公布，22家美国大型银行全部通过，证明它们能够承受严重经济衰退冲击，可承受超过5500亿美元损失。高盛盘后一度大涨超3%创历史新高，富国银行、摩根大通、花旗银行盘中股价均创出历史新高。此次顺利"通关"为启动数十亿美元股票回购和股息派发扫清障碍，压力资本缓冲最终值待8月确定。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">6月制造业PMI升至50.3%，重返扩张区间</div>
+      <div class="news-summary">国家统计局6月30日发布数据显示，6月份制造业采购经理指数（PMI）为50.3%，比上月上升0.3个百分点，<em>重返扩张区间</em>；非制造业商务活动指数和综合PMI产出指数分别为50.2%和50.6%，均比上月上升0.1个百分点，我国经济景气水平有所回升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">巴菲特向五家基金会捐赠伯克希尔B股，价值约60亿美元</div>
+      <div class="news-summary">伯克希尔·哈撒韦公司公告称，巴菲特将8,239股A股转换为12,358,500股B股，向五个基金会捐赠12,358,321股B类股，其中9,433,839股捐赠给比尔&梅琳达·盖茨基金会。捐赠于6月30日到账，总价值约60亿美元。这是巴菲特连续多年的年度捐赠计划的一部分。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">迈克尔·戴尔套现12亿美元，减持戴尔科技约3%股份</div>
+      <div class="news-summary">据提交给美国证券交易委员会的文件显示，戴尔科技公司首席执行官迈克尔·戴尔出售了价值12亿美元的同名电脑公司股票，减持比例约为3%。此前戴尔科技股价受益于AI服务器需求强劲而持续走高。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">53.99%</div>
+          <div class="data-label">科创综指上半年涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">50.3%</div>
+          <div class="data-label">6月制造业PMI</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">362只</div>
+          <div class="data-label">上半年翻倍股票数量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">760%+</div>
+          <div class="data-label">中船特气上半年涨幅</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">OpenAI重大技术突破：系统优化使模型推理成本降低50%以上</div>
+      <div class="news-summary">据报道，OpenAI工程师在内部透露，公司已通过一系列全新的系统底层优化，成功将AI模型的推理（运行）成本降低了50%以上。这一突破有望大幅提升AI服务的利润率，并为更广泛的应用场景打开空间。推理成本一直是制约AI规模化商用的关键瓶颈之一。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Anthropic Claude模型正式登陆Microsoft Foundry</div>
+      <div class="news-summary">Anthropic宣布Claude模型即日起正式在Microsoft Foundry（Azure AI Foundry）全面可用，企业用户可直接在Azure环境中部署和调用Claude模型，并沿用现有Azure身份认证、计费及治理体系。目前支持Claude Opus 4.8和Claude Haiku 4.5，涵盖提示缓存、扩展思考等能力，可用于编程、智能代理及复杂推理等场景。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Meta计划对外销售过剩AI算力，正式进军云服务市场</div>
+      <div class="news-summary">Meta正在制定一项云基础设施业务计划，将销售AI计算能力和模型的访问权限，从而与亚马逊AWS、微软Azure和谷歌云等行业巨头展开新的竞争。Meta一直在加紧建设昂贵的数据中心和其他基础设施，随着AI模型训练需求波动，部分算力资源出现闲置，对外销售有望开辟新的收入来源。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">德国要求苹果谷歌下架DeepSeek应用，中方明确反对</div>
+      <div class="news-summary">德国数据保护专员要求苹果和谷歌公司从其在德国的应用商店下架中国AI大语言模型"深度求索"（DeepSeek）应用，理由是所谓数据安全担忧。中方此前已多次明确表示，反对部分国家泛化国家安全概念、将经贸科技问题政治化的做法。此举被认为是欧洲AI监管趋严的又一信号。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">寒武纪市值突破万亿后深夜提示风险，次日蒸发近700亿</div>
+      <div class="news-summary">6月30日寒武纪股价盘中突破1600元，总市值跨过一万亿元人民币门槛，成为科创板开板七年来首只万亿市值股票。当晚公司发布风险提示公告，称上游原材料价格上涨可能影响经营业绩。7月1日股价重挫超7%，总市值回落至约9300亿元，单日蒸发近700亿元。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">英伟达高管去年抛售超10亿美元股票，AI热潮中精准套现</div>
+      <div class="news-summary">据英国金融时报报道，英伟达多名高管在过去一年中抛售了价值超过10亿美元的公司股票，正值AI热潮推动英伟达股价持续飙升。高管减持通常被视为对股价高位的一种信号，但也可能是个人财务规划的正常安排。</div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">🏥</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">创新药基金霸屏公募业绩榜，上半年收益领跑全市场</div>
+      <div class="news-summary">今年上半年，创新药、人形机器人、北交所、新消费等热点轮番演绎，相关主题基金均取得不错投资回报。其中配置创新药板块的基金业绩表现最为突出，霸屏公募基金业绩榜前列。随着药品审评审批加速和医保支付方式改革深化，创新药产业链持续受到资金青睐。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">益生股份上半年净利润预增超42倍，白羽鸡周期反转</div>
+      <div class="news-summary">益生股份公告预计2026年半年度归属于上市公司股东的净利润为2.7亿—3亿元，同比增长4287%—4774%。业绩大幅增长主要受益于白羽肉鸡行业周期反转，鸡苗价格同比大幅上涨，公司产能充分释放。白羽鸡产业链整体景气度持续回升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">永太科技上半年预增350%-460%，锂电材料量价齐升</div>
+      <div class="news-summary">永太科技公告预计上半年净利润2.65亿—3.30亿元，同比增长350.68%—461.22%。业绩变动主要系受益于新能源汽车及储能市场需求增长，公司六氟磷酸锂、LiFSI、VC及电解液等锂电材料核心产品销量与价格同比提升，新投产VC产能稳步释放。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">第二批险资入市启动，布局高股息等三大方向</div>
+      <div class="news-summary">泰康稳行完成首笔投资交易，标志第二批保险资金长期投资试点项目正式开启。获批120亿元的泰康人寿和泰康资产积极响应，投资将围绕高股息资产、产业升级红利、逆周期买入三大方向，助力资本市场平稳运行，优化资产负债匹配。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">外资看多中国资产，A股总市值突破100万亿元</div>
+      <div class="news-summary">6月以来，高盛、摩根士丹利等外资机构纷纷看多中国资产，上调经济增长预期。6月25日，A股总市值突破100万亿元，市场信心回暖。外资看多源于中国经济韧性、估值优势、科技突破等因素，科技成长股和高股息资产成为重点配置方向。</div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">星核聚变完成8.3亿元首轮融资，创国内商业核聚变首轮融资纪录</div>
+      <div class="news-summary">合肥星核聚变能源科技有限公司宣布完成8.3亿元首轮融资，投后估值近30亿元，刷新国内民营商业核聚变领域首轮融资规模纪录。本轮融资由上汽金控/恒旭资本、深创投、中科创星联合领投，24家机构联合入局。公司主攻仿星器技术路线，"星核0号"实验装置计划2026年底实现首次等离子体放电，目标24小时长时稳态运行。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">宁德时代枧下窝锂矿复产，占国内碳酸锂产量约一成</div>
+      <div class="news-summary">停产十个月后，宁德时代旗下枧下窝锂矿于6月29日晚间正式复产，安全生产许可证已获批。该矿停产前月均产出碳酸锂约7000至8000吨，占国内月度总产量的8%至10%，满产年产能可达10万至12万吨。受消息影响，碳酸锂期货主力合约单日大涨8.36%，市场情绪显著回暖。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">特斯拉完成首例无人驾驶新车交付，奥斯汀客户见证历史时刻</div>
+      <div class="news-summary">特斯拉宣布完成首例无人驾驶新车交付，在得克萨斯州奥斯汀市，一辆全新特斯拉汽车在没有驾驶员的情况下被送到客户手中。这标志着特斯拉在自动驾驶技术商业化应用方面迈出重要一步，也为汽车销售和交付模式带来革命性变化。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">同有科技拟定增募资10亿元，加码AI全场景企业级存储</div>
+      <div class="news-summary">同有科技公告拟向特定对象发行A股股票募集资金不超过10亿元，用于面向AI全场景的企业级存储系统和SSD研发中心建设项目、企业级存储系统和SSD智能制造项目等。今年以来公司股价已上涨超180%，总市值达245亿元。AI浪潮下企业级存储需求持续爆发。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">深科技股价半月累涨57%，半导体封测业务受关注</div>
+      <div class="news-summary">深科技发布股票交易异常波动公告，公司股票自6月16日至30日累计涨幅达57.64%，可能存在短期快速上涨后下跌的风险。公司半导体封测业务主要从事高端存储芯片的封装与测试，包括DRAM、NAND FLASH以及嵌入式存储芯片，HBM技术尚处于研发阶段。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">8.3亿</div>
+          <div class="data-label">星核聚变首轮融资额（元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">~10%</div>
+          <div class="data-label">枧下窝占国内碳酸锂产量比例</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">16.3万</div>
+          <div class="data-label">碳酸锂期货收盘价（元/吨）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">30亿</div>
+          <div class="data-label">星核聚变投后估值（元）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">二手豪华燃油车价格大跳水，宾利跌至27万保时捷15万</div>
+      <div class="news-summary">二手豪华燃油车市场出现罕见大幅降价，8年以上车龄的宾利飞驰挂牌价仅26.8万元，入门保时捷Macan低至15万元，新车近90万元的大众途锐二手成交价6.8万元。过去二手豪华燃油车全年折旧幅度普遍不超过30%，今年5月单月折旧幅度就达到30%。新能源汽车快速渗透、排放标准升级等因素叠加，导致传统豪华燃油车保值率持续走低。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">国内航线燃油附加费7月5日起大幅下调</div>
+      <div class="news-summary">国内航线燃油附加费将于7月5日起大幅下调，具体调整方案待正式公布。这是继油价持续回落之后的又一利好，有望降低暑期出行成本，进一步刺激航空旅行需求。暑期旅游旺季来临，机票价格整体仍呈上涨趋势。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">苹果首次上架iPhone 16e官翻机，黑白两色可选</div>
+      <div class="news-summary">苹果官方首次上架iPhone 16e官翻机，仅有黑色与白色可选，价格较全新机有一定折扣。官翻机经过严格的质量检测和认证，享受与全新机相同的保修服务，受到追求性价比的消费者青睐。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">董明珠喊话股东：家电不换成格力，凭什么要分红</div>
+      <div class="news-summary">格力电器董事长董明珠在股东大会上发表强势言论，喊话股东如果家里的电器不换成格力产品，凭什么要求分红。此番言论引发市场热议，部分投资者认为体现了企业家的自信和对产品的信心，也有人认为言论过于激进。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">巴菲特"断供"盖茨基金会，捐赠格局生变</div>
+      <div class="news-summary">巴菲特今年的捐赠中，盖茨基金会获得的份额出现明显变化，市场传出巴菲特"断供"盖茨基金会的说法。分析认为，这可能与巴菲特对基金会运作方向的看法变化有关，也可能是其整体捐赠计划调整的一部分。多年来盖茨基金会一直是巴菲特最大的捐赠对象。</div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">沪深交易所拟调整ST股涨跌幅至10%，优化市场定价效率</div>
+      <div class="news-summary">沪深交易所就调整主板风险警示股票价格涨跌幅限制比例公开征求意见，拟将涨跌幅限制比例由5%调整为10%，同步调整异常波动披露指标。此举有利于提高股票定价效率，减少板块机制差异，但投资者需谨慎参与风险警示股票。交易所表示将加强监管，保护投资者权益。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">6月南向资金加仓港股，医药与科技板块分化</div>
+      <div class="news-summary">6月以来港股市场震荡上行，南向资金成为重要推动力量，净流入环比翻倍。资金配置转向医药板块，科技板块出现分化——中芯国际、美团-W获净流入，小米集团、腾讯控股、阿里巴巴-W遭净卖出。港元触发弱方兑换保证或对后续资金流入产生一定影响。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">港交所调整交收费结构，6月30日起实施</div>
+      <div class="news-summary">港交所自6月30日起实施新的股票交收费结构，取消最低2港元、最高100港元限制，费率从0.002%调至0.0042%。小额交易成本降低，有望提升市场活跃度，优化市场微观结构。截至6月27日，港交所年内股价已涨44.91%，摩根士丹利上调其目标价。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">光智科技终止收购先导电科，外部环境变化为主要原因</div>
+      <div class="news-summary">光智科技公告终止发行股份及支付现金购买先导电科100%股份的重大资产重组，因外部环境变化及部分商业条款未达成一致。公司股价近期波动较大，投资者需关注后续业务整合进展。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">香港财政司司长：金融科技跨境支付潜力巨大</div>
+      <div class="news-summary">香港财政司司长陈茂波表示，金融科技在跨境贸易应用的潜力巨大，目标是解决跨境支付速度慢、成本高等长期存在的痛点。上周发布的《数字资产发展政策宣言2.0》将稳定币作为四大支柱之一，稳定币法例将于今年8月1日生效。</div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">八部门发文推动工业互联网高质量发展，2030年核心产业增加值破2.5万亿</div>
+      <div class="news-summary">工业和信息化部等八部门联合印发《关于推动工业互联网高质量发展的实施意见》，明确到2030年工业互联网核心产业增加值突破2.5万亿元。意见提出提升算力支撑水平，推动工业互联网与智算、超算设施一体规划同步建设，探索构建工业算力网络体系。6月土木工程建筑业商务活动指数升至55%以上，新订单指数升至51%以上。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">四方达拟定增募资20亿元，拓展PCB半导体高端耗材赛道</div>
+      <div class="news-summary">四方达公告拟向不超过35名特定投资者发行A股股票，募集资金总额不超过20亿元，其中17.5亿元用于金刚石钻针产业化项目，2.5亿元用于补充流动资金。公司致力拓展PCB、半导体高端耗材赛道，打造全新业绩增长曲线。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">杰创智能拟定增募资19.65亿元，建设智算云服务中心</div>
+      <div class="news-summary">杰创智能公告拟向不超过35名特定投资者发行A股股票，募集资金总额不超过19.65亿元，扣除发行费用后用于智算云服务中心建设项目、AI+安全装备研发及产业化建设项目及补充流动资金。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">安洁科技拟现金收购苏州志烽51%股权，加码光模块产业链</div>
+      <div class="news-summary">安洁科技公告拟现金收购苏州志烽51%股权，收购标的主要产品包括光模块芯片基座等。随着AI算力需求爆发，光模块产业链持续景气，上游核心零部件供应商迎来发展机遇。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">美参议院通过"大漂亮"税收法案，未来10年增加债务3.8万亿</div>
+      <div class="news-summary">美国参议院程序性投票通过总统特朗普力推的"大漂亮"税收与支出法案。该法案将实施特朗普的大部分政策议程，但据估算未来10年将使美国联邦政府债务增加约3.8万亿美元。市场担忧财政赤字扩大将对长期利率和美元汇率产生压力。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">2.5万亿</div>
+          <div class="data-label">2030年工业互联网核心产业增加值目标</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">20亿</div>
+          <div class="data-label">四方达定增募资额（元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">55%+</div>
+          <div class="data-label">6月土木工程建筑业商务活动指数</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">3.8万亿</div>
+          <div class="data-label">美国新法案10年增债额（美元）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">沪深交易所拟优化ST股涨跌幅机制，投资者教育同步跟进</div>
+      <div class="news-summary">沪深交易所就调整主板风险警示股票涨跌幅限制公开征求意见，拟将ST股涨跌幅从5%放宽至10%。市场人士提醒，机制优化意味着定价效率提升的同时，短期波动也可能加大，投资者教育工作需同步跟进，帮助投资者充分认识风险警示股票的投资风险。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">国泰君安国际获虚拟资产交易牌照，股价大涨港股通持股翻倍</div>
+      <div class="news-summary">国泰君安国际获得虚拟资产交易牌照后股价大涨，港股通持股量翻倍。香港作为国际金融中心，正积极布局虚拟资产和Web3.0教育与人才培养，吸引更多金融科技人才来港发展。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">广发策略：A股不缺钱，场外资金入市需契机</div>
+      <div class="news-summary">广发策略研报指出，当前A股市场场外资金充裕，但入市需要明确契机。经济数据持续向好、政策超预期发力、外部风险缓释等都可能成为触发因素。投资者教育和财富管理渠道畅通也是推动居民资产配置向权益市场转移的重要因素。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">韩国经济陷"绝望"境地，青年就业问题引关注</div>
+      <div class="news-summary">韩国总统李在明称该国经济处于"绝望"境地，2025年一季度GDP萎缩，央行多次降息。经济困境源于深层结构性矛盾，包括产业转型难、人口老龄化等，青年就业问题尤为突出。韩国政府计划出台补充预算案，但效果有待观察。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中华职业教育社产教融合案例发布，聚焦战略性新兴产业</div>
+      <div class="news-summary">中华职业教育社发布产教融合创新实践案例，多个聚焦智能制造、集成电路、新能源等战略性新兴产业。超八成案例依托链主企业组建产教联合体，推动产业链、教育链、人才链紧密衔接。</div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">詹姆斯发文告别湖人，NBA传奇生涯进入新篇章</div>
+      <div class="news-summary">NBA巨星勒布朗·詹姆斯在社交媒体发文告别洛杉矶湖人队，引发全球球迷热议。詹姆斯为湖人队效力期间带领球队夺得总冠军，成为球队历史上的重要一员。他的下一步去向备受关注，多支球队已表达浓厚兴趣。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">比特币稳定在10.7万美元附近，市场情绪谨慎乐观</div>
+      <div class="news-summary">比特币价格稳定在约107,254美元附近，波动较小，市场情绪谨慎乐观。此前经历剧烈波动后，投资者逐渐回归理性。机构投资者持续入场、ETF资金流入、监管环境逐步明朗等因素支撑市场。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">罗伯特·清崎呼吁投资白银，称"机会就在价格上涨前"</div>
+      <div class="news-summary">《富爸爸穷爸爸》作者罗伯特·清崎发出紧急呼吁，建议投资者抓住当前机会投资白银，预期价格将大幅上涨。他长期看好黄金、白银等贵金属以及比特币，认为全球货币宽松环境将推动硬资产价格上升。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">沙特在联合国AI伦理论坛展示AI治理经验</div>
+      <div class="news-summary">沙特阿拉伯代表在泰国举办的第三届全球人工智能伦理论坛上，展示了沙特在建设人工智能生态体系方面的经验。沙特数据与人工智能局（SDAIA）介绍了沙特在AI治理框架、人才培养、产业应用等方面的进展。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">土耳其推出动物主题加密货币BOJI，区块链+公益成新趋势</div>
+      <div class="news-summary">伊斯坦布尔推出一款名为BOJI的数字代币，将加密货币与动物福利相结合，旨在通过区块链技术推动流浪动物保护事业。这种"加密+公益"的创新模式吸引了社区广泛关注，为Web3应用场景探索了新方向。</div>
+    </div>
+  </div>
+
+  <!-- 重点关注汇总 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 6月30日重大动态</div>
+    <div class="focus-item"><strong>【重大数据】</strong>A股上半年收官：科创综指涨53.99%，362只股票翻倍，中船特气涨760%</div>
+    <div class="focus-item"><strong>【重大数据】</strong>6月制造业PMI升至50.3%，重返扩张区间，经济景气水平回升</div>
+    <div class="focus-item"><strong>【重大政策】</strong>八部门联合印发工业互联网高质量发展意见，2030年核心产业增加值破2.5万亿</div>
+    <div class="focus-item"><strong>【重大融资】</strong>星核聚变完成8.3亿元首轮融资，创国内商业核聚变纪录，仿星器路线受追捧</div>
+    <div class="focus-item"><strong>【龙头企业】</strong>甲骨文云签下300亿美元超级大单，股价大涨市值突破6200亿美元</div>
+    <div class="focus-item"><strong>【龙头企业】</strong>亚马逊云科技投入10亿美元设AI部门，数千工程师驻场服务客户</div>
+    <div class="focus-item"><strong>【金融市场】</strong>美国大型银行全部通过压力测试，高盛大涨创新高，分红回购在望</div>
+    <div class="focus-item"><strong>【新能源】</strong>宁德时代枧下窝锂矿复产，占国内碳酸锂产量约一成</div>
+    <div class="focus-item"><strong>【消费趋势】</strong>二手豪华燃油车价格大跳水，宾利跌至27万新能源冲击加剧</div>
+  </div>
+
+  <!-- 市场观察与看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与七月展望</h2>
+    <div class="outlook-sub">Market Outlook & July Watchpoints</div>
+
+    <div class="outlook-item">
+      <strong>上半年行情完美收官，七月关注持续性：</strong>A股上半年表现亮眼，科创50领涨全球，但6月末市场波动加大，寒武纪等热门股高位回调。七月需关注半年报业绩验证、政策增量以及外资流向三大核心变量，市场风格可能从估值修复转向业绩驱动。
+    </div>
+    <div class="outlook-item">
+      <strong>AI云服务竞争格局生变：</strong>甲骨文签下300亿美元云大单、亚马逊设立10亿美元AI部门、Meta计划对外销售算力——云市场正在从"资源竞争"转向"深度服务+行业解决方案"的竞争。AI能力正成为云厂商差异化的核心抓手。
+    </div>
+    <div class="outlook-item">
+      <strong>核聚变商业化进程加速：</strong>星核聚变8.3亿元首轮融资创纪录，仿星器技术路线首次在国内获得大规模商业资本支持。合肥依托EAST等大装置形成的聚变产业集群效应开始显现，AI+聚变+3D制造的组合有望加速工程化进程。
+    </div>
+    <div class="outlook-item">
+      <strong>美国银行股迎来分红回购窗口期：</strong>压力测试全部通过后，美国大型银行有望启动数十亿美元的资本返还。但特朗普关税政策对银行利润的影响仍需观察，净息差走向和信贷质量是下半年关键变量。
+    </div>
+    <div class="outlook-item">
+      <strong>七月重点事件：</strong>①7月1日多项新政正式实施（电池新国标、医保改革、快递包装国标等）；②美联储7月利率决议及经济展望；③A股中报业绩预告密集披露期；④全球AI治理对话会及多国AI监管政策动向。
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>

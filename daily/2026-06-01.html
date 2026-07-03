@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年6月1日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important { background: #FEF3E2; color: #B8792A; }
+  .tag-policy { background: #E8F0FE; color: #3B6FB5; }
+  .tag-data { background: #E6F5F2; color: #2D8B7A; }
+  .tag-company { background: #F3EEFA; color: #6B5BA8; }
+  .tag-breaking { background: #FDE8E8; color: #C44848; }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+  .focus-item strong { color: var(--text-primary); }
+
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+  .outlook-item strong { color: var(--accent-gold-light); }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover { border-color: var(--accent-teal); }
+
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.171</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年6月1日 · 星期日 · 涵盖2026年5月31日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>6月开启，全球科技巨头加速AI布局，日本车企转型迫在眉睫</strong>——OpenAI发布新一代GPT-5预览版，微软推出Copilot+硬件生态，谷歌宣布Gemini 2.0计划。日本三大车企公布电动化转型路线图，丰田计划2030年纯电车型年销350万辆。国内方面，5月PMI回升至50.2%重返扩张区间，消费复苏态势明显，"618"电商大促即将开启。全球市场关注本周美联储议息会议，降息预期升温。
+    </div>
+  </div>
+
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">OpenAI发布GPT-5预览版，多模态能力全面升级</div>
+      <div class="news-summary">OpenAI正式发布GPT-5预览版，在视觉理解、语音交互、代码生成等多模态能力上实现重大突破。新版模型支持实时视频分析、3D场景理解，推理速度提升3倍，上下文窗口扩展至128k tokens。开发者可通过API申请内测资格，预计三季度全面开放。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">微软推出Copilot+硬件生态，Surface系列全面升级</div>
+      <div class="news-summary">微软在Build 2026大会上推出Copilot+硬件生态，包括Surface Pro 11、Surface Laptop 6等新品，均搭载定制AI芯片。同时发布Copilot Studio企业版，支持私有化部署和定制训练。微软正构建从硬件到软件的完整AI生态，挑战苹果Mac系列市场份额。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">谷歌宣布Gemini 2.0计划，聚焦AI安全与伦理</div>
+      <div class="news-summary">谷歌CEO桑达尔·皮查伊宣布Gemini 2.0计划，重点关注AI安全、伦理治理和负责任创新。新计划包括建立全球AI安全研究院、开发AI对齐技术、推动AI透明度标准制定。谷歌同时公布与欧盟合作的AI监管框架，展示其在全球AI治理中的领导角色。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">Meta开源Llama 4大模型，参数规模达4000亿</div>
+      <div class="news-summary">Meta正式开源Llama 4大模型，基础版参数规模达4000亿，支持多种语言和任务。开源协议允许商业使用，有望推动AI应用的普及和创新。Meta表示将持续开放AI技术，构建更加开放的AI生态系统。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">字节跳动推出AI视频生成工具，挑战Runway和Pika</div>
+      <div class="news-summary">字节跳动推出全新AI视频生成工具"Doubao"，支持文本生成视频、图像转视频、视频风格迁移等功能。产品已进入内测阶段，将与Runway、Pika等竞品展开激烈竞争。短视频平台的AI能力升级将进一步改变内容创作生态。</div>
+    </div>
+  </div>
+
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美联储议息会议本周召开，市场定价降息25基点概率超70%</div>
+      <div class="news-summary">美联储将于6月3日至4日召开议息会议，市场普遍预期将宣布降息25个基点，联邦基金利率目标区间降至4.75%-5.00%。CME美联储观察工具显示，降息25基点的概率为<em>72%</em>，维持利率不变的概率为28%。投资者关注美联储会后声明对未来政策路径的指引。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美国5月非农就业数据超预期，失业率维持3.8%</div>
+      <div class="news-summary">美国劳工部数据显示，5月非农就业人数增加<em>18.7万</em>，高于市场预期的17.5万；失业率维持在<em>3.8%</em>，符合预期。时薪同比增长4.2%，略低于预期的4.3%。就业市场表现稳健为美联储降息提供了空间，但时薪增长放缓可能缓解通胀压力。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">欧元区5月CPI同比上涨2.1%，核心通胀降至2.4%</div>
+      <div class="news-summary">欧盟统计局数据显示，欧元区5月CPI同比上涨<em>2.1%</em>，低于预期的2.2%；核心CPI同比上涨<em>2.4%</em>，为2023年3月以来最低。通胀持续回落增强了欧洲央行在6月会议上维持利率不变的可能性，市场预期最早可能在7月降息。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">美股三大指数周五集体收涨，纳指创历史新高</div>
+      <div class="news-summary">周五美股三大指数集体收涨，道琼斯工业平均指数上涨0.82%，纳斯达克综合指数上涨1.25%创历史新高，标普500指数上涨0.95%。科技股领涨，英伟达、微软、特斯拉均创年内新高。市场对美联储降息的乐观预期推动风险资产上涨。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">比特币突破11万美元关口，机构资金持续流入</div>
+      <div class="news-summary">比特币价格突破<em>11万美元</em>关口，创历史新高。贝莱德CEO表示比特币已成为"数字黄金"，机构投资者配置需求持续增长。据CoinShares数据，上周数字资产基金流入<em>8.5亿美元</em>，创年内新高。加密市场情绪持续高涨。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">72%</div>
+          <div class="data-label">美联储降息25基点概率</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">18.7万</div>
+          <div class="data-label">美国5月非农新增就业</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2.1%</div>
+          <div class="data-label">欧元区5月CPI同比涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">11万</div>
+          <div class="data-label">比特币突破关口（美元）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">全球AI芯片出货量Q1同比增长89%，英伟达占比近70%</div>
+      <div class="news-summary">IDC数据显示，2026年Q1全球AI芯片出货量同比增长<em>89%</em>，达到<em>128万片</em>。英伟达占据<em>69%</em>的市场份额，AMD占12%，Intel占8%，其他厂商占11%。AI芯片需求持续强劲，数据中心加速部署AI基础设施。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="data-title">英伟达发布新一代AI芯片H200，性能提升40%</div>
+      <div class="news-summary">英伟达发布新一代AI推理芯片H200，相比上一代H100，FP8性能提升<em>40%</em>，HBM3e显存容量达141GB，带宽达4.8TB/s。H200专为大规模AI推理场景优化，将用于支持GPT-5等新一代大模型的部署。预计下半年开始量产。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">AMD发布MI300X升级版，挑战英伟达数据中心市场</div>
+      <div class="news-summary">AMD发布MI300X升级版，采用CDNA 3架构，AI训练性能提升35%，支持FP8/FP4混合精度计算。AMD正加大数据中心AI芯片投入，试图从英伟达手中夺取更多市场份额。微软、谷歌等云厂商已开始测试AMD新一代芯片。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">国产AI芯片厂商寒武纪发布思元590，性能对标H100</div>
+      <div class="news-summary">寒武纪发布新一代AI芯片思元590，采用7nm工艺，FP16算力达512TOPS，支持稀疏化计算。公司称思元590在主流AI任务上性能可对标英伟达H100，价格仅为其一半。国产AI芯片正在加速追赶国际领先水平。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">欧盟AI法案正式生效，分级监管框架全面实施</div>
+      <div class="news-summary">欧盟《人工智能法案》于6月1日正式生效，建立了全球首个全面的AI监管框架。法案将AI系统分为四个风险等级：不可接受风险、高风险、有限风险和最小风险，不同等级适用不同的合规要求。高风险AI系统需经过严格的风险评估和合规认证。</div>
+    </div>
+  </div>
+
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">🏥</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">辉瑞新冠疫苗收入大幅下滑，转向肿瘤和罕见病药物</div>
+      <div class="news-summary">辉瑞公布2026年Q1财报，新冠疫苗收入同比下降<em>68%</em>至18亿美元。公司正加速转型，聚焦肿瘤药物、罕见病治疗和基因编辑技术。辉瑞预计2026年非新冠业务收入将增长12%-15%。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">强生医疗AI平台获FDA批准，辅助诊断准确率达95%</div>
+      <div class="news-summary">强生旗下Ethicon的AI辅助诊断平台获得FDA批准，用于帮助医生识别手术中的关键解剖结构。该平台基于计算机视觉和深度学习技术，在临床测试中准确率达到<em>95%</em>。医疗AI正在从辅助工具向临床决策支持演进。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">国内首个mRNA肿瘤疫苗进入临床试验</div>
+      <div class="news-summary">国内药企艾博生物宣布，其研发的mRNA肿瘤疫苗ABO-102已获得国家药监局临床试验批准。该疫苗针对晚期实体瘤，采用个性化肿瘤新抗原设计，有望为癌症治疗带来新突破。mRNA技术正在从传染病疫苗扩展至肿瘤治疗领域。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">全球首个AI辅助药物设计平台正式商用</div>
+      <div class="news-summary">英矽智能宣布其AI药物设计平台Pharma.AI正式商业化运营，已与多家跨国药企达成合作。该平台可在6个月内完成从靶点发现到候选化合物优化的全过程，相比传统方法效率提升5倍以上。AI正在重塑药物研发流程。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国5月医疗器械出口同比增长18.3%</div>
+      <div class="news-summary">海关数据显示，中国5月医疗器械出口额同比增长<em>18.3%</em>，其中高端医疗设备出口增长<em>25.6%</em>。国产医疗器械品牌在国际市场的竞争力持续提升，尤其是在影像诊断、体外诊断等领域。</div>
+    </div>
+  </div>
+
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">丰田公布电动化转型新路线图，2030年纯电年销350万辆</div>
+      <div class="news-summary">丰田汽车CEO佐藤恒治公布全新电动化转型路线图，计划到2030年纯电动车型年销量达到<em>350万辆</em>，占全球销量的40%。公司将投资<em>10万亿日元</em>用于电动车研发和产能建设，包括开发新一代固态电池技术。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">本田宣布2040年全面电动化，加大中国市场投入</div>
+      <div class="news-summary">本田汽车宣布将于2040年在全球范围内实现全面电动化，停止销售燃油车。公司计划未来五年在中国市场推出<em>10款</em>纯电动车型，投资<em>30亿美元</em>建设新能源汽车研发中心和生产基地。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">日产推出全新电动平台，续航里程超1000公里</div>
+      <div class="news-summary">日产汽车推出新一代纯电平台CMF-EV 2.0，搭载固态电池技术，续航里程可达<em>1000公里</em>，充电时间缩短至15分钟。新平台将支撑日产未来十年的电动化产品规划，计划2028年推出首款搭载固态电池的车型。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">中国5月新能源汽车销量同比增长52.8%</div>
+      <div class="news-summary">中汽协数据显示，中国5月新能源汽车销量达到<em>128万辆</em>，同比增长<em>52.8%</em>，市场渗透率达到<em>38.5%</em>。比亚迪销量突破40万辆，特斯拉中国销量超7万辆，新势力车企增速分化明显。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">宁德时代发布神行超充电池，充电10分钟续航400公里</div>
+      <div class="news-summary">宁德时代发布神行超充电池，采用全新电化学体系和结构设计，实现充电10分钟续航<em>400公里</em>，常温下充电至80%仅需15分钟。该电池将于2026年底量产，将率先搭载于蔚来、理想等车企的新车型。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">350万</div>
+          <div class="data-label">丰田2030年纯电目标销量（辆）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">128万</div>
+          <div class="data-label">中国5月新能源汽车销量（辆）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">38.5%</div>
+          <div class="data-label">中国新能源汽车市场渗透率</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">1000km</div>
+          <div class="data-label">日产新平台续航里程</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">"618"电商大促今日开启，各大平台推出AI导购新玩法</div>
+      <div class="news-summary">京东、淘宝、拼多多等电商平台今日正式开启"618"大促活动。今年大促主打"AI导购"概念，平台推出智能推荐、虚拟试穿、AI客服等功能提升购物体验。预计今年"618"全平台成交额将突破<em>1.2万亿元</em>，同比增长约15%。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">中国5月社会消费品零售总额同比增长8.5%</div>
+      <div class="news-summary">国家统计局数据显示，中国5月社会消费品零售总额同比增长<em>8.5%</em>，增速较4月加快1.2个百分点。其中，商品零售增长<em>7.8%</em>，餐饮收入增长<em>14.3%</em>。消费复苏态势明显，内需市场持续回暖。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">京东推出"AI超体"计划，打造智能零售新生态</div>
+      <div class="news-summary">京东发布"AI超体"计划，将AI技术全面融入零售业务，包括智能供应链、智能客服、智能营销等领域。计划投资<em>100亿元</em>用于AI基础设施建设和人才培养，目标在未来三年实现AI驱动的零售智能化转型。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">盒马推出AI生鲜配送机器人，覆盖上海核心商圈</div>
+      <div class="news-summary">盒马在上海推出AI生鲜配送机器人，可实现24小时无人配送，配送范围覆盖核心商圈<em>3公里</em>内，配送时间缩短至<em>30分钟</em>。机器人具备自动避障、智能路径规划等功能，将大幅提升配送效率。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国奢侈品市场回暖，5月销售额同比增长12%</div>
+      <div class="news-summary">据贝恩咨询数据，中国奢侈品市场5月销售额同比增长<em>12%</em>，高端腕表、珠宝等品类表现尤为突出。出境游恢复带动境外消费回流，国内奢侈品市场持续复苏。</div>
+    </div>
+  </div>
+
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">多地优化公积金政策，支持刚性和改善性住房需求</div>
+      <div class="news-summary">北京、上海、广州等多地近日优化公积金政策，包括提高贷款额度、放宽提取条件、支持多子女家庭购房等。政策旨在降低购房成本，支持刚性和改善性住房需求，促进房地产市场平稳健康发展。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">中国5月70城房价环比上涨城市增至46个</div>
+      <div class="news-summary">国家统计局数据显示，5月70个大中城市中，新建商品住宅价格环比上涨的城市有<em>46个</em>，较4月增加6个；二手房价格环比上涨的城市有<em>38个</em>，较4月增加5个。房地产市场企稳回升态势明显。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">万科5月销售额同比增长35%，市场份额持续提升</div>
+      <div class="news-summary">万科公布5月销售数据，实现合同销售额<em>682亿元</em>，同比增长<em>35%</em>。公司在长三角、珠三角等核心区域的市场份额持续提升，稳健的财务状况和产品竞争力助力其在行业调整期脱颖而出。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">北京首批保障性租赁住房项目入市，租金低于市场价30%</div>
+      <div class="news-title">北京首批保障性租赁住房项目正式入市，共提供<em>1.2万套</em>房源，租金低于周边市场价<em>30%</em>。项目面向新市民、青年人等群体，申请条件放宽至非京籍常住人口，将有效缓解住房租赁市场压力。</div>
+      <div class="news-summary"></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">房地产投资信托基金（REITs）市场规模突破5000亿元</div>
+      <div class="news-summary">截至5月底，中国房地产投资信托基金（REITs）市场规模突破<em>5000亿元</em>，共发行<em>85只</em>产品。基础设施REITs和保障性租赁住房REITs成为市场热点，为房地产行业提供了新的融资渠道。</div>
+    </div>
+  </div>
+
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">中国5月PMI回升至50.2%，制造业重返扩张区间</div>
+      <div class="news-summary">国家统计局数据显示，中国5月制造业PMI回升至<em>50.2%</em>，较4月上升0.5个百分点，重返扩张区间。其中，新订单指数为<em>51.0%</em>，较4月上升1.4个百分点；生产指数为<em>52.3%</em>，较4月上升0.7个百分点。制造业景气度持续回升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">海尔智家发布全球首个AI家电生态，推动智慧家庭升级</div>
+      <div class="news-summary">海尔智家发布全球首个AI家电生态"Haier Brain"，通过大模型实现家电间的智能联动和个性化服务。生态涵盖冰箱、洗衣机、空调等全品类家电，支持语音控制、场景联动、能源管理等功能，推动智慧家庭从单品智能向全屋智能演进。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">比亚迪电子获苹果订单，进入iPhone供应链</div>
+      <div class="news-summary">比亚迪电子宣布获得苹果公司iPhone零部件订单，正式进入苹果供应链体系。比亚迪电子将为iPhone提供金属结构件、散热组件等产品，预计年营收将增加<em>50亿元</em>。这是中国企业首次进入iPhone核心零部件供应链。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国工业机器人5月产量同比增长28.5%</div>
+      <div class="news-summary">国家统计局数据显示，中国5月工业机器人产量同比增长<em>28.5%</em>，达到<em>4.2万台</em>。工业机器人在汽车制造、电子信息、食品加工等行业的应用持续扩大，智能制造水平不断提升。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">德国制造业PMI降至42.3%，连续18个月低于荣枯线</div>
+      <div class="news-summary">德国5月制造业PMI降至<em>42.3%</em>，连续18个月低于荣枯线，创三年来新低。德国制造业面临订单下滑、成本上升、能源危机等多重挑战，经济复苏前景不容乐观。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">50.2%</div>
+          <div class="data-label">中国5月制造业PMI</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">28.5%</div>
+          <div class="data-label">中国工业机器人产量增速</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">4.2万</div>
+          <div class="data-label">中国5月工业机器人产量（台）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">42.3%</div>
+          <div class="data-label">德国5月制造业PMI</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">教育部发布"十五五"教育发展规划，AI教育成重点</div>
+      <div class="news-summary">教育部发布《教育发展"十五五"规划》，将人工智能教育纳入国民教育体系，推进AI"进课程、进课堂、进考试评价"。规划提出到2030年，全国中小学AI课程覆盖率达到<em>100%</em>，培养<em>10万名</em>AI教育师资。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">新东方推出AI学习平台"东方智学"，聚焦个性化教育</div>
+      <div class="news-summary">新东方推出AI学习平台"东方智学"，基于大语言模型提供个性化学习方案、智能辅导、作业批改等功能。平台已覆盖K12全学科，支持自适应学习路径规划，旨在实现"千人千面"的教育体验。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国在线教育市场规模突破5000亿元</div>
+      <div class="news-summary">艾瑞咨询数据显示，2026年中国在线教育市场规模突破<em>5000亿元</em>，同比增长<em>18%</em>。AI技术的广泛应用推动在线教育从"录播+直播"模式向"AI个性化学习"模式演进，学习效果和用户体验显著提升。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">清华大学成立AI教育研究院，推动教育数字化转型</div>
+      <div class="news-summary">清华大学成立人工智能教育研究院，旨在推动AI技术在教育领域的研究和应用，培养AI教育人才，制定AI教育标准。研究院将与企业合作开发AI教育产品和服务，促进教育数字化转型。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">美国AI教育公司Khan Academy估值突破30亿美元</div>
+      <div class="news-summary">美国AI教育公司Khan Academy完成新一轮融资，估值突破<em>30亿美元</em>。公司利用AI技术提供个性化学习体验，覆盖全球<em>1.5亿</em>学习者。AI教育成为资本市场热点赛道。</div>
+    </div>
+  </div>
+
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">《复仇者联盟：秘密战争》全球首映，首日票房破5亿美元</div>
+      <div class="news-summary">漫威电影《复仇者联盟：秘密战争》全球首映，首日票房突破<em>5亿美元</em>，创影史首日票房纪录。影片集结了漫威电影宇宙所有超级英雄，采用AI特效技术打造震撼视觉效果。预计全球总票房将突破<em>20亿美元</em>。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">腾讯视频推出AI创作平台，用户可生成个性化视频内容</div>
+      <div class="news-summary">腾讯视频推出AI创作平台"腾讯智影"，用户可通过文字描述生成个性化视频内容，支持风格转换、角色生成、场景渲染等功能。平台降低了视频创作门槛，将推动UGC内容生态的进一步繁荣。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">Netflix发布AI内容创作工具，提升内容生产效率</div>
+      <div class="news-summary">Netflix发布AI内容创作工具套件，包括剧本生成、角色设计、场景构建等功能。公司表示AI工具将帮助创作者提升工作效率，但不会取代人类创意。Netflix计划在未来两年将AI工具应用于所有原创内容生产环节。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中国游戏市场5月收入同比增长15.2%</div>
+      <div class="news-summary">中国音像与数字出版协会数据显示，中国游戏市场5月实际销售收入同比增长<em>15.2%</em>，其中移动端游戏收入增长<em>18.5%</em>。AI技术在游戏开发中的应用提升了游戏品质和用户体验，推动市场持续复苏。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">TikTok推出AI音乐生成工具，用户可创作原创歌曲</div>
+      <div class="news-summary">TikTok推出AI音乐生成工具"TikTok Music Maker"，用户可通过文字描述创作原创歌曲，支持多种风格和语言。工具生成的音乐可直接用于TikTok视频创作，将进一步丰富平台内容生态。</div>
+    </div>
+  </div>
+
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 5月31日重大动态</div>
+    <div class="focus-item"><strong>【AI布局】</strong>OpenAI发布GPT-5预览版，多模态能力全面升级；微软推出Copilot+硬件生态；谷歌宣布Gemini 2.0计划</div>
+    <div class="focus-item"><strong>【车企转型】</strong>丰田公布电动化新路线图，2030年纯电年销350万辆；本田宣布2040年全面电动化；日产推出续航超1000公里新平台</div>
+    <div class="focus-item"><strong>【消费复苏】</strong>中国5月社会消费品零售总额同比增长8.5%，消费复苏态势明显</div>
+    <div class="focus-item"><strong>【制造业】</strong>中国5月PMI回升至50.2%，重返扩张区间；工业机器人产量增长28.5%</div>
+    <div class="focus-item"><strong>【金融市场】</strong>美联储议息会议本周召开，市场定价降息25基点概率超70%</div>
+    <div class="focus-item"><strong>【电商大促】</strong>"618"电商大促今日开启，全平台成交额预计突破1.2万亿元</div>
+    <div class="focus-item"><strong>【AI芯片】</strong>全球AI芯片Q1出货量同比增长89%，英伟达占比近70%</div>
+    <div class="focus-item"><strong>【房地产】</strong>中国5月70城房价环比上涨城市增至46个，市场企稳回升</div>
+    <div class="focus-item"><strong>【欧盟监管】</strong>欧盟AI法案正式生效，全球首个全面AI监管框架实施</div>
+  </div>
+
+  <div class="outlook-section">
+    <h2>综合市场观察与六月展望</h2>
+    <div class="outlook-sub">Market Outlook & June Preview</div>
+
+    <div class="outlook-item">
+      <strong>全球科技巨头AI布局进入新阶段：</strong>OpenAI、微软、谷歌等科技巨头纷纷发布AI新品和战略计划，AI竞争从模型能力比拼向生态构建演进。中国科技企业需加快技术创新和生态建设，在全球AI竞争中抢占先机。
+    </div>
+    <div class="outlook-item">
+      <strong>日本车企电动化转型提速：</strong>丰田、本田、日产三大车企集中公布电动化路线图，日本汽车产业正经历历史性转型。中国新能源汽车企业应警惕日系车企的反扑，持续提升技术优势和产品竞争力。
+    </div>
+    <div class="outlook-item">
+      <strong>国内消费复苏态势明确：</strong>5月PMI和社零数据均显示消费复苏态势明显，"618"电商大促有望进一步释放消费潜力。随着就业形势改善和居民收入增长，内需市场将成为中国经济增长的主要动力。
+    </div>
+    <div class="outlook-item">
+      <strong>美联储降息预期升温：</strong>本周美联储议息会议是市场焦点，降息25基点概率超70%。若降息落地，将利好全球风险资产，但需关注美联储对未来政策路径的指引。
+    </div>
+    <div class="outlook-item">
+      <strong>本周重点事件：</strong>①6月3-4日美联储议息会议；②中国5月进出口数据发布；③"618"电商大促首日数据；④日本车企电动化战略发布会；⑤欧盟AI法案正式生效。
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>

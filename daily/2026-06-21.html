@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年6月21日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  /* News Card */
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important {
+    background: #FEF3E2;
+    color: #B8792A;
+  }
+
+  .tag-policy {
+    background: #E8F0FE;
+    color: #3B6FB5;
+  }
+
+  .tag-data {
+    background: #E6F5F2;
+    color: #2D8B7A;
+  }
+
+  .tag-company {
+    background: #F3EEFA;
+    color: #6B5BA8;
+  }
+
+  .tag-breaking {
+    background: #FDE8E8;
+    color: #C44848;
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  /* Data Box */
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Focus Box */
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  /* Outlook Section */
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  /* Color Themes for Sections */
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+  .theme-geopolitics .section-icon { background: #FDE8E8; color: #C4686B; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.172</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年6月21日 · 星期日 · 涵盖2026年6月20日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<!-- Summary -->
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>6月20日，中东局势急剧升级，白宫称特朗普两周内决定是否攻击伊朗</strong>——以色列对伊朗发动大规模空袭，伊朗导弹击中以色列医院，中东地缘政治风险飙升。A股三大指数跌超1%，油气股逆市爆发。美联储连续第四次维持利率不变，点阵图更趋鹰派。中国商务部称将加快稀土出口审查，中俄领导人通话就中东局势交换意见。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">谷歌跌近4%领跌科技股，苹果涨超2%力撑道指</div>
+      <div class="news-summary">美股科技股走势分化，谷歌母公司Alphabet股价下跌近4%，成为科技板块领跌股，市场担忧其AI投入回报不及预期。苹果则逆势上涨超2%，为道琼斯指数提供有力支撑。投资者对大型科技公司的估值分歧加大，AI商业化进度成为影响股价的关键变量。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">Meta推出新款AI智能眼镜Oakley Meta，399美元抢攻运动市场</div>
+      <div class="news-summary">Meta联合眼镜品牌Oakley推出全新AI智能眼镜Oakley Meta，定价399美元，主攻运动健身场景。该产品内置AI助手，支持实时语音交互、运动数据追踪和第一视角拍摄。Meta正加速布局可穿戴AI硬件生态，此前Ray-Ban Meta智能眼镜已取得不俗销售成绩，此次进军运动市场意在扩大用户基础。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">英伟达据报计划在AI服务器生产线部署人形机器人</div>
+      <div class="news-summary">据媒体报道，英伟达正计划在其AI服务器生产线中部署人形机器人，以提升制造效率和自动化水平。此举标志着人形机器人从实验室走向工业落地的关键一步。黄仁勋此前多次强调机器人技术是AI之后最大机遇，英伟达自身工厂的部署将成为该技术商业化的重要标杆。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">Circle稳定币股价涨超20%创历史新高，稳定币赛道持续火热</div>
+      <div class="news-summary">Circle股价单日暴涨超20%创下历史新高，稳定币赛道持续吸引资本市场关注。随着全球监管框架逐步清晰，稳定币作为加密市场与传统金融之间的桥梁，正获得越来越多机构和企业的采用。Circle作为USDC稳定币发行方，市值持续攀升，反映出市场对合规稳定币前景的乐观预期。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">特朗普集团推出自有手机品牌"Trump Mobile"，定价499美元</div>
+      <div class="news-summary">特朗普集团正式推出自有手机品牌"Trump Mobile"，定价499美元。该品牌主打"美国制造"标签，瞄准保守派消费群体。手机内置定制应用和服务，与特朗普商业生态深度绑定。分析人士指出，此举是特朗普商业版图从地产、媒体向消费电子领域延伸的最新尝试，但市场竞争激烈前景存疑。</div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美联储连续第四次维持利率4.25%-4.50%不变，点阵图更趋鹰派</div>
+      <div class="news-summary">美联储6月议息会议决定连续第四次维持联邦基金利率在4.25%-4.50%区间不变。最新点阵图显示，多数官员预计今年仅降息一次，较3月预期的两次降息明显收窄，释放出更趋鹰派的信号。鲍威尔强调需看到通胀持续回落才会降息，经济韧性给予美联储更多观望空间。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">特朗普连续两日要求美联储降息2.5个百分点，再骂鲍威尔愚蠢</div>
+      <div class="news-summary">特朗普连续第二天公开要求美联储降息2.5个百分点，并再度抨击美联储主席鲍威尔"愚蠢"，称其在降息问题上行动迟缓。特朗普的施压与其一贯立场一致，但美联储决策独立于白宫，鲍威尔此前已多次表示不会因政治压力改变政策路径。市场对美联储年内降息幅度的预期仍然有限。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">A股三大指数跌超1%，油气股爆发，下跌个股超4600只</div>
+      <div class="news-summary">A股三大指数集体下跌超1%，市场情绪低迷，下跌个股超4600只。受中东局势推动国际油价飙升影响，油气板块逆市大幅走强，多只油气股涨停。避险情绪升温叠加美联储鹰派表态压制风险偏好，科技、消费等板块资金流出明显。成交量有所萎缩，市场观望气氛浓厚。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">英国央行维持利率4.25%不变但释放鸽派信号</div>
+      <div class="news-summary">英国央行货币政策委员会以6:3的投票结果维持基准利率在4.25%不变，但会议声明和投票分布释放出鸽派信号。支持降息的委员人数增加，市场对英国央行8月降息的预期升温。英国经济增长动能减弱，劳动力市场松动迹象增多，为后续宽松政策打开了空间。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">瑞士央行降息至零，挪威央行意外降息</div>
+      <div class="news-summary">瑞士央行将基准利率下调25个基点至0%，正式回归零利率时代，瑞郎承压走弱。瑞士央行称瑞郎持续升值对经济构成压力，降息旨在抑制通缩风险。与此同时，挪威央行意外降息25个基点，为多年来首次宽松操作，市场此前普遍预期其按兵不动。欧洲央行宽松浪潮继续蔓延。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">4.25-4.50%</div>
+          <div class="data-label">美联储维持利率区间不变</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">1次</div>
+          <div class="data-label">点阵图预计年内降息次数</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">4600+</div>
+          <div class="data-label">A股下跌个股数量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">0%</div>
+          <div class="data-label">瑞士央行基准利率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">Meta以1亿美元签约奖金挖角OpenAI员工，奥特曼称核心技术团队无人跳槽</div>
+      <div class="news-summary">Meta为挖角OpenAI研究人员开出高达1亿美元的签约奖金，引发AI人才争夺战升级。OpenAI CEO奥特曼回应称，核心技术研究团队中无人跳槽至Meta，公司已对关键人才进行了加薪和股权激励。AI顶级人才的争夺正成为巨头间竞争的核心战场，薪酬军备竞赛日趋白热化。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">xAI据报每月烧钱10亿美元，马斯克驳斥为"胡说八道"</div>
+      <div class="news-summary">有报道称马斯克旗下xAI公司每月运营支出高达10亿美元，烧钱速度令人咋舌。马斯克在社交媒体上驳斥该报道为"胡说八道"，但未披露具体财务数据。xAI正在大规模扩建数据中心和算力基础设施，以为Grok模型训练提供支撑，高投入模式下的盈利路径仍不清晰。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">软银孙正义去年投出840亿元，领跑生成式AI投资</div>
+      <div class="news-summary">数据显示，软银创始人孙正义去年在生成式AI领域投资约840亿元人民币，投资规模领跑全球。软银重仓押注AI赛道，先后投资OpenAI、芯片及机器人等多个方向。孙正义多次公开表示AI将深刻改变人类社会，软银将继续加大投入力度，将AI视为未来十年最重要的战略方向。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Meta 148亿美元收购Scale AI 49%股份，为AI训练基础设施加码</div>
+      <div class="news-summary">Meta斥资148亿美元收购AI数据标注公司Scale AI的49%股份，这是Meta在AI领域迄今最大规模的投资之一。Scale AI是AI训练数据标注领域的头部企业，为多家大型科技公司提供高质量训练数据。此交易将帮助Meta强化AI训练基础设施，确保数据供给的自主可控。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">AI人才争夺白热化，科技巨头薪酬军备竞赛加剧</div>
+      <div class="news-summary">随着Meta开出天价签约费挖角OpenAI员工，AI领域的人才争夺进入白热化阶段。谷歌、亚马逊、微软等巨头纷纷加码薪酬激励，顶级AI研究人员的年薪已突破数百万美元。人才成本飙升引发行业对可持续性的担忧，部分观察人士认为AI人才泡沫正在形成。</div>
+    </div>
+  </div>
+
+  <!-- 地缘政治 -->
+  <div class="section theme-geopolitics">
+    <div class="section-header">
+      <div class="section-icon">🌍</div>
+      <div class="section-title">地缘政治</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">白宫称特朗普两周内决定是否攻击伊朗，福尔多核设施为主要目标</div>
+      <div class="news-summary">白宫发言人表示，特朗普将在两周内决定是否对伊朗发动军事打击，伊朗福尔多核设施被视为主要打击目标。以色列此前对伊朗发动大规模空袭，中东局势急剧升级。美国若直接介入，将彻底改变地区力量格局，国际社会普遍呼吁各方保持克制，通过外交途径解决争端。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">伊朗导弹击中以色列医院，以方称将强力回应</div>
+      <div class="news-summary">伊朗向以色列发射的导弹击中一家医院，造成人员伤亡和设施损毁。以色列方面迅速谴责此次袭击，称将予以"强力回应"。以伊冲突持续升级引发全球关注，国际油价和避险资产价格大幅波动。多国紧急呼吁停火，联合国安理会召开紧急会议商讨局势。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">伊朗外长与英法德三国外长及欧盟代表在日内瓦举行会谈</div>
+      <div class="news-summary">伊朗外长在日内瓦与英国、法国、德国三国外长及欧盟外交与安全政策高级代表举行会谈，就中东局势和伊朗核问题交换意见。欧洲方面希望以外交手段缓和紧张局势，避免中东爆发更大规模冲突。会谈虽未达成实质性突破，但各方同意保持对话渠道畅通。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">中俄领导人通话，习近平就中东局势提出四点主张</div>
+      <div class="news-summary">中国国家主席习近平与俄罗斯总统普京通电话，双方就中东局势交换意见。习近平就当前中东局势提出四点主张：立即停火止战、保障平民安全、坚持通过对话协商解决问题、尊重各国主权和领土完整。中俄双方强调应通过政治外交途径化解分歧，反对单边军事行动。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">中国商务部：将依法依规加快稀土出口许可审查</div>
+      <div class="news-summary">中国商务部表示，将依法依规加快稀土出口许可审查进度。此前中国加强稀土出口管控引发国际关注，多国担忧供应链安全受影响。商务部强调出口管制是国际通行做法，加快审查旨在保障正常贸易秩序，同时维护国家安全利益。稀土作为关键战略资源，其出口政策动向持续牵动全球产业链。</div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">特斯拉Robotaxi即将在奥斯汀上路试运营，细节引发担忧</div>
+      <div class="news-summary">特斯拉宣布其Robotaxi无人驾驶出租车服务即将在得克萨斯州奥斯汀启动试运营。然而，运营细节和安全保障措施的缺失引发外界担忧。批评者指出，特斯拉尚未公布详细的远程监控方案和应急处理流程，在缺乏安全员的情况下上路测试风险较高。监管机构正密切关注试点进展。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">工信部等三部门召开新能源汽车安全管理工作视频会</div>
+      <div class="news-summary">工信部、应急管理部、市场监管总局三部门联合召开新能源汽车安全管理工作视频会议，强调要切实加强新能源汽车产品质量安全和运行安全管理。会议要求企业落实安全主体责任，加快完善电池安全标准体系，强化事故隐患排查整治，保障消费者生命财产安全。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">小米目标2030年成为中国头部家电品牌，卢伟冰称期待和美的海尔并列</div>
+      <div class="news-summary">小米集团总裁卢伟冰表示，小米的目标是到2030年成为中国头部家电品牌，期待与美的、海尔等传统家电巨头并列。小米近年来加速布局白色家电领域，凭借AIoT生态和性价比策略快速抢占市场份额。分析人士指出，小米在渠道和用户生态方面具备优势，但在核心技术积淀上仍需补课。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">三星SDI启动干法电极验证工作，有望降低全固态电池成本</div>
+      <div class="news-summary">三星SDI正式启动干法电极工艺的验证工作，该技术有望大幅降低全固态电池的生产成本。干法电极工艺省去了传统湿法工艺中的溶剂干燥环节，可显著提升生产效率并减少能耗。全固态电池被视为下一代动力电池的核心方向，三星SDI此举旨在加速商业化进程，抢占技术制高点。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">中东局势推升国际油价，新能源替代逻辑再度强化</div>
+      <div class="news-summary">中东地缘冲突升级推动国际油价飙升，布伦特原油期货大幅上涨。油价高企再度强化了全球能源转型和新能源替代的长期逻辑。各国对能源安全的紧迫感上升，电动汽车、光伏和储能等新能源产业链有望获得政策与市场的双重推动。</div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">国内成品油价格年内第五次上调，加满一箱多花约10元</div>
+      <div class="news-summary">国内成品油价格迎来年内第五次上调，汽油、柴油每吨分别上调约250元和240元。以50升油箱容量的普通私家车计算，加满一箱92号汽油将多花约10元。此次调价主要受国际原油价格上涨驱动，中东局势紧张是推升油价的核心因素。后续油价走势仍取决于地缘政治走向。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">泡泡玛特Labubu大量补货后二手报价腰斩</div>
+      <div class="news-summary">泡泡玛特旗下热门IP Labubu在大量补货后，二级市场价格大幅回落，部分款式二手报价较峰值腰斩。此前Labubu因稀缺性被炒至高价，黄牛炒作现象严重。补货举措有效打击了投机行为，但也反映出潮玩市场热度与供给波动之间的微妙平衡，品牌方需谨慎管理市场预期。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">多地"国补"暂停？国家有关部门回应：剩余资金将有序下达</div>
+      <div class="news-summary">近期多地传出消费品"以旧换新"国家补贴暂停的消息，引发消费者和商家关注。国家有关部门回应称，部分地区的阶段性补贴资金确已使用完毕，但剩余资金将有序下达，补贴政策不会中断。各地将根据实际情况调整补贴节奏，确保政策惠及更多消费者，推动消费持续回暖。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">董明珠格力股东大会发言引热议</div>
+      <div class="news-summary">董明珠在格力电器股东大会上的发言引发广泛关注和热议。她谈及格力多元化战略、接班人问题及公司治理等核心议题，言辞犀利风格不改。市场对格力在空调主业之外的增长空间持续关注，投资者希望看到更清晰的转型路线图。格力股价近期表现承压，股东会对公司未来方向提出更高要求。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">油价上涨传导至物流运输成本，消费端价格压力渐显</div>
+      <div class="news-summary">国际油价飙升正逐步传导至国内物流运输成本，快递、货运等行业的燃料支出显著增加。部分物流企业已开始调整运价，消费端价格压力逐渐显现。若油价持续高位运行，将进一步推升居民生活成本，对下半年消费复苏形成一定制约。</div>
+    </div>
+  </div>
+
+  <!-- 重点关注汇总 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 6月20日重大动态</div>
+    <div class="focus-item"><strong>【地缘冲突】</strong>白宫称特朗普两周内决定是否攻击伊朗，福尔多核设施为主要目标</div>
+    <div class="focus-item"><strong>【中东局势】</strong>伊朗导弹击中以色列医院，以方称将强力回应</div>
+    <div class="focus-item"><strong>【外交动态】</strong>伊朗外长与英法德三国外长及欧盟代表在日内瓦举行会谈</div>
+    <div class="focus-item"><strong>【大国关系】</strong>中俄领导人通话，习近平就中东局势提出四点主张</div>
+    <div class="focus-item"><strong>【货币政策】</strong>美联储连续第四次维持利率4.25%-4.50%不变，点阵图更趋鹰派</div>
+    <div class="focus-item"><strong>【AI人才战】</strong>Meta以1亿美元签约奖金挖角OpenAI员工，AI人才争夺白热化</div>
+    <div class="focus-item"><strong>【AI基建】</strong>Meta 148亿美元收购Scale AI 49%股份，为AI训练基础设施加码</div>
+    <div class="focus-item"><strong>【自动驾驶】</strong>特斯拉Robotaxi即将在奥斯汀上路试运营，细节引发担忧</div>
+    <div class="focus-item"><strong>【A股市场】</strong>A股三大指数跌超1%，油气股逆市爆发，下跌个股超4600只</div>
+  </div>
+
+  <!-- 市场观察与看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与下周展望</h2>
+    <div class="outlook-sub">Market Outlook & Next Week Watchpoints</div>
+
+    <div class="outlook-item">
+      <strong>中东局势成为全球市场最大变量：</strong>以色列与伊朗冲突急剧升级，白宫表态将在两周内决定是否军事打击伊朗，令全球地缘风险升至近年高点。国际油价飙升、避险资产受追捧，若局势进一步恶化，将对全球通胀路径和央行政策产生深远影响。
+    </div>
+    <div class="outlook-item">
+      <strong>美联储鹰派立场压制风险偏好：</strong>点阵图显示年内仅降息一次，叠加特朗普持续施压降息，美联储政策走向不确定性上升。全球央行分化加剧——瑞士降至零利率、挪威意外降息，而美联储和英国央行选择观望，汇率市场波动或将加剧。
+    </div>
+    <div class="outlook-item">
+      <strong>AI人才军备竞赛进入新阶段：</strong>Meta开出1亿美元签约费挖角OpenAI员工，148亿美元收购Scale AI股份，显示巨头对AI顶级人才和基础设施的争夺空前激烈。人才成本飙升和资本密集投入，正改变AI行业的竞争规则。
+    </div>
+    <div class="outlook-item">
+      <strong>A股短期承压但结构性机会凸显：</strong>中东冲突推升油气板块，但整体市场情绪受避险主导而低迷。稀土出口审查提速、新能源安全会议等政策信号，为相关产业链提供中长期逻辑支撑。
+    </div>
+    <div class="outlook-item">
+      <strong>下周重点事件：</strong>①中东局势后续发展及美国是否对伊朗采取军事行动；②美联储主席鲍威尔国会证词；③A股半年报预告密集披露期；④特斯拉Robotaxi试运营实际表现；⑤国际油价走势及OPEC+应对举措。
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>

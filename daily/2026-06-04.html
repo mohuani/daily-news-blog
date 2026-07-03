@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年6月4日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important {
+    background: #FEF3E2;
+    color: #B8792A;
+  }
+
+  .tag-policy {
+    background: #E8F0FE;
+    color: #3B6FB5;
+  }
+
+  .tag-data {
+    background: #E6F5F2;
+    color: #2D8B7A;
+  }
+
+  .tag-company {
+    background: #F3EEFA;
+    color: #6B5BA8;
+  }
+
+  .tag-breaking {
+    background: #FDE8E8;
+    color: #C44848;
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.155</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年6月4日 · 星期四 · 涵盖2026年6月3日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>美联储6月议息会议进入倒计时，市场预期维持利率不变但释放降息信号</strong>——美元指数持续走弱跌破103关口，黄金价格突破2,500美元/盎司创历史新高，全球非美货币普遍走强。AI领域Anthropic发布Claude 4系列大模型，性能全面超越GPT-4o，大模型价格战持续升级。光伏产业链价格企稳回升，储能装机数据超预期。房地产融资环境持续改善，房企发债规模同比增长超三成。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">苹果WWDC26大会6月9日开幕，iOS 19与Apple Intelligence成最大看点</div>
+      <div class="news-summary">苹果WWDC26全球开发者大会将于6月9日正式开幕，距今仅剩5天。据多方爆料，本次大会将是苹果AI战略全面落地的里程碑。iOS 19将深度整合Apple Intelligence 2.0，Siri迎来历史最大升级，支持更自然的对话交互和复杂任务执行。MacOS 16、watchOS 12、visionOS 3也将同步发布。首款搭载苹果自研AI芯片的MacBook Pro有望在大会上亮相。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">谷歌I/O大会前瞻：Gemini 3.0与Android 16联袂登场</div>
+      <div class="news-summary">谷歌I/O 2026开发者大会将于6月10日举办，Gemini 3.0大模型系列和Android 16将是两大核心亮点。Gemini 3.0据称在推理能力、多模态理解和代码生成方面实现重大突破。Android 16将全面融合Gemini能力，打造AI原生操作系统。谷歌还可能发布Pixel 10系列、新一代Tensor芯片和AR设备进展。AI与硬件深度融合是本次大会的主旋律。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">微软Build大会召开，Copilot+全面融入Windows生态</div>
+      <div class="news-summary">微软Build 2026开发者大会召开，宣布Copilot+ AI助手将全面融入Windows 11生态，系统级AI功能大幅扩展。新一代Copilot支持跨应用操作、文件智能整理、代码自动生成等高级功能。微软还发布了Azure AI新服务，降低企业构建AI应用的门槛。Windows AI生态持续完善，微软在AI时代的平台化战略日益清晰。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">全球云基础设施Q1支出820亿美元，AWS份额32%稳居第一</div>
+      <div class="news-summary">Canalys最新数据显示，2026年第一季度全球云基础设施服务支出达<em>820亿美元</em>，同比增长19%。AWS以32%的市场份额稳居第一，微软Azure22%位居第二，谷歌云11%排名第三。阿里云、华为云等中国厂商在全球市场份额持续提升。AI驱动的算力需求是云市场增长的主要动力，GPU云服务增速超100%。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">Meta发布开源多模态大模型Llama 4，性能对标闭源模型</div>
+      <div class="news-summary">Meta发布新一代开源大模型Llama 4系列，包括7B、70B和400B三个参数版本。多模态能力大幅增强，支持图文理解和视频分析。官方数据显示，Llama 4 400B在多项基准测试中接近GPT-4o和Claude 3 Opus水平。Meta继续坚持开源路线，AI开源生态持续壮大，推动AI技术民主化和普惠化。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">三星电子3nm工艺良率突破90%，2nm工艺下半年量产</div>
+      <div class="news-summary">三星电子宣布，其3nm GAA工艺良率已突破<em>90%</em>，达到业界领先水平，客户订单持续增加。2nm工艺研发进展顺利，将于下半年开始量产。三星在先进制程领域加速追赶台积电，GAA架构技术储备深厚。先进制程竞赛白热化，台积电、三星、英特尔三强争霸格局形成。</div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美联储6月议息会议进入倒计时，市场预期维持利率不变但释放降息信号</div>
+      <div class="news-summary">美联储6月FOMC议息会议将于6月17-18日召开，市场普遍预期将维持联邦基金利率在<em>5.25%-5.50%</em>不变，但可能释放年内降息的明确信号。CME"美联储观察"工具显示，市场预期9月首次降息的概率达75%，年内降息2次的概率超50%。通胀持续回落、劳动力市场放缓是降息的主要依据。鲍威尔的新闻发布会将是关注焦点。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">美元指数跌破103创三个月新低，非美货币普遍走强</div>
+      <div class="news-summary">受美联储降息预期升温影响，美元指数持续走弱，跌破<em>103</em>关口，创三个月以来新低。欧元兑美元升至1.10上方，英镑兑美元突破1.29，美元兑日元回落至153附近。人民币汇率也延续升值态势，在岸人民币对美元升破7.18。分析师预计，随着美联储政策转向，美元中期可能维持偏弱走势，非美货币有望进一步走强。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">黄金价格突破2,500美元/盎司创历史新高，年内涨幅超15%</div>
+      <div class="news-summary">COMEX黄金期货价格突破<em>2,500美元/盎司</em>，创历史新高，年内累计涨幅超15%。美联储降息预期、地缘政治风险、全球央行持续购金是推动金价上涨的三大主要因素。世界黄金协会数据显示，全球央行连续第11个季度净买入黄金。机构普遍看好黄金后市表现，多家投行上调金价目标价至2,800-3,000美元。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据前瞻</span>
+      <div class="news-title">美国5月非农就业数据本周五公布，预计新增18万人</div>
+      <div class="news-summary">美国5月非农就业报告将于本周五公布，市场预期新增非农就业人数约<em>18万人</em>，失业率维持在3.9%。就业数据是美联储货币政策的重要参考指标，若就业市场持续放缓将强化降息预期。本周三还将公布ADP私营部门就业数据和JOLTS职位空缺数据，可先行观察就业市场走势。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">桥水基金增持中国资产，达里奥长期看好中国市场</div>
+      <div class="news-summary">全球最大对冲基金桥水基金最新持仓报告显示，一季度增持了多只中国股票和中概股ETF。桥水创始人达里奥近期多次公开表示，长期看好中国市场，中国资产在全球投资组合中不可或缺。他认为，中国经济转型升级将带来巨大投资机会，科技、新能源、消费等领域潜力巨大。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">103</div>
+          <div class="data-label">美元指数关口</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2,500</div>
+          <div class="data-label">黄金价格（美元/盎司）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">5.25-5.50%</div>
+          <div class="data-label">联邦基金利率目标区间</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">75%</div>
+          <div class="data-label">9月降息概率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">Anthropic发布Claude 4系列大模型，性能全面超越GPT-4o</div>
+      <div class="news-summary">Anthropic正式发布Claude 4系列大模型，包括Opus 4、Sonnet 4和Haiku 4三个版本。官方数据显示，Claude Opus 4在MMLU、GSM8K、HumanEval等主流基准测试中全面超越GPT-4o，推理能力提升约25%，代码生成能力提升约30%。新模型支持100万token上下文窗口，多模态理解能力也大幅增强。API价格与上一代基本持平，性价比显著提升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">大模型价格战持续升级，头部厂商接连降价推动AI普及</div>
+      <div class="news-summary">AI大模型价格战持续升温，本月已有Anthropic、OpenAI、谷歌、阿里云等至少10家厂商宣布降价，平均降幅约35%。入门级模型API价格已降至每百万token不足1元。推理成本快速下降是价格战的基础，算法优化、硬件升级和规模效应共同推动成本下行。大模型价格快速下降，将大幅降低AI应用门槛，推动AI技术千行百业落地。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">OpenAI首款AI硬件设备曝光，与Jony Ive合作开发</div>
+      <div class="news-summary">有消息称，OpenAI与苹果前设计总监Jony Ive合作开发的首款AI硬件设备已进入原型机阶段，预计明年发布。这款设备被定位为"AI时代的iPhone"，主打自然语言交互和智能助手功能，可能采用全新的设备形态。软银已投资数十亿美元支持该项目。AI硬件成为科技巨头新的竞争赛道。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">百度文心一言企业版客户破20万，大模型商业化加速</div>
+      <div class="news-summary">百度宣布，文心一言企业版客户数已突破<em>20万</em>，覆盖金融、制造、能源、政务等多个行业。大模型商业化进程加速，从早期试点进入规模化应用阶段。百度智能云收入同比增长超50%，AI云服务成为主要增长动力。国内大模型厂商纷纷加大ToB业务投入，企业级AI市场竞争日趋激烈。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">中国AI核心产业规模突破8,000亿，2026年有望超万亿</div>
+      <div class="news-summary">中国人工智能产业发展联盟数据显示，2025年中国AI核心产业规模达<em>8,200亿元</em>，同比增长38%。预计2026年将突破1万亿元大关。AI技术与实体经济深度融合，智能制造、智慧医疗、智能交通、金融科技等领域应用成效显著。AI产业成为推动经济高质量发展的重要引擎。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">AI Agent市场爆发，企业智能体应用成新风口</div>
+      <div class="news-summary">AI Agent（智能体）成为AI领域新风口，国内外科技巨头纷纷布局。Gartner预测，到2028年，超过60%的企业将使用AI Agent处理日常业务。AI Agent能够自主理解任务、规划步骤、调用工具，比传统对话式AI更强大。客服、销售、研发、运维等场景应用最广泛。Agent开发平台也快速兴起，降低企业构建智能体的门槛。</div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">🏥</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">GLP-1减肥药市场持续爆发，国内多款产品进入临床后期</div>
+      <div class="news-summary">GLP-1受体激动剂类减肥药市场持续高速增长，诺和诺德、礼来两大巨头占据全球主要市场份额。国内创新药企加速布局，华东医药、信达生物、恒瑞医药、博瑞医药等十余家企业的GLP-1产品进入临床后期，预计明后年将集中获批上市。机构预测，中国GLP-1市场规模有望在2030年突破<em>2,000亿元</em>。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">国产创新药出海再获突破，百济神州多款产品海外授权</div>
+      <div class="news-summary">百济神州宣布，与诺华达成新的战略合作，将两款早期肿瘤药物的海外权益授权给诺华，首付款达6亿美元，里程碑付款超20亿美元。这是国产创新药出海的又一重要里程碑。近年来，国产创新药海外授权交易数量和金额持续增长，license-out成为国内药企重要的盈利模式，也印证了中国创新药研发实力的提升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">创新药审评审批加速，前5月获批国产创新药18个</div>
+      <div class="news-summary">国家药监局数据显示，2026年前5个月，共有<em>18个</em>国产创新药获批上市，较去年同期增长38%。肿瘤、自身免疫、抗感染是获批数量最多的治疗领域。药品审评审批制度改革持续深化，创新药审评时限大幅缩短。中国创新药研发进入收获期，获批数量逐年增加。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">药明康德AI药物研发平台赋能，多个项目进入临床</div>
+      <div class="news-summary">药明康德宣布，其AI辅助药物发现平台已助力超过50个客户项目进入临床研究阶段，研发周期平均缩短40%，成本降低约50%。AI正在深刻改变药物研发范式，从靶点发现、化合物筛选到临床试验设计全链条赋能。药明康德持续加大AI技术投入，打造端到端的AI药物研发能力。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">医疗AI审批加速，已有25款AI三类证获批</div>
+      <div class="news-summary">国家药监局数据显示，截至目前已有<em>25款</em>医疗AI产品获得三类医疗器械注册证，覆盖影像诊断、辅助治疗、健康管理等多个领域。AI辅助诊断在肺结节、眼底病变、乳腺癌等领域准确率已接近甚至超过人类医生。医疗AI从概念验证走向临床常规应用，产业发展进入新阶段。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">中药创新药研发升温，年内已有6款获批</div>
+      <div class="news-summary">中药创新药研发持续升温，今年以来已有6款中药创新药获批上市，涉及呼吸系统、消化系统、心脑血管等治疗领域。政策支持中药传承创新发展，中药审评审批体系不断完善。中药创新药质量标准和临床证据要求显著提升，推动中药现代化和国际化。</div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">光伏产业链价格企稳回升，组件价格反弹至0.9元/W</div>
+      <div class="news-summary">光伏产业链价格近期企稳回升，182mm PERC组件主流报价回升至<em>0.9元/W</em>左右，较前期低点上涨约10%。上游硅料、硅片、电池片价格也出现不同程度反弹。行业产能出清加速，中小企业减产停产增多，供需格局边际改善。下半年需求旺季临近，国内大基地和海外需求有望支撑光伏板块景气度回升。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">前5个月储能新增装机25GW/55GWh，同比增90%超预期</div>
+      <div class="news-summary">国家能源局发布数据，2026年前5个月，全国新型储能新增装机达到<em>25GW/55GWh</em>，同比增长90%，大超市场预期。电源侧配套储能、独立储能、共享储能等多种模式快速发展。储能成本持续下降，经济性逐步显现。预计全年新型储能新增装机将突破<em>70GW/150GWh</em>，储能产业进入规模化发展新阶段。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">宁德时代发布神行超充电池2.0，充电10分钟续航800里</div>
+      <div class="news-summary">宁德时代正式发布神行超充电池2.0版本，实现"充电10分钟，续航800里（400公里）"的超快充能力。新电池采用新型磷酸锰铁锂体系，能量密度提升至180Wh/kg，循环寿命超10,000次。将于今年第三季度量产，首搭多款热门车型。超快充技术的普及将有效缓解里程焦虑，推动电动汽车进一步普及。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">比亚迪第800万辆新能源汽车下线，再创里程碑</div>
+      <div class="news-summary">比亚迪宣布，第800万辆新能源汽车正式下线，距离第700万辆下线仅用了两个多月时间，产销规模持续扩大。比亚迪是全球首个达成800万辆新能源汽车里程碑的车企。海外市场拓展加速，出口占比持续提升。比亚迪全年销量目标360万辆，目前完成进度良好，有望超额完成。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">风电招标量同比增40%，海上风电迎来装机大年</div>
+      <div class="news-summary">据统计，2026年前5个月全国风电招标量达<em>45GW</em>，同比增长40%。其中海上风电招标量超18GW，同比增长120%。海上风电迎来装机大年，广东、江苏、福建等沿海省份项目集中开工。风电技术持续进步，单机容量不断增大，度电成本持续下降。风电与光伏、储能协同发展，构建新型电力系统。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">0.9元/W</div>
+          <div class="data-label">光伏组件最新报价</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">+90%</div>
+          <div class="data-label">前5月储能装机增速</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">800万</div>
+          <div class="data-label">比亚迪累计新能源车产量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">45GW</div>
+          <div class="data-label">前5月风电招标量</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">618第一波付尾款开启，全网GMV同比增30%创新高</div>
+      <div class="news-summary">618电商大促第一波付尾款正式开启，各大平台GMV同比增长约<em>30%</em>，创下历史新高。家电、3C数码、美妆个护依然是销售额最高的三大品类。直播电商贡献突出，头部主播单场GMV超80亿元。平台补贴力度空前，消费者购物热情高涨。618大促验证消费复苏力度，消费市场回暖趋势明确。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">端午假期旅游人次破亿，旅游消费持续复苏</div>
+      <div class="news-summary">文化和旅游部数据显示，2026年端午假期全国国内旅游出游<em>1.05亿人次</em>，同比增长21%；实现国内旅游收入1,080亿元，同比增长26%。人均旅游消费1,028元，同比增长4.2%。短途游、周边游、亲子游是主流。旅游市场持续复苏，消费升级趋势明显，高品质、体验式旅游产品更受青睐。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">美团618即时零售订单量增120%，30分钟达成新常态</div>
+      <div class="news-summary">美团数据显示，618期间即时零售订单量同比增长<em>120%</em>，手机、数码、美妆、酒水等品类增长最快。30分钟送达的即时消费越来越受消费者青睐。即时零售与电商大促深度融合，形成"线上下单、线下履约"的新模式。美团闪购、京东到家、饿了么等平台加速布局即时零售赛道。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">珀莱雅618预售额破20亿，国货美妆龙头地位巩固</div>
+      <div class="news-summary">珀莱雅宣布，618预售期间全渠道销售额突破<em>20亿元</em>，同比增长45%，继续领跑国货美妆。大单品策略成效显著，红宝石面霜、双抗精华等核心产品持续热销。国货美妆品牌在产品研发、品牌建设、渠道运营等方面全面进步，市场份额持续提升，对国际品牌形成强有力竞争。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">预制菜市场规模破5,000亿，B端C端齐发力</div>
+      <div class="news-summary">艾媒咨询数据显示，2025年中国预制菜市场规模达<em>5,200亿元</em>，同比增长26%。B端餐饮企业降本增效需求和C端家庭便捷化消费共同推动市场增长。菜品品类日益丰富，从家常菜到高端菜系均有覆盖。行业标准逐步完善，产品质量和食品安全水平持续提升。预制菜产业进入规范化、品质化发展新阶段。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">黄金珠宝消费持续火热，5月限额以上金银珠宝零售额增18%</div>
+      <div class="news-summary">国家统计局数据显示，5月限额以上单位金银珠宝类零售额同比增长<em>18%</em>，增速在所有商品品类中位居前列。金价上涨预期、婚庆需求、投资需求等多重因素推动黄金珠宝消费持续火热。古法金、硬金、IP联名款等创新产品深受年轻消费者喜爱。黄金珠宝行业迎来新一轮增长周期。</div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">房企融资环境持续改善，前5月发债规模同比增32%</div>
+      <div class="news-summary">数据显示，2026年前5个月房地产企业境内外发债合计约<em>3,100亿元</em>，同比增长32%。其中，央国企发债占比超七成，融资成本持续下行。"第二支箭"、"第三支箭"政策效果持续显现，支持优质房企合理融资需求。但民营房企融资环境改善仍不明显，行业信用分化格局延续。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策动态</span>
+      <div class="news-title">多地出台房地产新政，支持刚性和改善性住房需求</div>
+      <div class="news-summary">近期多地出台房地产调控优化政策，包括降低首付比例、下调贷款利率、提高公积金贷款额度、放宽限购条件等。已有超过100个城市调整了房地产调控政策。政策坚持"房住不炒"定位，因城施策精准调控，支持刚性和改善性住房需求。政策累积效应逐步显现，市场信心有所恢复。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">5月70城房价数据前瞻：一线城市企稳二线分化</div>
+      <div class="news-summary">国家统计局5月70个大中城市房价数据将于近期公布。市场预期，一线城市房价环比总体企稳，二线城市分化，三线城市仍有下行压力。二手房市场表现好于新房，成交量有所放大。政策效果逐步显现，房地产市场正在经历筑底过程。后续需关注政策进一步加码的可能性和销售数据的边际变化。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">招商蛇口前5月销售额同比增15%，布局核心城市成效显著</div>
+      <div class="news-summary">招商蛇口公布前5个月销售数据，累计签约销售额<em>1,580亿元</em>，同比增长15%，在头部房企中表现优异。公司坚持"核心城市+核心地段"布局策略，项目去化率和利润率均优于行业平均水平。央企房企凭借融资、品牌、资源等优势，在行业调整期市场份额持续提升。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">保交楼持续推进，今年已交付超180万套</div>
+      <div class="news-summary">住建部数据显示，今年以来全国已交付保交楼项目超180万套，完成年度目标的70%以上。各地扎实推进保交楼工作，通过专项借款、配套融资、企业自救、司法重整等多种方式化解项目风险。购房者信心逐步恢复，延期交付项目数量持续减少。保交楼是房地产市场平稳运行的重要基础。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">住房租赁市场发展加快，保障性租赁住房供给增加</div>
+      <div class="news-summary">住房租赁市场加快发展，全国已筹集保障性租赁住房超800万套（间），有效缓解了新市民、青年人的住房困难问题。长租公寓市场规范化发展，专业化、规模化住房租赁企业增多。住房租赁市场的发展有助于完善住房供应体系，建立多主体供给、多渠道保障、租购并举的住房制度。</div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">5月工业企业利润数据前瞻，营收利润率有望持续修复</div>
+      <div class="news-summary">5月工业企业利润数据将于近期公布，市场预期工业企业利润同比降幅继续收窄，营收利润率有望持续修复。PPI同比降幅收窄、需求边际改善、降本增效持续推进是利润改善的主要驱动。上游原材料行业利润承压，中游制造业和下游消费电子、汽车等行业利润改善较好。工业企业盈利修复趋势确立。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">格力电器工业机器人业务增长超60%，多元化战略见效</div>
+      <div class="news-summary">格力电器披露，其工业机器人业务今年以来收入同比增长超<em>60%</em>，成为新的增长亮点。格力在数控机床、工业机器人、智能装备等领域持续投入，高端制造业务占比不断提升。家电企业多元化发展趋势明显，美的、格力、海尔等纷纷布局机器人、新能源汽车零部件、医疗设备等新赛道。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">前5月中国造船完工量同比增18%，手持订单超8,000万载重吨</div>
+      <div class="news-summary">中国船舶工业行业协会数据显示，2026年前5个月全国造船完工量<em>1,850万载重吨</em>，同比增长18%；新接订单量2,480万载重吨，同比增长12%；手持订单量8,200万载重吨，同比增长15%。中国造船三大指标继续保持全球领先，市场份额超50%。高端船舶建造能力持续提升，LNG船、大型集装箱船、汽车运输船等高端船型订单增长迅速。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">三一重工海外收入占比首超50%，国际化进入新阶段</div>
+      <div class="news-summary">三一重工披露，2026年一季度海外收入占比首次超过<em>50%</em>，标志着公司国际化进入新阶段。公司在东南亚、中东、非洲、拉美等新兴市场增长迅速，欧美高端市场也持续突破。中国工程机械企业全球化布局成效显著，出口成为重要增长极。徐工、中联、柳工等也在加速国际化进程。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">新能源装备制造业高速增长，前5月产值增超40%</div>
+      <div class="news-summary">工信部数据显示，2026年前5个月新能源装备制造业产值同比增长超<em>40%</em>，增速在所有工业行业中位居前列。光伏设备、风电设备、储能设备、锂电设备等细分领域均实现高速增长。新能源装备是中国制造的优势产业，全球竞争力持续增强，为绿色低碳转型提供了坚实的装备支撑。</div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">+32%</div>
+          <div class="data-label">前5月房企发债增速</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">+18%</div>
+          <div class="data-label">前5月造船完工量增速</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">50%+</div>
+          <div class="data-label">三一重工海外收入占比</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">+40%</div>
+          <div class="data-label">新能源装备产值增速</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">高考倒计时3天，各地做好考前准备确保平稳顺利</div>
+      <div class="news-summary">距离2026年全国高考仅剩3天，各地考前准备工作进入冲刺阶段。考点布置、考务培训、安全检查、应急演练等有序推进。各地教育部门联合公安、交通、卫生、市场监管等部门，为考生创造良好的考试环境。今年全国高考报名人数1,391万，创历史新高。教育部提醒考生和家长做好考前准备，诚信考试。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策动态</span>
+      <div class="news-title">教育部印发通知，部署做好2026年高校招生工作</div>
+      <div class="news-summary">教育部印发通知，部署做好2026年普通高校招生工作。通知要求，严格执行招生政策，规范招生管理，深入实施"阳光工程"，确保招生公平公正。继续推进高考综合改革，完善多元录取机制。加强招生信息公开，接受社会监督。严厉打击招生诈骗和违规招生行为，维护考生合法权益。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">全国共有普通高校3,072所，毛入学率达62%</div>
+      <div class="news-summary">教育部发布《2025年全国教育事业发展统计公报》，全国共有普通高校<em>3,072所</em>，其中本科院校1,280所，高职（专科）院校1,792所。各种形式的高等教育在学总规模4,850万人，高等教育毛入学率62%。高等教育进入普及化后期发展阶段，从规模扩张转向质量提升。研究生教育规模稳步扩大，在学研究生超400万人。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">好未来转型成效显著，科技服务业务收入占比超60%</div>
+      <div class="news-summary">好未来披露最新业务数据，科技服务业务收入占比已超过<em>60%</em>，转型成效显著。公司业务涵盖智能学习硬件、教育AI解决方案、ToB科技服务等多个领域。教培机构转型发展加速，从学科培训转向素质教育、职业教育、教育科技等新赛道。AI技术推动教育产业变革，催生大量新机会。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">职业教育产教融合深化，100个产教融合共同体获批</div>
+      <div class="news-summary">教育部公布首批100个国家级产教融合共同体名单，覆盖智能制造、新能源、集成电路、生物医药等重点产业领域。每个共同体由龙头企业牵头，联合高校、职业院校、科研机构等共同组建。产教融合有助于提升人才培养质量，促进教育链、人才链与产业链、创新链有机衔接。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">暑期培训市场升温，素质教育成主流</div>
+      <div class="news-summary">暑假临近，培训市场逐步升温。与往年不同，素质教育成为培训市场主流，人工智能、编程、机器人、科创、艺术、体育等品类最受欢迎。学科类培训大幅减少，教育生态持续优化。家长教育观念转变，更加注重孩子综合素质培养和身心健康发展。</div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">暑期档电影市场开启，30余部大片云集有望再创纪录</div>
+      <div class="news-summary">2026年暑期档正式开启，已有30余部影片定档6-8月，涵盖科幻、喜剧、动画、悬疑、动作等多种类型。国产大片阵容强大，多部重量级影片将在暑期档上映。进口片方面，好莱坞大片也将同步引进。机构预测今年暑期档票房有望突破<em>200亿元</em>，再创历史新高。电影市场持续复苏，优质内容供给是核心驱动力。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">端午档票房16.8亿收官，同比增长22%</div>
+      <div class="news-summary">国家电影局数据显示，2026年端午档电影总票房达<em>16.8亿元</em>，同比增长22%，观影人次4,200万。国产影片表现亮眼，包揽票房前三名。一部国产悬疑片以6.5亿元夺得档期冠军。端午档为暑期档打响头炮，市场对后续暑期档表现充满期待。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">腾讯视频会员数突破2亿，长视频行业格局优化</div>
+      <div class="news-summary">腾讯视频宣布，订阅会员数已突破<em>2亿</em>，创历史新高。优质内容供给是会员增长的核心驱动力。爱奇艺会员数也达1.5亿。长视频行业竞争格局优化，头部平台盈利模式跑通，亏损大幅收窄。内容为王时代，优质IP和自制内容能力是核心竞争力。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">网易游戏收入同比增25%，新品表现亮眼</div>
+      <div class="news-summary">网易发布2026年一季度财报，游戏业务收入同比增长<em>25%</em>，增速超市场预期。多款新品表现亮眼，推动收入增长。网易游戏坚持精品化战略，研发投入持续加大，产品储备丰富。国内游戏市场回暖，出海业务也保持快速增长。游戏行业进入高质量发展新阶段。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">AIGC赋能内容产业，视频生成技术快速迭代</div>
+      <div class="news-summary">AI视频生成技术快速迭代，文生视频、图生视频质量大幅提升，已可生成数分钟的高清视频内容。AIGC正在深刻改变内容产业的生产方式，大幅提升创作效率，降低内容生产门槛。短视频、影视、广告、游戏等行业率先应用。AI内容监管也成为新课题，行业规范逐步建立。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">音乐节市场火爆，端午假期20余场音乐节举办</div>
+      <div class="news-summary">端午假期全国举办20余场音乐节，吸引观众超100万人次。音乐节市场持续火爆，年轻消费者热情高涨。草莓、迷笛、仙人掌等知名音乐节品牌影响力不断扩大。文旅融合趋势明显，音乐节成为拉动地方旅游消费的重要抓手。现场娱乐市场全面复苏，演唱会、话剧、音乐剧等演出形态蓬勃发展。</div>
+    </div>
+  </div>
+
+  <!-- 重点关注汇总 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 6月3日重大动态</div>
+    <div class="focus-item"><strong>【美联储政策】</strong>6月议息会议进入倒计时，市场预期维持利率不变但释放降息信号，9月降息概率75%</div>
+    <div class="focus-item"><strong>【全球市场】</strong>美元指数跌破103创三月新低，黄金突破2500美元/盎司创历史新高</div>
+    <div class="focus-item"><strong>【AI动态】</strong>Anthropic发布Claude 4系列，性能全面超越GPT-4o，大模型价格战持续升级</div>
+    <div class="focus-item"><strong>【新能源】</strong>光伏组件价格企稳回升至0.9元/W，前5月储能装机同比增90%超预期</div>
+    <div class="focus-item"><strong>【房地产】</strong>房企融资环境持续改善，前5月发债规模同比增32%</div>
+    <div class="focus-item"><strong>【消费】</strong>618第一波付尾款开启，全网GMV同比增30%创新高</div>
+    <div class="focus-item"><strong>【高考】</strong>倒计时3天，各地考前准备有序推进，今年报名人数1391万创新高</div>
+    <div class="focus-item"><strong>【电影市场】</strong>暑期档正式开启，30余部大片云集，票房有望突破200亿</div>
+  </div>
+
+  <!-- 市场观察与看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与美联储政策展望</h2>
+    <div class="outlook-sub">Market Outlook & Fed Policy Analysis</div>
+
+    <div class="outlook-item">
+      <strong>美联储政策转向渐近，全球流动性环境有望改善：</strong>随着美国通胀持续回落和就业市场放缓，美联储降息预期不断升温。美元走弱、黄金走强、非美货币升值都反映了这一预期。若美联储开启降息周期，全球流动性环境将得到改善，新兴市场资产有望受益。人民币汇率和A股市场也将获得支撑。
+    </div>
+    <div class="outlook-item">
+      <strong>大模型价格战升级，AI应用加速普及：</strong>Claude 4系列发布、各大模型厂商接连降价，AI大模型正快速从"技术竞赛"转向"性价比竞赛"。推理成本的快速下降将大幅降低AI应用门槛，推动AI技术在千行百业落地。AI投资主线有望从算力硬件向软件应用和垂直行业扩散。
+    </div>
+    <div class="outlook-item">
+      <strong>光伏储能板块景气度回升：</strong>光伏产业链价格企稳回升、储能装机数据超预期，新能源板块基本面边际改善。经历前期深度调整后，板块估值已处于历史低位，安全边际较高。随着下半年需求旺季来临，光伏储能板块有望迎来修复行情，关注具备技术优势和成本优势的龙头企业。
+    </div>
+    <div class="outlook-item">
+      <strong>房地产融资改善，行业分化延续：</strong>房企发债规模同比大增，融资环境持续改善。但主要是央国企受益，民营房企融资仍较困难，行业分化格局延续。政策底已现，市场底正在构筑。关注优质房企的投资机会，以及政策进一步加码的可能性。
+    </div>
+    <div class="outlook-item">
+      <strong>本周重点事件：</strong>①6月5日美国5月非农就业数据；②6月5日欧央行利率决议；③618大促第一波销售数据；④5月贸易数据公布；⑤6月上旬经济金融数据陆续发布。
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>

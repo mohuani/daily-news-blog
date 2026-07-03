@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年6月26日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  /* News Card */
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important {
+    background: #FEF3E2;
+    color: #B8792A;
+  }
+
+  .tag-policy {
+    background: #E8F0FE;
+    color: #3B6FB5;
+  }
+
+  .tag-data {
+    background: #E6F5F2;
+    color: #2D8B7A;
+  }
+
+  .tag-company {
+    background: #F3EEFA;
+    color: #6B5BA8;
+  }
+
+  .tag-breaking {
+    background: #FDE8E8;
+    color: #C44848;
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  /* Data Box */
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* Focus Box */
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  /* Outlook Section */
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  /* Color Themes for Sections */
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.177</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年6月26日 · 星期四 · 涵盖2026年6月25日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<!-- Summary -->
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>6月25日，英伟达股价创历史新高，黄仁勋称机器人是AI之后最大机遇</strong>——英伟达收涨4.3%重回全球市值第一，黄仁勋在股东大会上表示AI和机器人代表数万亿美元增长机会。英特尔汽车业务停摆裁员，谷歌推出Gemini CLI开源编程工具，DeepMind发布AlphaGenome基因分析AI。地缘政治方面，特朗普称将在三四人中选出下任美联储主席，北约宣布2035年前军费提至GDP 5%。特斯拉欧洲销量连续第五个月暴跌。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">英伟达股价创历史新高，黄仁勋称机器人是AI之后最大机遇</div>
+      <div class="news-summary">英伟达年度股东大会上，黄仁勋表示公司在多个领域拥有增长机会，而AI和机器人技术是最大的两个，代表数万亿美元级别的增长机会。他强调自动驾驶汽车将成为机器人技术的首个主要商业应用领域。受此提振，英伟达股价高开高走，收涨4.3%创历史新高，市值超越微软重回全球市值第一宝座。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">英特尔汽车业务停摆，裁减大部分员工</div>
+      <div class="news-summary">英特尔宣布关闭其汽车业务并裁减大部分员工。此前该部门一直活跃于自动驾驶汽车技术和"软件定义汽车"趋势。英特尔发言人称此次调整是为了重新聚焦核心客户和数据中心业务。这一决策有助于优化资源配置，但也反映出其在自动驾驶与车载芯片领域竞争失利的现实。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">谷歌推出开源AI编程工具Gemini CLI</div>
+      <div class="news-summary">谷歌宣布推出开源编程工具Gemini CLI，这是一款从终端本地运行的代理式AI工具，可将Gemini AI模型连接到本地代码库，允许开发者用自然语言请求解释代码、编写功能、调试或运行指令。此举有助于巩固谷歌在AI工具市场的领先地位，吸引更多开发者生态。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">DeepMind推出AlphaGenome，AI进军DNA分析领域</div>
+      <div class="news-summary">谷歌DeepMind推出AI模型AlphaGenome，旨在预测人类DNA中的基因变异如何影响调节基因的生物过程。该模型可分析多达100万个DNA碱基对，预测数千种与调控活动相关的分子特性，通过比较突变序列和未突变序列的预测来评估基因变异影响，有助于研究人员更好地理解癌症等疾病。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">Gartner预测：到2027年超40%的AI智能体项目将被淘汰</div>
+      <div class="news-summary">研究咨询公司Gartner报告称，到2027年底超过40%的AI智能体项目将被取消，原因是成本上升和商业价值不明确。目前大多数AI智能体项目处于早期实验或概念验证阶段，受炒作驱动且经常被误用。</div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">特朗普称将在三四人中选出下任美联储主席</div>
+      <div class="news-summary">特朗普表示会在三四个人之内选出下一任美联储主席。此前特朗普多次抨击美联储主席鲍威尔，称其"愚蠢""政治化"且降息"太迟"，并威胁解除其职务。鲍威尔表示特朗普作为总统没有解除其职务的合法权限，他将工作至任期结束。鲍威尔任期至2026年5月。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美股科技股分化：英伟达涨超4%创新高，特斯拉跌逾3%</div>
+      <div class="news-summary">纳指收涨0.31%，道指收跌0.25%，标普微跌。美股大型科技股多数上涨：英伟达涨超4%创新高，谷歌涨逾2%，苹果涨0.63%，微软涨0.44%，亚马逊跌0.37%，特斯拉跌逾3%。银行股集体上涨，航空股全线走低。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">黄仁勋套现英伟达近4490万美元</div>
+      <div class="news-summary">黄仁勋近期套现英伟达股票近4490万美元。随着AI热潮推动英伟达股价持续飙升，高管减持引发市场关注。分析指出，尽管部分高管减持，但英伟达基本面依然强劲，AI和机器人技术的长期增长前景未变。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">科技七巨头6月市值蒸发超2万亿美元</div>
+      <div class="news-summary">美股"科技七巨头"（苹果、微软、Alphabet、亚马逊、英伟达、Meta、特斯拉）6月市值蒸发超2万亿美元。微软损失最惨重，股价累计下跌20%；英伟达市值缩水约13%，苹果和亚马逊各回落约8%。资金正从科技巨头转向芯片企业。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">费城半导体指数上半年暴涨93%，芯片行业利润大幅走高</div>
+      <div class="news-summary">追踪美国芯片企业的费城半导体指数上半年暴涨93%，有望创下1999年以来最佳年度行情。受云计算巨头硬件需求激增、供给紧张拉动，芯片行业利润大幅走高。闪迪股价涨幅接近760%，美光、英特尔、西部数据等涨幅均超两倍。</div>
+    </div>
+
+    <!-- Data Box -->
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">93%</div>
+          <div class="data-label">费城半导体指数上半年涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2万亿</div>
+          <div class="data-label">科技七巨头6月市值蒸发（美元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">760%</div>
+          <div class="data-label">闪迪股价上半年涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">4.3%</div>
+          <div class="data-label">英伟达6月25日涨幅</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">黄仁勋：机器人技术是AI之后英伟达最大机遇</div>
+      <div class="news-summary">在英伟达年度股东大会上，黄仁勋强调机器人技术与AI并列成为公司最大的增长机遇，代表数万亿美元级别的市场机会。自动驾驶汽车将成为机器人技术的首个主要商业应用领域。这一表态表明英伟达正从单纯的AI计算平台向更广阔的物理智能领域扩展。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">谷歌Gemini CLI开源，AI编程工具竞争升温</div>
+      <div class="news-summary">谷歌推出Gemini CLI开源编程工具，允许开发者从终端本地运行代理式AI，连接本地代码库并通过自然语言请求完成代码解释、编写、调试等任务。此举与GitHub Copilot、Claude Code形成直接竞争，AI编程工具市场竞争日趋激烈。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">DeepMind AlphaGenome发布，AI助力基因研究</div>
+      <div class="news-summary">DeepMind推出AlphaGenome AI模型，可分析100万个DNA碱基对，预测数千种分子特性，评估基因变异影响。该工具有望加速癌症等疾病的研究进程，展示了AI在生物科技领域的巨大潜力。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">沃尔玛、优步等企业缩减AI使用规模，AI业务收入承压</div>
+      <div class="news-summary">沃尔玛、优步等最早大规模应用AI的企业在收到高额账单后纷纷缩减AI使用规模、调整采购方案。投资者担忧客户转向低价模型、压缩预算将影响大型科技企业的AI业务收入。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">存储芯片紧缺局面预计持续至2028年</div>
+      <div class="news-summary">业内预计存储芯片紧缺局面将持续至2028年。Meta、微软等企业已发出预警，存储芯片价格暴涨叠加其他元器件涨价，将大幅推高数据中心建设成本。芯片与存储是今年标普500指数中表现最好的板块。</div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">特斯拉欧洲销量连续第五个月暴跌，市场份额降至1.2%</div>
+      <div class="news-summary">欧洲汽车制造商协会数据显示，5月特斯拉在欧洲汽车销量降至13,863辆，同比下降27.9%，市场份额从2024年5月的1.8%降至1.2%。这是特斯拉在欧洲销量连续第五个月下滑，中国品牌在欧洲市场的竞争力持续提升是重要因素。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">英特尔退出汽车业务，自动驾驶领域竞争格局生变</div>
+      <div class="news-summary">英特尔关闭汽车业务并裁员，标志着其在自动驾驶与车载芯片领域的退出。此前英特尔通过收购Mobileye进入汽车领域，但面对英伟达、高通等竞争对手的强势布局，最终选择重新聚焦数据中心核心业务。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">广汽集团计划打造万台级人形机器人产线</div>
+      <div class="news-summary">广汽集团宣布计划打造万台级人形机器人产线，进军机器人领域。与此同时，贾跃亭也宣布进军工业级机器人，首发三款机型可现货交付。国内人形机器人产业化进程加速。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">小鹏机器人负责人米良川离职</div>
+      <div class="news-summary">消息称小鹏机器人负责人米良川已于近期离职。小鹏汽车在机器人领域的战略调整受到关注，公司此前推出了多款人形机器人原型机。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">估值200亿，中国最像特斯拉机器人的公司浮出水面</div>
+      <div class="news-summary">市场传言一家估值达200亿元的中国机器人公司被认为最接近特斯拉Optimus的技术路线，引发资本市场关注。人形机器人赛道持续火热。</div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美股航空股全线走低，波音跌近1%</div>
+      <div class="news-summary">美股航空股全线走低，波音跌近1%，美国航空跌超2%，达美航空跌逾2%，西南航空跌超1%，美联航跌近3%。市场担忧能源成本上升和经济前景影响航空出行需求。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">沃尔玛缩减AI使用规模，成本压力凸显</div>
+      <div class="news-summary">沃尔玛在收到高额AI账单后缩减AI使用规模、调整采购方案。作为最早大规模应用AI的企业之一，沃尔玛的调整反映出AI应用成本仍较高，企业正在寻求更经济的解决方案。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">优步调整AI采购方案，转向更经济的模型</div>
+      <div class="news-summary">优步同样在调整AI采购策略，转向使用更经济的AI模型。随着AI应用从实验阶段进入规模化商用，成本控制成为企业关注的核心问题。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">纳指标普创历史新高，科技股表现分化</div>
+      <div class="news-summary">纳指、标普创历史新高，但科技股表现分化明显。英伟达等芯片股持续走强，而部分大型科技公司因AI投入巨大且回报尚不明确而遭遇抛售压力。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">黄金连跌两周破3300美元，避险需求减弱</div>
+      <div class="news-summary">黄金连跌两周，跌破3300美元/盎司关口。市场风险偏好升温、美元走弱预期以及实际利率变动等因素共同影响黄金价格。</div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">北约宣布2035年前军费开支提至GDP 5%</div>
+      <div class="news-summary">北约成员国领导人就未来军费支出目标达成一致，决定在2035年前将年度国防开支提高至国内生产总值的5%，其中3.5%用于核心军费支出，1.5%用于关键基础设施防护和网络安全。特朗普声称美国无须遵守该目标，但要求其他盟国履行义务。西班牙仅承诺提升至2.1%，部分成员国认为短期内大幅增加军费不现实。</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">英特尔战略收缩，关闭汽车业务聚焦数据中心</div>
+      <div class="news-summary">英特尔关闭汽车业务并裁员，重新聚焦核心客户和数据中心业务。这一战略调整有助于优化资源配置，提升核心业务竞争力，但也意味着英特尔彻底退出自动驾驶和车载芯片市场。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">芯片行业产能紧张，涨价压力持续传导</div>
+      <div class="news-summary">存储芯片价格暴涨，叠加其他元器件涨价，大幅推高数据中心建设成本。Meta、微软等企业已发出预警，芯片紧缺局面预计持续至2028年。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">费城半导体指数涨0.95%，芯片股多数上涨</div>
+      <div class="news-summary">费城半导体指数涨0.95%，超威半导体涨逾3%，微芯科技涨超1%，应用材料涨逾1%，台积电涨超1%。英特尔跌逾1%，格芯跌逾1%。</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">全球芯片企业利润大幅走高，存储芯片领涨</div>
+      <div class="news-summary">受云计算巨头硬件需求激增、供给紧张拉动，全球芯片企业利润大幅走高。闪迪股价涨幅接近760%，美光、西部数据、希捷科技等涨幅均超两倍。</div>
+    </div>
+  </div>
+
+  <!-- 重点关注汇总 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注 · 6月25日重大动态</div>
+    <div class="focus-item"><strong>【AI龙头】</strong>英伟达股价创历史新高，黄仁勋称机器人是AI之后最大机遇</div>
+    <div class="focus-item"><strong>【战略调整】</strong>英特尔汽车业务停摆裁员，退出自动驾驶与车载芯片市场</div>
+    <div class="focus-item"><strong>【AI工具】</strong>谷歌推出Gemini CLI开源编程工具，AI编程竞争升温</div>
+    <div class="focus-item"><strong>【生物科技】</strong>DeepMind发布AlphaGenome，AI进军DNA分析领域</div>
+    <div class="focus-item"><strong>【金融政策】</strong>特朗普称将在三四人中选出下任美联储主席</div>
+    <div class="focus-item"><strong>【地缘政治】</strong>北约宣布2035年前军费开支提至GDP 5%</div>
+    <div class="focus-item"><strong>【汽车市场】</strong>特斯拉欧洲销量连续第五个月暴跌，市场份额降至1.2%</div>
+    <div class="focus-item"><strong>【芯片行业】</strong>科技七巨头市值蒸发2万亿，资金转向芯片企业</div>
+    <div class="focus-item"><strong>【芯片行业】</strong>费城半导体指数上半年暴涨93%，创1999年以来最佳行情</div>
+  </div>
+
+  <!-- 市场观察与看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与下周展望</h2>
+    <div class="outlook-sub">Market Outlook & Next Week Watchpoints</div>
+
+    <div class="outlook-item">
+      <strong>科技股板块轮动加剧：</strong>资金正从"科技七巨头"转向上游芯片企业，反映出市场对AI基础设施投资的信心超过对AI应用层的预期。芯片与存储成为今年表现最好的板块，这一趋势在下半年可能继续延续。
+    </div>
+    <div class="outlook-item">
+      <strong>机器人成为AI之后的新风口：</strong>黄仁勋将机器人技术与AI并列视为英伟达最大增长机遇，广汽集团、贾跃亭等国内企业也纷纷加码机器人领域。人形机器人正从实验室走向产业化，预计未来几年将成为重要的投资主题。
+    </div>
+    <div class="outlook-item">
+      <strong>美联储人事变动引关注：</strong>特朗普关于下一任美联储主席的表态将持续影响市场预期。鲍威尔任期即将结束，美联储政策走向存在不确定性，需密切关注人事任命进展。
+    </div>
+    <div class="outlook-item">
+      <strong>特斯拉欧洲市场承压：</strong>中国品牌在欧洲市场竞争力提升，特斯拉连续五个月销量下滑。欧洲市场格局正在发生深刻变化，中国新能源汽车品牌的国际化进程值得关注。
+    </div>
+    <div class="outlook-item">
+      <strong>下周重点事件：</strong>①科技巨头二季度财报季开启；②美联储6月会议纪要；③欧盟与美国贸易谈判进展；④英伟达、微软等AI龙头财报；⑤黄金价格走势及避险情绪变化。
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 结构化呈现</div>
+    <a href="../index.html" class="back-link">返回首页</a>
+  </div>
+</footer>
+
+</body>
+</html>
