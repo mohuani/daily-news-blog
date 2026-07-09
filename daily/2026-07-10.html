@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年7月10日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important { background: #FEF3E2; color: #B8792A; }
+  .tag-policy { background: #E8F0FE; color: #3B6FB5; }
+  .tag-data { background: #E6F5F2; color: #2D8B7A; }
+  .tag-company { background: #F3EEFA; color: #6B5BA8; }
+  .tag-breaking { background: #FDE8E8; color: #C44848; }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .news-source {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .news-source a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .news-source a:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 40px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.191</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年7月10日 · 星期五 · 涵盖2026年7月9日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>7月9日，A股午后大反转，科创50指数暴涨超8%创历史第四大单日涨幅，半导体芯片股全线爆发，中芯国际总市值超越贵州茅台。</strong>智能体互联网领域迎来重磅突破：中国信通院启动智能体互联网关键系统技术验证工程，覆盖智能体全生命周期的系列国家标准正式发布。金融市场方面，长鑫科技披露科创板招股书，募资295亿元创年内最大IPO；美伊冲突升级导致国际油价飙涨，布伦特原油涨5.43%。新能源汽车领域，比亚迪第1700万辆新能源车下线，蔚来ES8大五座版上市，小米SkyNomad系列定名"小米澎程"。消费零售政策加码，商务部等9部门印发零售业创新发展意见。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">智能体互联网关键系统技术验证工程启动，三大核心系统率先突破</div>
+      <div class="news-summary">7月8日，中国互联网协会、中国信通院联合主办的"智能体互联网论坛"在北京召开，会上正式启动智能体互联网关键系统技术验证工程。本次验证聚焦三大核心系统：智能体网络空间观测系统、智能体互联网执行系统、智能体操作系统。首批24个符合《可信互联网智能体能力评估规范》的智能体入选登记清单。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660535549874291215/" target="_blank" rel="noopener noreferrer">人民财讯</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">工信部加强新一代通信网和算力网规划建设，构建空天地一体信息网络</div>
+      <div class="news-summary">工信部总工程师钟志红在2026中国互联网大会上表示，要加强新一代通信网和算力网规划建设，构建空天地一体信息网络。提出坚持战略引领、创新驱动、融合赋能、开放合作四大方向，深化"人工智能+"和"数据要素x"应用探索，拓展互联网服务新模式新业态。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660431921532371498/" target="_blank" rel="noopener noreferrer">中新网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">覆盖智能体全生命周期系列国家标准发布，七项规范补齐技术空白</div>
+      <div class="news-summary">《人工智能 智能体互联》国家标准化指导性技术文件正式发布，作为国内首套覆盖智能体全生命周期的完整标准体系，七部分规范形成闭环技术框架，补齐智能体身份、协同、工具调用全链条标准空白，为跨平台跨行业智能体互联互通提供统一技术依据。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660479772711076378/" target="_blank" rel="noopener noreferrer">人民网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">华为联合产业伙伴启动OPEN NPO项目，共建国内首个近封装光学光互连MSA</div>
+      <div class="news-summary">华为计算联合产业伙伴发起OPEN NPO项目，旨在共建国内首个近封装光学（NPO）光互连MSA标准。该项目由全球计算联盟指导，Open AI Infra社区参与，将推动AI服务器光互连技术标准化，降低芯片传输延迟与功耗，支撑算力基础设施升级。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660493204755661358/" target="_blank" rel="noopener noreferrer">财闻联播</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">众智FlagOS开源算力底座更新适配包，兼容国产昇腾平头哥全系列芯片</div>
+      <div class="news-summary">2026中国互联网大会启动"燎原计划"，众智FlagOS开源算力底座发布更新适配包，全面兼容国产昇腾、平头哥全系列芯片，统一国产大模型算力调度标准，解决多品牌国产芯片适配难、调度低效问题，开源框架免费向中小企业开放。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7659586250541695540/" target="_blank" rel="noopener noreferrer">科技新闻速览</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">24个</div>
+          <div class="data-label">首批可信智能体清单</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">7项</div>
+          <div class="data-label">智能体互联国家标准</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">51个</div>
+          <div class="data-label">智能体互联网首批评估项目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">35家</div>
+          <div class="data-label">智能体产业发展工作组单位</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">A股午后大反转，科创50暴涨8.41%创历史第四大单日涨幅，中芯国际总市值超越贵州茅台</div>
+      <div class="news-summary">7月9日A股探底回升，截至收盘沪指涨<em>1.65%</em>收复4000点，深成指涨<em>3.07%</em>，创业板指涨<em>4.49%</em>，科创50暴涨<em>8.41%</em>。沪深两市成交额2.91万亿元放量3502亿。半导体芯片股全线爆发，中芯国际A股总市值超越贵州茅台，兆易创新、长电科技等多股涨停。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660458253633241651/" target="_blank" rel="noopener noreferrer">财联社</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">长鑫科技披露科创板招股书，7月16日申购，募资295亿元创年内最大IPO</div>
+      <div class="news-summary">国内DRAM存储龙头长鑫科技正式披露科创板上市招股意向书，将于7月16日进行新股申购，计划募集资金<em>295亿元</em>，规模创下2026年以来A股市场最大IPO纪录。募资将用于12英寸存储晶圆扩产、HBM配套存储芯片研发，加速存储产业链自主可控。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660486652783034931/" target="_blank" rel="noopener noreferrer">芝麻AI速递</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">央行明确下阶段货币政策思路，强调精准发力促经济</div>
+      <div class="news-summary">中国人民银行货币政策委员会2026年第二季度例会提出，继续实施适度宽松的货币政策，加大逆周期和跨周期调节力度，保持流动性充裕，促进社会融资规模、货币供应量与经济增长和物价目标匹配，加强对重点领域的金融支持。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660486652783034931/" target="_blank" rel="noopener noreferrer">芝麻AI速递</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美伊冲突升级，国际油价飙涨，布伦特原油涨5.43%</div>
+      <div class="news-summary">特朗普宣布美伊停火协议"已经结束"，美军连续两天对伊朗发动打击。受此刺激，7月9日布伦特原油期货上涨<em>5.43%</em>收于78.19美元/桶，WTI原油期货上涨<em>4.37%</em>收于73.52美元/桶。美股道指跌<em>1.09%</em>。高盛警告霍尔木兹海峡航运受阻风险。</div>
+      <div class="news-source">来源：<a href="https://cj.sina.cn/articles/view/7879923015/1d5ae154701901eegk" target="_blank" rel="noopener noreferrer">新浪财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">韩国股市重挫进入技术性熊市，高盛建议转投中国AI产业链</div>
+      <div class="news-summary">韩国综合股价指数（KOSPI）收盘下跌超5%，较6月高点累计回落超20%进入技术性熊市。高盛主题研究团队发布报告，建议客户将仓位从韩国AI交易切换至"中国AI价值链"，认为中国AI估值偏低，供应链环节具备竞争优势。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660486652783034931/" target="_blank" rel="noopener noreferrer">芝麻AI速递</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">+8.41%</div>
+          <div class="data-label">科创50单日涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">295亿</div>
+          <div class="data-label">长鑫科技募资额（元）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">+5.43%</div>
+          <div class="data-label">布伦特原油涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2.91万亿</div>
+          <div class="data-label">A股单日成交额</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">OpenAI发布GPT-Live支持全双工语音对话，可"边听边说"实时交互</div>
+      <div class="news-summary">OpenAI低调推出GPT-Live，这是一个真正的"全双工"语音模型，可在说话的同时收听并实时对用户的打断做出反应，无需等待回合结束。该功能已开始向ChatGPT各级订阅用户分阶段推送，标志着AI交互方式的重大突破。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660518266812678690/" target="_blank" rel="noopener noreferrer">AI日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">Meta计划9月生产IRIS AI芯片，明年算力翻倍至14吉瓦</div>
+      <div class="news-summary">Meta计划于九月份开始生产"IRIS"人工智能芯片，计划明年将计算能力翻倍至<em>14吉瓦</em>。与此同时，Meta在加拿大阿尔伯塔省斯特金县动工兴建首个加拿大数据中心，总投资达130亿加元（约91.7亿美元），规模高达1GW。</div>
+      <div class="news-source">来源：<a href="https://www.cls.cn/detail/2421964" target="_blank" rel="noopener noreferrer">财联社</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">人社部联合四部门印发《人工智能+人社实施意见》，搭建行业专属AI数据集</div>
+      <div class="news-summary">人力资源社会保障部等四部门联合印发《关于加快推进"人工智能＋人社"应用发展的实施意见》，明确四大建设方向：通用AI人社应用平台、人社专属高质量语料库、行业专用AI算法模型、完整行业AI标准体系，面向社保办理、就业匹配等场景落地智能自动化系统。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7659586250541695540/" target="_blank" rel="noopener noreferrer">科技新闻速览</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">腾讯引入OpenAI前顶尖视觉研究员田永龙，加码VLM多模态视觉大模型研发</div>
+      <div class="news-summary">OpenAI视觉方向核心研究员田永龙正式入职腾讯大模型部门，主攻图文理解、工业视觉检测、车载感知多模态算法，补足腾讯多模态AI底层技术短板。这是腾讯继姚顺雨之后再次挖角OpenAI核心人才。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7659586250541695540/" target="_blank" rel="noopener noreferrer">科技新闻速览</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">索尼AI发布递归自我改进研究，AI系统已能自主设计后继者雏形</div>
+      <div class="news-summary">索尼AI实验室在arXiv上发表关于"递归自我改进（RSI）"的研究，展示其最新AI系统已具备自主设计并优化下一代算法架构的能力，提供了更多实证数据支持AI自我进化的可行性。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660518266812678690/" target="_blank" rel="noopener noreferrer">AI日报</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">14吉瓦</div>
+          <div class="data-label">Meta明年算力目标</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">91.7亿</div>
+          <div class="data-label">Meta加拿大投资（美元）</div>
+        </div>
+        <div class="data-value">30%</div>
+        <div class="data-label">美国企业调用中国模型词元占比</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">🏥</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">中国新版国家基本药物目录发布，创新药首次纳入遴选调整范围</div>
+      <div class="news-summary">国家卫健委发布2026年版《国家基本药物目录》，共收录药品<em>794种</em>，其中化学药品和生物制品476种，中成药318种。新版目录首次将创新药纳入遴选调整范围，调入国产Ⅰ类新药4种，为今后更多创新药进入基药目录探索路径，目录自9月1日起施行。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660496272297607695/" target="_blank" rel="noopener noreferrer">中新社</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">国家医保局通报集采进展：11批490种药品集采，强调"新药不集采"</div>
+      <div class="news-summary">国家医保局召开2026年上半年例行新闻发布会，医药价格和招标采购司司长王小宁强调"新药不集采，集采非新药"，从国家层面组织实施了<em>11批490种</em>药品集采，以及<em>6批9大类142种</em>耗材集采，未来将继续规范化、制度化、常态化推进。</div>
+      <div class="news-source">来源：<a href="https://m.weibo.cn/detail/5318877526364489" target="_blank" rel="noopener noreferrer">南方周末</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">CDC确认12人感染E.coli，与冷冻有机蓝莓相关</div>
+      <div class="news-summary">美国CDC发布食品安全警报，确认<em>12人</em>感染E.coli与冷冻有机蓝莓相关，其中4人住院，11例来自佛罗里达，1例来自乔治亚。病例年龄从2岁到88岁，发病日期从5月11日至6月5日。</div>
+      <div class="news-source">来源：<a href="https://kffhealthnews.org/morning-breakout/first-edition-thursday-july-9-2026/" target="_blank" rel="noopener noreferrer">KFF Health News</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">密歇根Cyclosporiasis病例近1000例，为往年平均20倍</div>
+      <div class="news-summary">密歇根州Cyclosporiasis病例已达<em>992例</em>，至少36人住院，为往年平均约50例的<em>20倍</em>。这种由寄生虫引起的肠道疾病在该州罕见爆发。</div>
+      <div class="news-source">来源：<a href="https://kffhealthnews.org/morning-briefing/thursday-july-9-2026/" target="_blank" rel="noopener noreferrer">KFF Health News</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">美卫生部长RFK Jr.提议创建新冠疫苗伤害表，简化索赔流程</div>
+      <div class="news-summary">美国卫生部长Robert F. Kennedy Jr.宣布计划创建一份被认为由新冠疫苗引起的伤害清单，旨在简化索赔流程，预计于11月提出。此举是疫苗赔偿改革的一部分。</div>
+      <div class="news-source">来源：<a href="https://kffhealthnews.org/morning-briefing/thursday-july-9-2026/" target="_blank" rel="noopener noreferrer">KFF Health News</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">794种</div>
+          <div class="data-label">新版基药目录药品数</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">490种</div>
+          <div class="data-label">国家药品集采总数</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">992例</div>
+          <div class="data-label">密歇根Cyclosporiasis病例</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">12人</div>
+          <div class="data-label">E.coli感染人数</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">比亚迪第1700万辆新能源汽车下线，全球首家达成该里程碑</div>
+      <div class="news-summary">7月8日，比亚迪第<em>1700万辆</em>新能源汽车在西安工厂正式下线，成为全球首个达成该里程碑的车企。全新大型旗舰家庭轿车海豹08成为第1700万辆下线车型。从第1600万辆到1700万辆，比亚迪仅用时不到<em>3个月</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660534739341689384/" target="_blank" rel="noopener noreferrer">建约日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">小米汽车SkyNomad系列定名"小米澎程"，首款车型为三排座大空间SUV</div>
+      <div class="news-summary">小米汽车官方宣布，旗下全新产品系列SkyNomad正式定名"小米澎程"。首款车型为三排座大空间SUV，支持一排座椅180°电动旋转和二排座椅零重力模式，配备冷暖冰箱和后舱吸顶屏，预计年内正式上市。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660534739341689384/" target="_blank" rel="noopener noreferrer">建约日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">蔚来ES8大五座版上市，整车售价38.28万元起</div>
+      <div class="news-summary">蔚来ES8大五座版正式上市，行政豪华版整车购买<em>38.28万元</em>，电池租用方案27.48万元；行政签名版整车购买<em>42.28万元</em>。搭载NT. cedar雪松和神玑NX9031芯片，CLTC续航最长达<em>655km</em>，支持点到点全域领航辅助。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660534739341689384/" target="_blank" rel="noopener noreferrer">建约日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">上半年新能源汽车产销量双超700万辆</div>
+      <div class="news-summary">2026年上半年新能源汽车产销量双双突破<em>700万辆</em>，延续强劲增长态势。海南国际汽车博览会暨第八届海南国际新能源汽车展在海口启幕，集结国内外主流汽车品牌，推出多重购车补贴。</div>
+      <div class="news-source">来源：<a href="http://tv.people.com.cn/n1/2026/0709/c61600-40757081.html" target="_blank" rel="noopener noreferrer">人民网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">东风汽车计划年底推出100辆固态电池示范运行汽车</div>
+      <div class="news-summary">东风汽车集团研发总院新型电池运营经理张微表示，东风目标今年年底推出<em>100辆</em>固态电池示范运行汽车，2030年左右实现固态电池配套车辆小规模量产，2035年左右达成大规模量产及普及应用。东风已于2026年1月完成<em>350Wh/kg</em>固态电池装车冬测。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660451003044594217/" target="_blank" rel="noopener noreferrer">每日快讯</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">1700万辆</div>
+          <div class="data-label">比亚迪新能源车累计下线</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">700万辆+</div>
+          <div class="data-label">上半年新能源汽车产销量</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">38.28万</div>
+          <div class="data-label">蔚来ES8大五座版起售价</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">350Wh/kg</div>
+          <div class="data-label">东风固态电池能量密度</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">商务部等9部门印发《关于加快零售业创新发展的意见》，力争2030年形成现代零售体系</div>
+      <div class="news-summary">商务部等9部门联合印发《关于加快零售业创新发展的意见》，提出工作新目标：力争到2030年，基本形成布局合理、供给优质、业态多元、智慧便捷、竞争有序的现代零售体系，打造一批带动性强的零售场景，推出一批融合创新的业态模式，培育一批具有国际竞争力的零售企业。</div>
+      <div class="news-source">来源：<a href="http://news.cnr.cn/native/gd/20260709/t20260709_527700333.shtml" target="_blank" rel="noopener noreferrer">新华社</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">商务部：将打通线上线下零售渠道、商品、服务和数据，推动一视同仁监管</div>
+      <div class="news-summary">商务部流通发展司司长李佳路表示，鼓励平台对中小零售经营主体技术赋能、资源共享，实现进销存、物流配送的全链条数字化，打通线上线下渠道、商品、服务和数据；促进公平竞争、加强价格治理、推进监管统一，推动对线上线下零售一视同仁。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660494093272875566/" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">商务部："三新"试点首批86亿元支持资金陆续拨付，有望带动超3000亿元投资</div>
+      <div class="news-summary">商务部服贸司副司长左晓玻表示，50个消费新业态新模式新场景试点城市已收集相关项目超<em>6000个</em>，有望带动社会投资超过<em>3000亿元</em>，首批<em>86亿元</em>支持资金正陆续拨付，消费带动作用明显。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660482993760322091/" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">上半年海南离岛免税购物金额近200亿元，同比增长18.8%</div>
+      <div class="news-summary">海口海关发布数据，今年前6月，海关累计监管离岛免税购物金额<em>199.2亿元</em>、购物件数<em>1596.6万件</em>、购物人数<em>279.3万人次</em>，同比分别增长<em>18.8%、7.3%、12.6%</em>。"文旅赛事+会展节庆+免税购物"融合模式持续拓宽客源。</div>
+      <div class="news-source">来源：<a href="http://www.xinhuanet.com/20260708/66b8009136764f3cbf6902c684085120/c.html" target="_blank" rel="noopener noreferrer">新华网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">商务部：将进一步加强支持实体零售，夯实活跃线下消费根基</div>
+      <div class="news-summary">商务部表示将推动零售业创新提升工程，与现代商贸流通体系建设试点、消费新业态新模式新场景试点、一刻钟便民生活圈建设等工作有机结合，支持金融机构出台符合零售业特点的行业授信政策，允许商业设施改造项目土地用途兼容、建筑功能混合。</div>
+      <div class="news-source">来源：<a href="https://content-static.cctvnews.cctv.com/snow-book/index.html?item_id=7193264825862268431" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">86亿</div>
+          <div class="data-label">三新试点首批支持资金</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">6000+</div>
+          <div class="data-label">三新试点申报项目数</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">199.2亿</div>
+          <div class="data-label">上半年海南离岛免税额</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">3000亿+</div>
+          <div class="data-label">三新试点带动投资规模</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">中指院：预计新房市场在"十五五"中期逐步走出底部，下半年筑底延续分化加剧</div>
+      <div class="news-summary">中指研究院发布《2026上半年中国房地产市场总结&下半年趋势展望》，认为上半年市场整体延续筑底态势，二季度以来边际修复。预计下半年市场筑底延续、分化加剧，全年新建商品房销售面积约<em>8.1亿平方米</em>，同比下降<em>7.8%</em>，新房市场在"十五五"中期逐步走出底部。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660481265757422107/" target="_blank" rel="noopener noreferrer">第一财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">一线城市住房租赁市场企稳，上半年租金累计涨0.6%</div>
+      <div class="news-summary">《2026上半年中国住房租赁市场总结与展望》报告显示，上半年50城住宅平均租金累计下跌<em>0.56%</em>，跌幅较去年同期收窄0.83个百分点。一线城市住房租赁市场率先企稳，上半年租金累计上涨<em>0.60%</em>，上海、深圳、北京住房租金已连续4个月环比上涨。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660450991703212595/" target="_blank" rel="noopener noreferrer">中新网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">上半年重点城市二手房成交96万套，同比增长6%</div>
+      <div class="news-summary">报告显示，上半年重点30城二手住宅成交<em>96万套</em>，同比增长<em>6%</em>，二季度连续三个月同比增幅超10%。京沪上半年二手房成交量均创近五年新高；深圳4月底优化楼市政策后，5-6月连续两个月同比增长超10%。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660475634291966464/" target="_blank" rel="noopener noreferrer">上证报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">万科境内公开债有序化解，"23万科MTN004"兑付四成本金</div>
+      <div class="news-summary">万科公告称，"23万科MTN004"债券余额<em>20亿元</em>，已兑付中期票据本金的<em>40%</em>，剩余<em>60%</em>本金展期一年，展期期间票面利率维持不变。依托大股东低成本资金与销售回款托底，境内公开债分批化解稳步推进。</div>
+      <div class="news-source">来源：<a href="https://m.weibo.cn/detail/5318806806201265" target="_blank" rel="noopener noreferrer">地产锐观察</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">弘阳地产上半年合约销售金额9.44亿元</div>
+      <div class="news-summary">弘阳地产披露未经审核营运数据，2026年1-6月实现累计合约销售金额<em>9.44亿元</em>，累计销售面积约<em>10万平方米</em>，平均销售价格为每平方米<em>9440元</em>。6月单月合约销售金额1.76亿元。</div>
+      <div class="news-source">来源：<a href="http://tj.ihouse.ifeng.com/news/2026_07_09-57431399_0.shtml" target="_blank" rel="noopener noreferrer">中房网</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">8.1亿㎡</div>
+          <div class="data-label">全年新房销售面积预测</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">96万套</div>
+          <div class="data-label">上半年重点城市二手房成交</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">+0.6%</div>
+          <div class="data-label">一线城市租金涨幅</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">9.44亿</div>
+          <div class="data-label">弘阳地产上半年销售额</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">智能工厂建模规则国标发布，推动生产系统跨层跨域融合发展</div>
+      <div class="news-summary">《智能工厂 生产系统可重构建模规则》(GB/T 47859—2026)由国家市场监督管理总局、国家标准化管理委员会批准发布，将于2027年2月1日起实施。该标准规定智能工厂生产系统可重构建模规则的系统架构，统一跨设备、跨系统与跨平台的信息模型，为离散制造业快速换产、产线迭代升级提供国家级标准化支撑。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660479745666138639/" target="_blank" rel="noopener noreferrer">人民网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">2026制造业"中试+"生态大会在成都举行，10项合作集中落地</div>
+      <div class="news-summary">以"中试助推科产融合，生态激活新质生产力"为主题的2026制造业"中试+"生态大会在成都高新区举行。会上发布成渝地区制造业中试平台服务及需求清单，涵盖中试服务事项<em>100条</em>、中试需求内容<em>108条</em>，10项"中试+"合作集中签约，包括4个中试平台项目和6个中试合作项目。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660494705121083950/" target="_blank" rel="noopener noreferrer">成都高新区</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">6月制造业PMI为50.3%，连续4个月运行在扩张区间</div>
+      <div class="news-summary">国家统计局数据显示，6月份制造业采购经理指数（PMI）为<em>50.3%</em>，较上月上升<em>0.3个百分点</em>，连续4个月运行在50%及以上水平。二季度制造业PMI均值为<em>50.2%</em>，在连续5个季度收缩后回到扩张区间。新订单指数51.2%（+1.3），新出口订单50.1%（+1.5）重返扩张。</div>
+      <div class="news-source">来源：<a href="https://www.cnii.com.cn/gxxww/gy/202607/t20260707_747580.html" target="_blank" rel="noopener noreferrer">人民网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">台积电三年扩容30倍光电芯片PIC产能，2028年达每月2.5万片</div>
+      <div class="news-summary">台积电光子集成电路（PIC）产能将从目前约每月<em>500片</em>快速攀升，2026年Q2达每月<em>1万片</em>，Q4达每月<em>1.5万片</em>，2028年增至至少每月<em>2.5万片</em>，年化产出量将由约400万颗大幅提升至1.94亿颗，适配AI光互连算力服务器需求。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7659586250541695540/" target="_blank" rel="noopener noreferrer">科技新闻速览</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">阿联酋"制造在阿联酋"计划亮相全球制造业峰会，吸引美国企业投资</div>
+      <div class="news-summary">阿联酋在GMIS America全球制造业峰会上展示"制造在阿联酋"计划，推介投资优势与激励政策，吸引美国企业投资。阿联酋工业技术战略聚焦先进制造业、清洁能源转型，打造区域制造业中心。</div>
+      <div class="news-source">来源：<a href="https://www.wam.ae/ar/details/1395303088628" target="_blank" rel="noopener noreferrer">WAM</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">50.3%</div>
+          <div class="data-label">6月制造业PMI</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2.5万片/月</div>
+          <div class="data-label">台积电2028年PIC产能</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">100条</div>
+          <div class="data-label">中试平台服务事项</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">10项</div>
+          <div class="data-label">中试+合作签约项目</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">浙江提升防台风应急响应至Ⅲ级，暂停校内师生集体活动和校外实践活动</div>
+      <div class="news-summary">受第9号台风"巴威"影响，浙江省防指决定于7月9日21时将防台风应急响应提升至Ⅲ级。嘉兴市教育局发布紧急提醒：自7月10日下午起，一律暂停校内师生集体活动、校外实践活动、校内施工作业，实施校园全封闭管理。原定7月11日的义务教育中小学招生线下报名延期至7月13日。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660536361098822196/" target="_blank" rel="noopener noreferrer">浙江在线</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">宁德中考查分时间调整至7月13日，受台风"巴威"影响</div>
+      <div class="news-summary">宁德市教育局发布通知，受第9号台风"巴威"影响，中考考生申请查核分数时间由原定7月11日-12日调整至<em>7月13日8:00-16:00</em>，各地普高录取最低控制线公布时间由7月13日延迟至<em>7月14日</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660547195501920810/" target="_blank" rel="noopener noreferrer">宁德市教育局</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重点关注</span>
+      <div class="news-title">宁夏银川举办"童声里的中国"歌咏展演，美育与思政教育融合</div>
+      <div class="news-summary">银川市举行"强国复兴有我"群众性主题宣传教育活动暨2026年"童声里的中国"少年儿童歌咏首场线下展演，以童声合唱为载体融合美育与思政教育。活动同步举行"童音童画"儿童美育公益捐赠仪式，为永宁县武河小学捐赠<em>978套</em>儿童艺术手工盒。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660515420520071680/" target="_blank" rel="noopener noreferrer">中新网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">美国联邦学生贷款新规7月生效，Parent PLUS贷款年上限2万美元</div>
+      <div class="news-summary">美国联邦学生贷款新规于7月1日生效，对Parent PLUS贷款实施严格的<em>2万美元</em>年度上限，并完全取消Graduate PLUS贷款选项。教育部同时确认已阻止近<em>20亿美元</em>的联邦学生资助诈骗企图。</div>
+      <div class="news-source">来源：<a href="https://www.schools-closings.com/us-school-closings-news-briefing-july-09-2026-federal-loan-caps-summer-heatwaves/" target="_blank" rel="noopener noreferrer">School Closings</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">尼日利亚NANS公布39所未退还学生贷款资金的高等院校名单</div>
+      <div class="news-summary">尼日利亚全国学生协会（NANS）公布<em>39所</em>尚未退还学生贷款资金的高等院校名单。这些院校已收到尼日利亚教育贷款基金（NELFUND）拨款，但未按规定退还学生此前缴纳的学费，NANS呼吁相关院校立即退还。</div>
+      <div class="news-source">来源：<a href="https://campusspotlight.com.ng/2026/07/09/nans-name-39-institutions-yet-to-refund-students-after-nelfund-payment/" target="_blank" rel="noopener noreferrer">Campus Spotlight</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">978套</div>
+          <div class="data-label">美育公益捐赠手工盒</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2万美元</div>
+          <div class="data-label">Parent PLUS贷款年上限</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">20亿美元</div>
+          <div class="data-label">阻止的学生资助诈骗</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">39所</div>
+          <div class="data-label">未退还贷款院校数</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">2026年度电影总票房突破180亿元，暑期档票房超22亿元</div>
+      <div class="news-summary">网络平台数据显示，截至目前2026年度电影总票房已突破<em>180亿元</em>，《飞驰人生3》《给阿嬷的情书》《镖人》暂列前三位。《给阿嬷的情书》口碑票房持续走高，已官宣延长放映至7月31日。今年暑期档于6月1日开始后，总票房（含预售）已突破<em>22亿元</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660457125218501126/" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">国家电影局、市场监管总局联合印发通知，推动电影院多样化经营</div>
+      <div class="news-summary">国家电影局、市场监管总局联合印发《关于促进电影院多样化经营 繁荣发展电影院文化的通知》，提出三方面10条举措：支持影院引入咖啡、烘焙、轻食；打造文创潮玩打卡地；常态化举办美育分享、读书沙龙、科普讲座、艺术展览；推行"一店一策"打造特色影院。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660457125218501126/" target="_blank" rel="noopener noreferrer">央视新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">周星驰《功夫女足》零宣发预售8小时破千万，24小时突破2000万</div>
+      <div class="news-summary">周星驰时隔7年独立执导新作《功夫女足》，迪丽热巴、张小斐、张艺兴主演，融合功夫与女足热血故事。无大规模宣发却创下暑期档预售纪录，<em>8小时破千万</em>，<em>24小时预售突破2000万</em>，定档7月11日上映。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660520589862208015/" target="_blank" rel="noopener noreferrer">文娱热点盘点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头动态</span>
+      <div class="news-title">王俊凯七年巡演官宣，开票秒空，话题阅读量突破50亿</div>
+      <div class="news-summary">王俊凯个人巡回演唱会「当·潮汐漫溢」首站落地重庆，时隔7年重启巡演，门票<em>10秒全部售罄</em>，相关话题阅读量突破<em>50亿</em>，921票价暗藏生日专属寓意。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660520589862208015/" target="_blank" rel="noopener noreferrer">文娱热点盘点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">7月10日艺人标注新政正式落地，演员表统一按姓氏笔画排序</div>
+      <div class="news-summary">7月10日艺人标注新政正式落地：所有影视剧演员表取消花式番位，统一按照姓氏笔画排序，杜绝撕番乱象；同时中央网信办启动<em>2个月</em>清朗专项整治，严打团播低俗PK、诱导打赏、恶意炒作流量乱象，净化线上娱乐环境。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7660520589862208015/" target="_blank" rel="noopener noreferrer">文娱热点盘点</a></div>
+    </div>
+
+    <div class="data-box">
+      <div class="data-box-title">数据观察</div>
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-value">180亿</div>
+          <div class="data-label">年度电影总票房</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">22亿+</div>
+          <div class="data-label">暑期档票房</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">2000万</div>
+          <div class="data-label">《功夫女足》预售</div>
+        </div>
+        <div class="data-item">
+          <div class="data-value">50亿</div>
+          <div class="data-label">王俊凯巡演话题量</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 重点关注 -->
+  <div class="focus-box">
+    <div class="focus-box-title">重点关注</div>
+    <div class="focus-item"><strong>智能体互联网关键系统技术验证工程启动</strong>：中国信通院联合多部门启动三大核心系统验证，首批24个智能体入选可信评估清单，系列国家标准同步发布，标志智能体互联进入标准化发展新阶段。</div>
+    <div class="focus-item"><strong>长鑫科技科创板IPO募资295亿</strong>：国内DRAM存储龙头长鑫科技创年内最大IPO纪录，募资将用于12英寸存储晶圆扩产及HBM研发，A股半导体板块全线爆发，科创50暴涨8.41%。</div>
+    <div class="focus-item"><strong>比亚迪第1700万辆新能源车下线</strong>：全球首家达成该里程碑，从1600万辆到1700万辆仅用时3个月，海豹08成为里程碑车型。</div>
+    <div class="focus-item"><strong>商务部9部门零售业创新发展意见出台</strong>：提出2030年现代零售体系建设目标，打通线上线下渠道数据，首批86亿资金拨付，带动超3000亿投资。</div>
+    <div class="focus-item"><strong>美伊冲突升级推高油价</strong>：特朗普宣布停火协议结束，布伦特原油涨5.43%，市场担忧霍尔木兹海峡航运安全。</div>
+  </div>
+
+  <!-- 综合市场观察与本周看点 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与本周看点</h2>
+    <div class="outlook-sub">Global Market Outlook & Weekly Highlights</div>
+    <div class="outlook-item"><strong>A股科技股爆发：</strong>科创50创历史第四大单日涨幅，半导体板块全线涨停，中芯国际总市值超越贵州茅台。长鑫科技IPO催化叠加三星台积电提价，国产替代主线持续走强。</div>
+    <div class="outlook-item"><strong>智能体互联全面提速：</strong>技术验证工程启动+国家标准发布，行业进入标准化快车道，关注智能体平台、算力基础设施、安全认证等产业链机会。</div>
+    <div class="outlook-item"><strong>新能源汽车淘汰赛加剧：</strong>比亚迪1700万辆里程碑、蔚来ES8大五座版上市、小米澎程系列发布，行业集中度提升，技术迭代加速。</div>
+    <div class="outlook-item"><strong>消费政策持续加码：</strong>9部门零售业意见+三新试点资金到位，线上线下融合、即时零售、新业态模式有望迎来政策红利期。</div>
+    <div class="outlook-item"><strong>本周看点：</strong>①长鑫科技7月16日新股申购；②GPT-5.6三款模型正式发布；③SpaceX AI开放Grok 4.5；④奔驰纯电GLC交付；⑤国家科技奖励大会后续政策落地。</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 信息准确 · 来源可靠</div>
+    <a href="../index.html" class="back-link">← 返回首页</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
