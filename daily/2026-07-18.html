@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年7月18日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important { background: #FEF3E2; color: #B8792A; }
+  .tag-policy { background: #E8F0FE; color: #3B6FB5; }
+  .tag-data { background: #E6F5F2; color: #2D8B7A; }
+  .tag-company { background: #F3EEFA; color: #6B5BA8; }
+  .tag-breaking { background: #FDE8E8; color: #C44848; }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .news-source {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .news-source a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .news-source a:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 40px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.199</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年7月18日 · 星期六 · 涵盖2026年7月17日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>7月17日，全球市场在AI盛宴与地缘震荡中剧烈分化：2026世界人工智能大会(WAIC)在上海开幕，习近平主席致辞提出全球AI治理四点意见，1100家企业、超300款产品全球首发；A股遭遇罕见重挫，沪指跌3.05%失守3800点，创业板跌7.15%，科技成长板块成杀跌重灾区。</strong>美股半导体抛售加剧，苹果市值反超英伟达重回全球第一，奈飞盘后跌超8%拖累科技股；美伊冲突进入第六夜，霍尔木兹海峡通行量暴跌62%，国际油价单周大涨12%。AI领域重磅频出——Kimi K3以2.8万亿参数刷新开源纪录，谷歌Gemini 3.5 Pro从零重建后正式发布，OpenAI推出首款硬件Codex Micro。医药板块逆市走强，FDA批准全球首个口服PCSK9抑制剂，百利天恒双抗ADC再获批食管鳞癌适应症。六部委同步出台楼市新政组合拳，长鑫科技666亿科创板IPO创历史纪录。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">重磅会议</span>
+      <div class="news-title">2026世界人工智能大会(WAIC)上海开幕，习近平主席提出全球AI治理四点意见</div>
+      <div class="news-summary">2026 WAIC暨人工智能全球治理高级别会议7月17日至20日在上海"三地四馆"举行，主题"智能伙伴 共创未来"。展览总面积首次突破<em>10万㎡</em>，<em>1100+</em>家企业参展、3000余项展品集中亮相，超<em>300款</em>产品全球首发。习近平主席提出坚持开放共赢、强化风险意识、鼓励包容并蓄、倡导和衷共济四点意见，宣布中国智能经济核心产业规模已超万亿元。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663355450687898118/" target="_blank" rel="noopener noreferrer">头条新闻</a> · <a href="http://m.toutiao.com/group/7663378716461957684/" target="_blank" rel="noopener noreferrer">新民晚报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">市值里程碑</span>
+      <div class="news-title">苹果反超英伟达重回全球市值第一，逼近5万亿美元</div>
+      <div class="news-summary">苹果股价上涨推动市值反超英伟达，重新夺回全球最具价值上市公司宝座，市值接近<em>5万亿美元</em>门槛。英伟达下跌2%至4.835万亿美元，苹果则基本持平报4.912万亿美元。美国银行调查显示，82%的基金经理认为半导体是当前最拥挤交易。这是苹果自2025年以来首次重回市值第一。</div>
+      <div class="news-source">来源：<a href="https://techstartups.com/2026/07/17/top-tech-news-today-july-17-2026-anthropic-apple-google-meta-moonshot-ai-nvidia-more/" target="_blank" rel="noopener noreferrer">TechStartups</a> · <a href="https://www.moneyvox.fr/bourse/actualites/109737/le-cac-40-recule-apple-depasse-nvidia-un-risque-sous-estime-les-infos-bourse-du-17-juillet-2026" target="_blank" rel="noopener noreferrer">MoneyVox</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">产品发布</span>
+      <div class="news-title">OpenAI发布首款硬件产品Codex Micro，从纯软件迈向软硬结合</div>
+      <div class="news-summary">OpenAI正式推出首款硬件设备Codex Micro，与键盘制造商Work Louder合作开发，专为配合编程平台Codex使用。该设备为方形按钮面板，用户可通过它监控和管理AI编程代理的运行状态。此举被视为OpenAI向前苹果设计师Jony Ive合作AI硬件项目的试探性布局，标志其从纯软件公司向软硬结合方向迈出第一步。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663298592966312486/" target="_blank" rel="noopener noreferrer">7月17日AI日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">监管重锤</span>
+      <div class="news-title">欧盟强令谷歌开放Android与搜索数据，重塑全球AI搜索竞争格局</div>
+      <div class="news-summary">欧盟委员会依据《数字市场法》(DMA)向谷歌下达两项具有约束力裁决，要求其给予竞争对手AI助手和搜索引擎与自身同等系统访问权限。谷歌须在<em>2027年1月</em>前共享搜索数据，<em>2027年7月</em>前完成Android系统改动。违规可被处全球年营业额10%罚款。这为Perplexity、You.com等新兴AI助手产品提供前所未有的公平竞争机会。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663298592966312486/" target="_blank" rel="noopener noreferrer">7月17日AI日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">版权风波</span>
+      <div class="news-title">Suno AI音乐被曝非法爬取百万歌曲训练模型，引发版权伦理大讨论</div>
+      <div class="news-summary">据404 Media报道，黑客事件曝光数据文件显示，AI音乐生成平台Suno训练模型时从YouTube Music、Deezer、Genius等平台爬取数百万首歌曲和歌词。此前Suno一直拒绝公开训练数据集具体来源。美国唱片业协会(RIAA)此前已对Suno提起诉讼，Suno曾承认使用受版权保护音乐材料但主张合理使用。泄露事件加剧了AI音乐训练合法性争议。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663298592966312486/" target="_blank" rel="noopener noreferrer">7月17日AI日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">品牌整合</span>
+      <div class="news-title">谷歌将NotebookLM更名为Gemini Notebook，深度绑定AI生态</div>
+      <div class="news-summary">谷歌宣布将AI笔记应用NotebookLM正式更名为Gemini Notebook，应用保持独立运行，但将与Gemini和Google Search进行更深度的整合。NotebookLM最早于2023年5月在Google I/O以Project Tailwind名称亮相。更名后用户可能在Google Search中直接获得基于笔记内容的AI回答，反映谷歌将AI能力深度嵌入产品线的战略方向。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663298592966312486/" target="_blank" rel="noopener noreferrer">7月17日AI日报</a></div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">市场重挫</span>
+      <div class="news-title">A股遭遇罕见全面重挫：沪指跌3.05%失守3800点，创业板指跌7.15%</div>
+      <div class="news-summary">7月17日A股遭遇近年来罕见全面重挫。上证指数收报<em>3764.15点</em>，跌<em>3.05%</em>；深证成指跌5.40%；创业板指跌7.15%；科创50跌7.12%、科创综指跌8.13%。两市成交约<em>2.65万亿元</em>放量杀跌，近5000家下跌仅481家上涨，212家跌停。AI算力产业链全线崩塌，通信ETF收盘跌停，存储、半导体设备跌幅7-10%。仅银行、电力等防御板块逆势飘红。本周创业板累计跌10.78%，科创50周跌16.93%。</div>
+      <div class="news-source">来源：<a href="https://news.ifeng.com/c/8uq3P8jCatm" target="_blank" rel="noopener noreferrer">凤凰网</a> · <a href="http://m.toutiao.com/group/7663458515549291042/" target="_blank" rel="noopener noreferrer">A股收盘盘面全景复盘</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">业绩超预期</span>
+      <div class="news-title">台积电Q2净利润同比暴增77.4%大超预期，2nm首贡献营收并上调资本支出至600-640亿美元</div>
+      <div class="news-summary">台积电7月16日发布Q2财报：营收<em>402.0亿美元</em>(达指引上限)，同比+33.7%；毛利率<em>67.7%</em>(超预期)；归母净利润7065.6亿新台币，同比+77.4%。2nm首次贡献收入，HPC营收环比+20%占比66%。公司上调2026全年营收增速至略高于40%，资本支出预算大幅上调至<em>600-640亿美元</em>。亚利桑那州追加1000亿美元投资，台湾将建13座先进制程及封装厂。</div>
+      <div class="news-source">来源：<a href="http://stock.finance.sina.com.cn/stock/view/paper.php?reportid=837606177724&symbol=sh000001" target="_blank" rel="noopener noreferrer">招商证券</a> · <a href="http://m.toutiao.com/group/7663288073161949750/" target="_blank" rel="noopener noreferrer">吴晓波频道</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">历史IPO</span>
+      <div class="news-title">长鑫科技666亿科创板IPO中签率0.4714%创两项历史纪录，预计7月27日挂牌</div>
+      <div class="news-summary">国产存储芯片巨头长鑫科技科创板IPO网上有效申购户数<em>942.88万</em>户，中签率<em>0.4714%</em>，双双刷新科创板历史纪录。发行价8.66元/股，启用15%超额配售后募资最高<em>666.07亿元</em>，为A股历史第三大IPO、科创板历史最大IPO。预计7月27日正式挂牌上市。市场预测首日涨幅70%-600%区间，中一签盈利3000元至2.6万元。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663275429767299610/" target="_blank" rel="noopener noreferrer">新浪财经早报</a> · <a href="https://cj.sina.cn/articles/view/7879849019/1d5acf43b06801dguy" target="_blank" rel="noopener noreferrer">新浪财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">海外动向</span>
+      <div class="news-title">韩国综指较高位暴跌近25%，外资148万亿韩元抛售；韩国央行加息25基点至2.75%</div>
+      <div class="news-summary">韩国央行7月16日将基准利率上调25个基点至<em>2.75%</em>，为2023年1月以来首次加息。韩国综指已较高位暴跌近<em>25%</em>，外资抛售韩股规模达148万亿韩元。韩国股市因海力士业绩担忧及去杠杆压力大幅调整，对A股半导体板块形成显著情绪传染。央行行长李昌镛强调通胀、增长、汇率和金融稳定风险均指向同一政策方向。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663275429767299610/" target="_blank" rel="noopener noreferrer">新浪财经早报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">宏观数据</span>
+      <div class="news-title">港交所上半年IPO集资2102亿港元同比升92.1%，上半年金融业GDP增长6.7%</div>
+      <div class="news-summary">港交所公布2026年上半年IPO集资<em>2102亿港元</em>，同比升<em>92.1%</em>，为历年同期第二高，共87家新上市公司。国家统计局数据显示上半年金融业GDP为54614亿元，同比增长<em>6.7%</em>；房地产业GDP同比下滑0.2%；信息传输、软件和信息技术服务业GDP同比增长<em>10.7%</em>。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/money/fund/jjgsgd/2026-07-17/doc-iniianxh4179215.shtml" target="_blank" rel="noopener noreferrer">兴华基金每日财经资讯</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">地缘冲击</span>
+      <div class="news-title">美伊冲突进入第六夜，国际油价单周大涨12%布伦特逼近86美元</div>
+      <div class="news-summary">美军7月16日对伊朗发动"连续第6晚"新一轮打击，5座桥梁被击中7人死亡。布伦特原油涨1.03%至<em>85.10美元/桶</em>，WTI涨1.24%至79.93美元/桶，本周累计涨幅约<em>12%</em>。Kpler数据显示霍尔木兹海峡确认原油过境量暴跌<em>62%</em>至410万桶/日，区域装载量下降47%。60天停火协议8月16日到期，Rystad Energy预测"狭缝式保面子协议"概率40%。</div>
+      <div class="news-source">来源：<a href="https://www.thenationalnews.com/business/energy/2026/07/17/oil-set-for-steep-weekly-rise-as-us-and-iran-intensify-attacks/" target="_blank" rel="noopener noreferrer">The National News</a> · <a href="https://www.tradingkey.com/analysis/commodities/oil/262038058-us-iran-conflict-oil-prices-surge-hormuz-tradingkey" target="_blank" rel="noopener noreferrer">TradingKey</a></div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">重磅发布</span>
+      <div class="news-title">月之暗面Kimi K3以2.8万亿参数刷新开源纪录，综合水平跃居全球第三强</div>
+      <div class="news-summary">月之暗面发布Kimi K3开源大模型，参数规模达<em>2.8万亿</em>，刷新全球开源纪录。GDPval-AA v2评测显示Kimi K3综合智能水平超过Claude Opus 4.8 Max，仅次于Claude Fable 5 Max和GPT-5.6 Sol Max，位居全球<em>第三强</em>。在知识工作评测中接近全球前沿闭源模型，被视为对标Anthropic旗舰模型Claude Opus 4.8的关键产品。开源模式正式发布前已引发美股科技股剧烈波动。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-17/doc-iniiahrh7412542.shtml" target="_blank" rel="noopener noreferrer">华尔街见闻早餐</a> · <a href="https://www.nasdaq.com/articles/stock-market-midday-july-17-netflix-plunges-and-stocks-slide-semiconductor-sell-deepens" target="_blank" rel="noopener noreferrer">Nasdaq</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">旗舰发布</span>
+      <div class="news-title">谷歌Gemini 3.5 Pro从零重建后正式发布，2M上下文、Deep Think Ultra定价250美元/月</div>
+      <div class="news-summary">谷歌Gemini 3.5 Pro正式发布。此前因2.5 Pro架构在递归工具调用、SVG生成、数学推理三项结构性失败，谷歌决定报废原模型从零重建。新版本支持<em>2M上下文</em>，Deep Think推理访问需Ultra订阅<em>250美元/月</em>。定价约15美元/百万输入token、60美元/百万输出token。同步发布Nano Banana Pro图像生成模型，对标GPT-Image2。</div>
+      <div class="news-source">来源：<a href="https://aitoolsrecap.com/Blog/ai-news-july-16-2026" target="_blank" rel="noopener noreferrer">AIToolsRecap</a> · <a href="https://ai-damn.com/google-sets-july-17-for-gemini-3-5-pro-launch-taking-on-deepseek-v4-1783310604251" target="_blank" rel="noopener noreferrer">AI-Damn</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">巨头博弈</span>
+      <div class="news-title">微软CEO纳德拉警告：企业用AI"被双重付费"，Palantir九点AI主权宣言呼应</div>
+      <div class="news-summary">微软CEO纳德拉发文警告企业使用OpenAI/Anthropic模型"被双重付费"——既付token费用，又交出"模型学习的尾气"即机构知识。Palantir CEO Alex Karp在CNBC呼应称前沿实验室"tokenmaxxing"而非解决真实业务问题，发布九点"AI主权"宣言宣称"数据留存即宝藏"。前白宫AI主管David Sacks指OpenAI和Anthropic已形成双头垄断。开源模型正成为替代选择，Vercel数据显示开放模型占其AI gateway流量29%。</div>
+      <div class="news-source">来源：<a href="https://dc.fortune.com/2026/07/16/microsoft-ceo-satya-nadella-warns-enterprises-that-ai-labs-are-stealing-their-know-how/" target="_blank" rel="noopener noreferrer">Fortune Eye on AI</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">监管分裂</span>
+      <div class="news-title">Anthropic与OpenAI监管策略分裂：州法支持 vs 联邦预先抢占，Q4双双IPO</div>
+      <div class="news-summary">Politico确认Anthropic正推动加州SB 53、纽约RAISE法案、伊利诺伊SB 315、马萨诸塞透明法案等州级AI安全立法；OpenAI则倡导单一联邦标准预先抢占所有州规则。商业逻辑清晰：Anthropic的RSP政策已符合州法要求，州法是其护城河；对OpenAI而言是50倍合规成本。两家均冲刺Q4 2026 IPO，监管策略成为S-1投资者关系披露核心。</div>
+      <div class="news-source">来源：<a href="https://aitoolsrecap.com/Blog/ai-news-july-16-2026" target="_blank" rel="noopener noreferrer">AIToolsRecap</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">业绩爆发</span>
+      <div class="news-title">国产AI芯片半年报集体爆发：摩尔线程营收暴增149%、海光信息预增56%-70%、澜起科技净利预增81%</div>
+      <div class="news-summary">国产GPU双雄半年报集体爆发：摩尔 threads预计上半年营收<em>16.5-17.5亿元</em>，同比暴增135%-149%；海光信息营收预增<em>55.56%-70.20%</em>至85-93亿元，净利润预增41.50%-52.32%。澜起科技预计上半年营收33.35亿元同比+26.6%，归母净利润19-21亿元同比+63.9%至81.2%，董事长提议3-6亿元回购，回应韩国反垄断调查称经营正常。DeepSeek估值超<em>3500亿元</em>已启动第二轮融资。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-17/doc-iniiahrh7412542.shtml" target="_blank" rel="noopener noreferrer">华尔街见闻早餐</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">资本动向</span>
+      <div class="news-title">能源类IPO创1999年以来最快半年纪录126亿美元，投资者追逐AI算力红利</div>
+      <div class="news-summary">Dealogic数据显示，2026年上半年能源类IPO融资总额达<em>126亿美元</em>，创1999年互联网泡沫高峰期以来最高半年纪录，远超2025年全年43亿美元。数据中心电力需求成为AI万亿投资热潮关键瓶颈。无论哪家AI公司模型最终胜出都需消耗巨量电力，核能、可再生能源和电网升级企业获投资者追捧。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663298592966312486/" target="_blank" rel="noopener noreferrer">7月17日AI日报</a></div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">⚕️</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">里程碑</span>
+      <div class="news-title">FDA批准全球首个口服PCSK9抑制剂默克enlicitide，降脂治疗十年最大突破</div>
+      <div class="news-summary">7月16日FDA正式批准默克enlicitide(商品名Lipfendra)上市，成为全球首个获批的口服PCSK9抑制剂，适用于高胆固醇血症及杂合子家族性高胆固醇血症。CORALreef Lipids研究显示治疗24周后LDL-C较安慰剂多降低<em>63.6个百分点</em>，52周时仍维持59.6个百分点降幅。此前PCSK9抑制剂均为注射剂型，口服剂型问世被视为降脂治疗领域十年来最大突破。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663284042393010707/" target="_blank" rel="noopener noreferrer">2026年7月17日药师要知道</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">三登顶刊</span>
+      <div class="news-title">拜耳非奈利酮同日登NEJM/JAMA/Lancet三顶刊，CKD全谱系获益获证实</div>
+      <div class="news-summary">2026年7月16日成为非奈利酮(finerenone，拜耳)高光时刻——《新英格兰医学杂志》《美国医学会杂志》《柳叶刀》同步发表三项重磅研究。FIND-CKD研究证实在非糖尿病CKD患者中eGFR下降显著减缓，肾脏-心血管复合结局风险降低<em>23%</em>。INFINITY荟萃分析(14574例)显示降低肾脏衰竭风险15%、启动透析或肾移植风险23%、全因死亡风险12%。同步获英国NICE推荐用于射血分数保留心衰。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663284042393010707/" target="_blank" rel="noopener noreferrer">2026年7月17日药师要知道</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">全球首个</span>
+      <div class="news-title">百利天恒全球首个双抗ADC再获批食管鳞癌适应症，30天内第二项</div>
+      <div class="news-summary">7月16日百利天恒双抗ADC伦康依隆妥单抗(iza-bren，宜泽康®)获NMPA批准用于复发或转移性食管鳞癌二线治疗，30天内获批的第二项适应症。基于PANKU-Esophagus01 III期研究，PFS/OS双主要终点达到阳性，为全球首个在该人群III期取得阳性结果的ADC药物。海外合作伙伴BMS 2023年12月达成84亿美元全球授权协议，创全球ADC领域单笔最高交易纪录。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663428958226072118/" target="_blank" rel="noopener noreferrer">头条新闻</a> · <a href="https://m.thepaper.cn/newsDetail_forward_33605106" target="_blank" rel="noopener noreferrer">澎湃新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">完全批准</span>
+      <div class="news-title">FDA将礼来Retevmo从加速批准转为完全批准，不限癌种RET靶向治疗</div>
+      <div class="news-summary">7月16日FDA将selpercatinib(Retevmo，礼来)从2022年加速批准转为传统完全批准，用于≥2岁患者中RET融合阳性的局部晚期或转移性实体瘤。LIBRETTO-001试验数据显示总缓解率<em>47%</em>，中位缓解持续时间<em>24.5个月</em>。这是典型的"部位不限定"(tumor-agnostic)精准治疗策略，标志着精准肿瘤学范式进一步成熟。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663284042393010707/" target="_blank" rel="noopener noreferrer">2026年7月17日药师要知道</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">管线进展</span>
+      <div class="news-title">恒瑞医药HRS9531获III期临床批准，拓展肥胖合并膝骨关节炎全新适应症</div>
+      <div class="news-summary">7月17日恒瑞医药公告，子公司福建盛迪医药HRS9531注射液(瑞普泊肽)获NMPA III期临床批准，新增适应症为肥胖合并膝骨关节炎成人患者。HRS9531为GLP-1R/GIPR双受体激动剂，对标替尔泊肽，国内进度最快的国产双靶点减重药物。核心减重适应症2025年9月已申报上市，48周最高剂量组平均减重<em>19.2%</em>。海外授权Kailera公司60亿美元，恒瑞持有19.9%股权。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663105404758540843/" target="_blank" rel="noopener noreferrer">GLP-1管线再突破</a></div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">新车发布</span>
+      <div class="news-title">比亚迪发布8系唐纯电SUV，续航超800km配激光雷达预计年内上市</div>
+      <div class="news-summary">比亚迪王朝网发布8系唐官方图片。该中大型纯电SUV采用大五座布局，搭载弗迪磷酸铁锂刀片电池，纯电续航里程超过<em>800公里</em>，预计年内上市。车身尺寸5045×1980×1740mm，轴距2950mm。车顶集成激光雷达，支持高阶智能驾驶功能。动力系统搭载TZ205QYD永磁同步电机，峰值功率<em>300kW</em>，最高车速250km/h。</div>
+      <div class="news-source">来源：<a href="https://auto.ifeng.com/c/8uphQcyknxG" target="_blank" rel="noopener noreferrer">凤凰网汽车</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">装机数据</span>
+      <div class="news-title">6月国内动力电池装车76.5GWh同比+31.5%，上半年累计335.6GWh同比+12%</div>
+      <div class="news-summary">中国汽车动力电池产业创新联盟7月16日数据显示，6月国内动力电池装车量<em>76.5GWh</em>，环比+6.4%、同比+<em>31.5%</em>。1-6月累计装车量<em>335.6GWh</em>，同比+12.0%。6月动力和储能电池合计产量<em>206.0GWh</em>，同比+59.5%；1-6月累计<em>1068.9GWh</em>，同比+<em>53.3%</em>。磷酸铁锂依旧占据主流份额，印证新能源车终端需求回暖。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663264612355293732/" target="_blank" rel="noopener noreferrer">每日经济新闻</a> · <a href="https://finance.sina.com.cn/money/fund/jjgsgd/2026-07-17/doc-iniianxh4179215.shtml" target="_blank" rel="noopener noreferrer">兴华基金</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">海外大单</span>
+      <div class="news-title">宁德时代与欧洲Alfen签5GWh钠电储能大单，2027年起西欧部署天恒钠电系统</div>
+      <div class="news-summary">宁德时代与欧洲新能源集成商Alfen N.V.签署谅解备忘录，自<em>2027年</em>起在荷兰等西欧国家部署<em>5GWh</em>天恒钠电储能系统，为该系统欧洲市场首批落地应用。天恒钠电储能系统拥有<em>25年</em>超长寿命，系统整体RTE提升近2%，可兼容磷酸铁锂系统，降低锂价波动影响。此举加速钠离子电池产业化出海进程，带动上游材料产业链商业化提速。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663264612355293732/" target="_blank" rel="noopener noreferrer">每日经济新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">智驾渗透</span>
+      <div class="news-title">比亚迪辅助驾驶车型保有量超333万辆，6月单月销售17.63万辆</div>
+      <div class="news-summary">据比亚迪汽车官微7月15日消息，比亚迪辅助驾驶车型保有量已超<em>333万辆</em>，6月单月销售<em>17.63万辆</em>。天神之眼辅助驾驶每天生成数据超<em>2.1亿公里</em>。海量真实数据底座为其高阶智驾迭代提供关键支撑，向智能化规模化切换是关键信号。具备比亚迪定点资质的智驾芯片、域控与传感器供应商获估值支撑。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663264612355293732/" target="_blank" rel="noopener noreferrer">每日经济新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">价格重构</span>
+      <div class="news-title">特斯拉官宣家充基础产品降价，平均降幅37%升级PVC线管高规格</div>
+      <div class="news-summary">7月16日特斯拉官微宣布家充安装服务升级，明确PVC线管准入标准达GY305及以上高规格，淘汰轻型薄壁管。第三代家充服务包单相版下调601元至<em>4599元</em>，第三代家充单相版裸桩下调200元至<em>2599元</em>；过墙孔、立柱/保护箱及安装、人工接地极等<em>18项</em>家充安装增项收费标准同步下调，平均降幅约<em>37%</em>。头部企业主动降价将加速行业价格体系重构。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663264612355293732/" target="_blank" rel="noopener noreferrer">每日经济新闻</a></div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛍️</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">宏观数据</span>
+      <div class="news-title">上半年社零总额24.87万亿同比增1.3%，6月可选消费环比改善</div>
+      <div class="news-summary">国家统计局数据显示，上半年社会消费品零售总额<em>248722亿元</em>，同比增长<em>1.3%</em>；除汽车外零售额229034亿元，增长2.8%。6月社零42691亿元，同比+1.0%，较5月加快1.6个百分点。粮油食品、烟酒、化妆品零售额同比分别增长<em>7.9%、12.1%、12.6%</em>。建筑材料、家具、家电虽仍负增长但环比分别改善3.1、2.1、6.9个百分点，电商渗透率升至<em>25.9%</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663332344887280170/" target="_blank" rel="noopener noreferrer">统计局数据发布</a> · <a href="https://www.cfi.cn/p20260717000513.html" target="_blank" rel="noopener noreferrer">中财网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">电商数据</span>
+      <div class="news-title">上半年全国网上商品和服务零售额10.07万亿同比增5.2%，吃类商品增16.8%</div>
+      <div class="news-summary">上半年全国网上商品和服务零售额<em>100715亿元</em>，同比增长<em>5.2%</em>。其中网上商品零售额64296亿元增长4.8%，吃类、穿类、用类商品分别增长<em>16.8%、6.2%、1.3%</em>。网上服务零售额36419亿元增长6.0%。国家统计局完善网上消费统计指标，将原"网上零售额"调整为"网上商品和服务零售额"，统计范围扩大。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663332344887280170/" target="_blank" rel="noopener noreferrer">统计局数据发布</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策利好</span>
+      <div class="news-title">商务部等8部门加快"人工智能+消费"发展，培育消费新增长点</div>
+      <div class="news-summary">商务部、网信办、发改委、教育部、工信部等8部门联合发布《关于加快"人工智能+消费"发展的实施意见》(商建发2026年第89号)。提出增加AI产品新供给(新一代AI手机、智能电视、智能穿戴、人形机器人)、扩大AI+服务消费(居家、养老、文化旅游、餐饮)、办好世界人工智能大会等商品首发平台。意见明确支持研发多模态感知人形机器人。</div>
+      <div class="news-source">来源：<a href="https://www.gov.cn/zhengce/zhengceku/202606/content_7072672.htm" target="_blank" rel="noopener noreferrer">国务院政策文件库</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">板块配置</span>
+      <div class="news-title">消费板块估值修复可期，化妆品国货龙头增长动能强劲</div>
+      <div class="news-summary">研报指出零售板块当前估值处于历史底部，作为防御性资产具备再平衡配置价值。区域商超龙头因门店数量有限、供应链集中，调改难度低、更易形成规模效应。化妆品板块受益于618大促平台流量政策向强自播和店播倾斜，珀莱雅、巨子生物、毛戈平、上海家化等国货龙头增长动能强劲。珠宝板块老铺黄金和周大福基本面良好且估值较低。</div>
+      <div class="news-source">来源：<a href="https://www.cfi.cn/p20260717000513.html" target="_blank" rel="noopener noreferrer">中财网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">业态分化</span>
+      <div class="news-title">便利店超市逆势增长，百货店品牌专卖店分别下降2.1%和8.7%</div>
+      <div class="news-summary">上半年限额以上零售业单位中，便利店、超市零售额同比分别增长<em>6.6%、3.8%</em>；专业店、百货店、品牌专卖店零售额分别下降<em>1.5%、2.1%、8.7%</em>。餐饮收入28255亿元同比增长2.8%。城镇消费品零售额215506亿元增长1.2%；乡村消费品零售额33216亿元增长2.5%，乡村增速高于城镇。业态分化反映消费习惯向即时便利和线上迁移。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663332344887280170/" target="_blank" rel="noopener noreferrer">统计局数据发布</a></div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">政策拐点</span>
+      <div class="news-title">六部委罕见同步出台楼市新政组合拳，覆盖需求金融财税土地保障全链条</div>
+      <div class="news-summary">2026年7月住建部、央行、财政部、金融监管总局、税务总局、自然资源部六大部委罕见同步发声，全方位楼市新政组合拳正式全国落地。首套房首付全国统一下调至<em>15%</em>，二套房降至<em>25%</em>；5年以上LPR维持<em>3.5%</em>，首套商贷利率3.05%-3.45%；满2年住宅免征增值税；"卖旧买新"个税退税政策延续至2027年底。过去四年从未有过此级别协同力度。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663381365705949702/" target="_blank" rel="noopener noreferrer">头条新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">国资托底</span>
+      <div class="news-title">央行推出3000亿元保障性住房再贷款年化1.75%，近80城启动存量房源收购</div>
+      <div class="news-summary">央行推出<em>3000亿元</em>保障性住房专项再贷款，年化利率仅<em>1.75%</em>，可撬动近万亿信贷资金。全国近80座城市的城投、安居集团同步启动存量房源收购计划，定向收购主城区、地铁沿线、配套完善的中小户型，翻新后转为保障性租赁住房。这是本轮政策里最有"王炸"气质的举措，旨在破解"卖不掉旧房、买不起新房"的循环卡死。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663381365705949702/" target="_blank" rel="noopener noreferrer">头条新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">供地收紧</span>
+      <div class="news-title">自然资源部新规：去化超36个月城市全面暂停新增住宅用地出让</div>
+      <div class="news-summary">自然资源部新规明确：商品住宅去化周期超过<em>36个月</em>的城市，全面暂停新增住宅用地出让；去化周期在<em>18-36个月</em>的，按照"盘活多少、供应多少"原则动态确定供地上限。说白了房子卖不动的地方就别再建新的。房企主办银行制度正式落地，融资资金严格限定用于项目建设、保交楼，禁止挪用。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663381365705949702/" target="_blank" rel="noopener noreferrer">头条新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">质量升级</span>
+      <div class="news-title">住建部"好房子"建设指南再次公开征求意见，聚焦渗漏隔声等民生痛点</div>
+      <div class="news-summary">住建部近日再次就《"好房子"建设指南(试行)(征求意见稿)》向社会公开征求意见，3月版本基础修改后共分"好房子"内涵与实施路径、安全耐久、舒适健康、绿色低碳、智慧便捷五大部分。聚焦群众居住痛点，从场地结构安全、室内健康环境、节能降碳技术、智慧小区与智能家居等维度细化技术要求，兼顾适老适幼、全龄友好、管线分离、空间可变等。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663288073161949750/" target="_blank" rel="noopener noreferrer">吴晓波频道财经日日评</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">宏观数据</span>
+      <div class="news-title">上半年房地产业GDP同比下滑0.2%，美国6月成屋签约销售环比降5.4%</div>
+      <div class="news-summary">国家统计局数据显示，上半年房地产业GDP为<em>41365亿元</em>，同比下滑<em>0.2%</em>。美国6月未决房屋销售(pending home sales)环比下降<em>5.4%</em>，5月份数据从3.8%下修至3.5%；同比下跌0.3%。两国房地产市场均处于调整期，但中国政策端已现明显拐点信号。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/money/fund/jjgsgd/2026-07-17/doc-iniianxh4179215.shtml" target="_blank" rel="noopener noreferrer">兴华基金每日财经资讯</a> · <a href="https://www.nasdaq.com/articles/stock-market-news-july-17-2026" target="_blank" rel="noopener noreferrer">Nasdaq</a></div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">火箭回收</span>
+      <div class="news-title">SpaceX星舰第13次试飞临发射中止，发动机未启动；马斯克称数日后再试</div>
+      <div class="news-summary">SpaceX巨型星舰(Starship)火箭原定7月17日进行第13次试飞，发射前数秒部分发动机未启动触发中止。该火箭高407英尺(124米)、配备33台主发动机，是世界最大最强火箭。原计划释放20颗最新Starlink卫星并与在轨卫星通信拍照。NASA正依赖Starship在未来几年登陆月球。马斯克在X平台宣布"下次发射尝试可能在几天后"。</div>
+      <div class="news-source">来源：<a href="https://news.net/northamerica/news/spacex-starship-launch-aborted-on-the-pad-at-the-last-moment/" target="_blank" rel="noopener noreferrer">News.net</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">产业里程碑</span>
+      <div class="news-title">宇树科技科创板IPO注册获批拟募42亿，工信部预测2026年人形机器人产量破10万台</div>
+      <div class="news-summary">宇树科技科创板上市注册获批，拟募资<em>42.02亿元</em>，投向智能机器人模型研发、本体研发等四大核心项目。7月7日工信部表示，随着大模型、智能体及AI芯片持续突破，2026年我国人形机器人整机产量有望突破<em>10万台</em>，产业发展重心正由技术研发转向规模制造和供应链能力建设。2026年Q1中国机器人出口额达<em>113.2亿元</em>，人形机器人出口同比增长<em>210%</em>。</div>
+      <div class="news-source">来源：<a href="https://finance.ifeng.com/c/8upVlc2NWaM" target="_blank" rel="noopener noreferrer">凤凰财经</a> · <a href="https://finance.sina.com.cn/roll/2026-07-17/doc-iniiahrn1314327.shtml" target="_blank" rel="noopener noreferrer">新浪财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">资本竞速</span>
+      <div class="news-title">中国商业航天半年融资151亿超2025全年八成，至少15家企业冲IPO</div>
+      <div class="news-summary">泰伯智库数据显示，2026年上半年国内商业航天公开披露融资事件89起，对应融资金额达<em>151.3亿元</em>，超过2025年融资总额(186亿元)的八成。星际荣耀2月完成50.37亿元D轮融资刷新民营火箭单笔纪录，长光卫星7月5日完成50亿元战投。蓝箭航天估值750亿元拟募75亿、中科宇航拟募41.8亿均进入问询阶段。SpaceX上市客观上为国内企业确立估值锚点。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663423532512117248/" target="_blank" rel="noopener noreferrer">蓝鲨财经社</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">工业母机</span>
+      <div class="news-title">航天科技喊话"航班化发射"逼出工业母机大考，AI工艺规划16天压缩到3天</div>
+      <div class="news-summary">7月10日"2026工业母机+百行万企产需对接"上，航天科技商业火箭公司提出要从"十年磨一剑"迈向"航班化发射"，对标SpaceX 2-3周重复周转。中国工程院院士林忠钦亮出AI赋能数据：航空发动机叶片工艺规划从<em>16天</em>压缩到<em>3天</em>，超薄壁厚精度从±0.3mm提到±0.1mm。72米高复用火箭的"制造→检测→修复"三大体系全要推倒重来。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663318515985711651/" target="_blank" rel="noopener noreferrer">头条新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">出口扩容</span>
+      <div class="news-title">1-5月中国机器人出口总值199.9亿元，清洁机器人占七成领跑全品类</div>
+      <div class="news-summary">据海关统计，2026年1-5月各类单独列名的机器人合计出口<em>1037.7万台</em>，出口总值达<em>199.9亿元</em>。欧盟和东盟为主要出口目的地。清洁机器人领跑全品类，出口额达<em>140亿元</em>，占机器人出口总值的七成以上。截至2026年7月15日，中证机器人指数近3个月涨幅<em>6.33%</em>，近一年年化收益21.78%。汇川技术Q1新兴业务销售同比增长约32%。</div>
+      <div class="news-source">来源：<a href="https://finance.ifeng.com/c/8upVlc2NWaM" target="_blank" rel="noopener noreferrer">凤凰财经</a></div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">专业增补</span>
+      <div class="news-title">教育部新增27个职教专业2027年招生，紧扣"十五五"规划对接人形机器人低空经济</div>
+      <div class="news-summary">7月16日教育部发布新增补的27个职业教育本专科专业，其中高职专科9个、职业本科18个，涉及14个专业大类、20个专业类，新增专业将于<em>2027年</em>开始招生。此次专业目录增补紧扣国家"十五五"规划纲要和《教育发展"十五五"规划》部署，紧密围绕建设现代化产业体系、促进服务业优质高效发展，精准对接新产业、新业态、新场景、新模式，锚定高技能人才培养。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663275429767299610/" target="_blank" rel="noopener noreferrer">新浪财经早报</a> · <a href="http://m.toutiao.com/group/7663421074788385324/" target="_blank" rel="noopener noreferrer">广州今日热点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">AI+教育</span>
+      <div class="news-title">国务院"人工智能+消费"实施意见推动教育数字化升级，开展生成式AI专用大模型建设</div>
+      <div class="news-summary">商务部等8部门《关于加快"人工智能+消费"发展的实施意见》明确提出"提升人工智能+教育教学"。推动AI赋能教育强国，开展生成式AI教育专用大模型建设项目，推动大模型从课堂走向应用。升级教育数字化基础设施，打造智慧课堂示范标杆。推动研发人工智能辅助学习助手、智能教学代理等产品，构建"AI+教育"新型消费场景。</div>
+      <div class="news-source">来源：<a href="https://www.gov.cn/zhengce/zhengceku/202606/content_7072672.htm" target="_blank" rel="noopener noreferrer">国务院政策文件库</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">教育资本</span>
+      <div class="news-title">PhysicsWallah收购Sarrthi IAS 11%股权升至51%，行动教育等绩优龙头估值处历史底部</div>
+      <div class="news-summary">PhysicsWallah批准以<em>71.81千万卢比</em>(约合6200万元)收购Sarrthi IAS额外11%股权，持股比例从40%升至<em>51%</em>，实现控股。研报观点指出教育板块中行动教育、中国东方教育、学大教育等绩优龙头处于历史估值底部，成长性修复空间较大。暑期避暑游、亲子游、研学游需求旺盛，研学教育与文旅融合成为新增长点。</div>
+      <div class="news-source">来源：<a href="https://investmentguruindia.com/newsdetail/key-highlights-stocks-in-news-economic-global-updates-17th-july-2026-by-gepl-capital-ltd507707" target="_blank" rel="noopener noreferrer">GEPL Capital</a> · <a href="https://www.cfi.cn/p20260717000513.html" target="_blank" rel="noopener noreferrer">中财网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">地方教育</span>
+      <div class="news-title">广州中考体育评分标准调整"三降一增"，足球难度加码其余项目降要求</div>
+      <div class="news-summary">广州中考体育评分标准调整以"三降一增"为主导：100米游泳、上肢力量及篮球项目降低评分要求，足球考试难度加码。中长跑规则保持稳定，男子1000米满分需达3分37秒，女子800米需达3分22秒。广东省提前批本科普通类志愿投档工作也顺利完成，为考生提供更多选择机会。同日2026年广东工会爱心托管班申报工作全面展开。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663421074788385324/" target="_blank" rel="noopener noreferrer">广州今日热点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">国际教育</span>
+      <div class="news-title">印度-英国自贸协定将降低英商品关税，预计对教育留学消费带来渐进影响</div>
+      <div class="news-summary">印度-英国自贸协定预计不会对印度国内消费品牌造成严重冲击，行业预期将促进创新而非引发激烈竞争。协议降低许多产品关税，使英国商品对消费者更实惠。Amul等公司因本地采购优势缓解进口竞争担忧。零售商相信协议将鼓励印度制造商质量提升和高端化。对教育和留学消费的影响预计将是渐进且经过时间衡量的。</div>
+      <div class="news-source">来源：<a href="https://investmentguruindia.com/newsdetail/key-highlights-stocks-in-news-economic-global-updates-17th-july-2026-by-gepl-capital-ltd507707" target="_blank" rel="noopener noreferrer">GEPL Capital</a></div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">财报爆雷</span>
+      <div class="news-title">奈飞Q2营收125.6亿但Q3指引疲软盘后跌超8%，2027年起观看时长报告改为年一次</div>
+      <div class="news-summary">奈飞Q2营收<em>125.6亿美元</em>同比增13%，归母净利润34.01亿美元同比增8.83%，符合预期。但Q3营收指引129亿美元同比仅增<em>11.7%</em>，为2023年末以来最低增幅，盘后跌超<em>8%</em>。全年营收指引收窄至510-514亿美元。更令市场不安的是，奈飞宣布从<em>2027年</em>起观看时长报告由每年两次减少至每年一次，去年已停止公布订阅用户数。高盛下调目标价至94美元，股价较2025年6月高点已累计下跌约50%。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-17/doc-iniiaaiq1342407.shtml" target="_blank" rel="noopener noreferrer">财联社</a> · <a href="https://news.ifeng.com/c/8uqPUkJ6R05" target="_blank" rel="noopener noreferrer">凤凰网</a> · <a href="https://tech.ifeng.com/c/8up4nlcU0Gt" target="_blank" rel="noopener noreferrer">IT之家</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">番位调整</span>
+      <div class="news-title">《两京十五日》主演调整：成毅独领衔，林更新改任特别出演兼联合出品人</div>
+      <div class="news-summary">7月17日爱奇艺717会员节现场，《两京十五日》官宣阵容：成毅(傅诗淇)为唯一领衔主演，林更新调整为特别出演并担任该剧联合出品人。调整直接原因是2026年7月10日落地影视演员署名新规——头衔按主线定位和戏份体量界定，按法定名字姓氏笔画排序。截至7月17日爱奇艺预约人数突破<em>104.6万</em>，微博主话题阅读量17.9亿，登顶热门剧集人气榜TOP1，张黎执导。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663425958192218674/" target="_blank" rel="noopener noreferrer">头条新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">暑期档</span>
+      <div class="news-title">2026年7月暑期档80部新片集中上映创近年开局月纪录，上海300余场免费公益电影</div>
+      <div class="news-summary">据国家电影局6月25日官方片单，2026年7月暑期档近<em>80部</em>影片定档，数量创近年开局月纪录。好莱坞头部IP占据核心场次：《侏罗纪世界：重生》7月2日开画首日票房破<em>1.2亿</em>，《蜘蛛侠：崭新之日》以17.9万想看人数登顶比第二名《功夫女足》多6.9万。上海闵行区7月推出<em>300多场</em>免费公益电影，其中露天电影超160场。</div>
+      <div class="news-source">来源：<a href="https://ent.sina.cn/2026-07-17/detail-iniicqkx8283858.d.html" target="_blank" rel="noopener noreferrer">新浪娱乐</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">流媒体</span>
+      <div class="news-title">亚马逊米高梅《The Runner》盖尔·加朵主演9月2日Prime Video首映</div>
+      <div class="news-summary">Amazon MGM Studios公布心理动作惊悚片《The Runner》官方预告、海报及首批剧照，盖尔·加朵(Gal Gadot)与戴米恩·路易斯(Damian Lewis)主演。影片将于<em>9月2日</em>在Prime Video全球首映。同日奈飞也宣布GenAI已应用于300部作品生产流程，主要在后期制作环节降本提效，云游戏日活用户自4月上线以来增长3倍。</div>
+      <div class="news-source">来源：<a href="https://businessnewsthisweek.com/entertainment/gal-gadot-races-against-time-in-amazon-mgm-studios-thriller-the-runner-premieres-september-2-on-prime-video/" target="_blank" rel="noopener noreferrer">Business News This Week</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">机器人格斗</span>
+      <div class="news-title">深圳南山举办众擎URKL首场比赛，32支T800重型机甲全球格斗盛宴</div>
+      <div class="news-summary">7月16日晚深圳南山见证全球机器人格斗盛宴——众擎URKL首场比赛火热开战。32支顶尖战队携T800重型机甲展开激烈对决，每一次碰撞都点燃观众热情，赛场内外尽显科技与竞技融合之美。同期广州塔码头全新亮相"吉祥舫"游船，将岭南文化与南越宫廷美学完美结合，为游客带来独特文化体验。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7663421074788385324/" target="_blank" rel="noopener noreferrer">广州今日热点</a></div>
+    </div>
+  </div>
+
+  <!-- 数据观察 -->
+  <div class="data-box">
+    <div class="data-box-title">📊 数据观察</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-value">2.65万亿</div>
+        <div class="data-label">A股7月17日成交额(放量杀跌)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">666.07亿</div>
+        <div class="data-label">长鑫科技科创板IPO募资额(创历史)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">+77.4%</div>
+        <div class="data-label">台积电Q2净利润同比增速</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">402.0亿</div>
+        <div class="data-label">台积电Q2营收(美元·达指引上限)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">2.8万亿</div>
+        <div class="data-label">Kimi K3开源模型参数规模(全球第三)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">4.912万亿</div>
+        <div class="data-label">苹果市值(美元·反超英伟达)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">-62%</div>
+        <div class="data-label">霍尔木兹海峡原油过境量降幅</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">85.10</div>
+        <div class="data-label">布伦特原油价格(美元/桶·周涨12%)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">24.87万亿</div>
+        <div class="data-label">上半年社会消费品零售总额(元)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">335.6GWh</div>
+        <div class="data-label">上半年动力电池累计装车量(同比+12%)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">3000亿</div>
+        <div class="data-label">央行保障性住房再贷款(年化1.75%)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">151.3亿</div>
+        <div class="data-label">上半年商业航天融资额(超2025全年八成)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 重点关注 -->
+  <div class="focus-box">
+    <div class="focus-box-title">🎯 重点关注</div>
+    <div class="focus-item">
+      <strong>【重大政策】</strong>习近平主席在2026 WAIC开幕式发表主旨讲话，提出全球AI治理四点意见：坚持开放共赢驱动创新发展、强化风险意识确保安全可控、鼓励包容并蓄促进文明互鉴、倡导和衷共济完善全球治理，宣布中国智能经济核心产业规模已超万亿元。
+    </div>
+    <div class="focus-item">
+      <strong>【重大项目】</strong>2026世界人工智能大会上海开幕：1100+企业参展、3000+展品亮相、300+款产品全球首发，华为Atlas 950超节点真机、全球首款AI智能体手机、西门子Eigen工程智能体等重磅亮相，世界人工智能合作组织协定签署。
+    </div>
+    <div class="focus-item">
+      <strong>【龙头企业】</strong>台积电Q2业绩全面超预期：营收402亿美元、净利润同比+77.4%、2nm首贡献营收，资本支出预算大幅上调至600-640亿美元，亚利桑那州追加1000亿美元投资，AI芯片需求强劲势头持续。
+    </div>
+    <div class="focus-item">
+      <strong>【龙头IPO】</strong>长鑫科技666亿元科创板IPO创两项历史纪录(中签率0.4714%、942.88万户申购)，A股历史第三大IPO、科创板历史最大IPO，预计7月27日挂牌上市，国产存储芯片龙头崛起。
+    </div>
+    <div class="focus-item">
+      <strong>【龙头变局】</strong>苹果市值反超英伟达重回全球第一，逼近5万亿美元门槛；美银行调查显示82%基金经理认为半导体是当前最拥挤交易，AI板块估值分歧加剧。
+    </div>
+    <div class="focus-item">
+      <strong>【地缘冲击】</strong>美伊冲突进入第六夜，霍尔木兹海峡通行量暴跌62%，国际油价单周大涨12%布伦特逼近86美元；60天停火协议8月16日到期，全球能源安全警报拉响。
+    </div>
+    <div class="focus-item">
+      <strong>【政策拐点】</strong>六部委罕见同步出台楼市新政组合拳：首付15%/25%、央行3000亿保障房再贷款年化1.75%、去化超36个月城市暂停供地、"卖旧买新"个税退税延续至2027年。
+    </div>
+  </div>
+
+  <!-- 综合市场观察 -->
+  <div class="outlook-section">
+    <h2>综合市场观察与本周看点</h2>
+    <div class="outlook-sub">MARKET OUTLOOK · WEEK AHEAD</div>
+
+    <div class="outlook-item">
+      <strong>1. 全球AI竞争进入"系统战"阶段：</strong>WAIC 2026释放出清晰信号——AI正从"模型军备赛"转向"系统能力战"。从拼单卡到拼系统、从能说会道到能办事能交易、从B端到C端商用。华为Atlas 950超节点、AI智能体手机、人形机器人量产三大变量将决定下一阶段竞争格局。中国智能经济核心产业规模已超万亿元，国产AI芯片半年报集体爆发(摩尔 threads营收+149%、海光+70%)。
+    </div>
+
+    <div class="outlook-item">
+      <strong>2. A股风格切换加速：</strong>7月17日A股遭遇罕见全面重挫，本周创业板累计跌10.78%、科创50周跌16.93%，科技成长板块成杀跌重灾区。前期AI算力产业链积累的融资盘止损形成负反馈循环，但台积电Q2业绩+资本支出大幅上调显示AI产业趋势依然强劲。预计去杠杆进程尚未完全结束，资金或从此前过度集中的半导体通信单一结构向更分散的科技细分领域及低位价值板块迁移。
+    </div>
+
+    <div class="outlook-item">
+      <strong>3. 地缘风险重新计价：</strong>美伊冲突进入第六夜，霍尔木兹海峡通行量暴跌62%、布伦特原油单周大涨12%。市场对地缘风险定价滞后而非前瞻，6月暴跌反映对停火协议过度乐观，7月反弹是对停火破裂的迟来纠偏。60天停火协议8月16日到期是关键时间窗口。摩根大通、高盛提示100美元是油价冲击真实启动线，届时全球通胀压力将明显反弹，美联储政策空间进一步收窄。
+    </div>
+
+    <div class="outlook-item">
+      <strong>4. 楼市政策拐点已现但非"全面暴涨"：</strong>六部委同步出台新政是过去四年从未有过的协同力度，但全国二手房挂牌量已突破852万套、新房销售从2021年17.94亿平方米跌至2025年不足10亿平方米。本轮政策真正的底层逻辑是顶层重构而非救市——从居民端(信贷+税费)、房企端(白名单+主办银行)、土地端(去化超36个月暂停供地)、保障端(3000亿再贷款)同步施策。本周重点关注政策落地节奏与二手房带看量变化。
+    </div>
+
+    <div class="outlook-item">
+      <strong>5. 本周值得关注的看点：</strong>①长鑫科技7月27日挂牌上市后的打新收益与存储芯片产业链反应；②Gemini 3.5 Pro正式发布后与Kimi K3、Claude Fable 5的benchmark对决；③美伊60天停火协议8月16日到期前后的地缘走向；④奈飞Q3业绩指引疲软后美股科技股估值再平衡；⑤WAIC 7月20日闭幕日SAIL奖揭晓及世界人工智能合作组织协定签署后续；⑥六部委楼市新政落地后一线/强二线城市二手房带看与成交量验证。
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 信息准确 · 来源可靠</div>
+    <a href="../index.html" class="back-link">← 返回首页</a>
+  </footer>
+</div>
+
+</body>
+</html>
