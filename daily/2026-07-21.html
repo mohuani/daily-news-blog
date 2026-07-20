@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年7月21日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-important { background: #FEF3E2; color: #B8792A; }
+  .tag-policy { background: #E8F0FE; color: #3B6FB5; }
+  .tag-data { background: #E6F5F2; color: #2D8B7A; }
+  .tag-company { background: #F3EEFA; color: #6B5BA8; }
+  .tag-breaking { background: #FDE8E8; color: #C44848; }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .news-summary em {
+    font-style: normal;
+    color: var(--accent-teal);
+    font-weight: 500;
+  }
+
+  .news-source {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .news-source a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .news-source a:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #F0F4F3 0%, #E6EDEB 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 16px;
+    border-left: 4px solid var(--accent-teal);
+  }
+
+  .data-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .data-item {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-light);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .focus-box {
+    background: linear-gradient(135deg, #FDF8ED 0%, #FBF2E0 100%);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 40px;
+    border-left: 4px solid var(--accent-gold);
+  }
+
+  .focus-box-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .focus-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(196,153,59,0.15);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .focus-item:last-child { border-bottom: none; }
+
+  .focus-item strong {
+    color: var(--text-primary);
+  }
+
+  .outlook-section {
+    margin-top: 48px;
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 100%);
+    border-radius: 16px;
+    padding: 40px 44px;
+    color: #FFFFFF;
+  }
+
+  .outlook-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-section .outlook-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .outlook-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .outlook-item:last-child { border-bottom: none; }
+
+  .outlook-item strong {
+    color: var(--accent-gold-light);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 48px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45,139,122,0.3);
+    transition: border-color 0.2s;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .theme-tech .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-finance .section-icon { background: #FEF3E2; color: #C4993B; }
+  .theme-ai .section-icon { background: #F3EEFA; color: #7B6BAE; }
+  .theme-health .section-icon { background: #E6F5F2; color: #2D8B7A; }
+  .theme-energy .section-icon { background: #E8F8F0; color: #3A9B6A; }
+  .theme-consumer .section-icon { background: #FDE8E8; color: #C4686B; }
+  .theme-realestate .section-icon { background: #F0EDE8; color: #8B7355; }
+  .theme-manufacturing .section-icon { background: #E6ECF0; color: #4A6B8A; }
+  .theme-education .section-icon { background: #E8F0FE; color: #4A7FB5; }
+  .theme-entertainment .section-icon { background: #F3EEFA; color: #9B6BAE; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .outlook-section { padding: 28px 24px; }
+    .data-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <span class="brand-tag">Global Daily Briefing</span>
+      <span class="date-tag">Vol.2026 · No.202</span>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">2026年7月21日 · 星期二 · 涵盖2026年7月20日全球动态</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="summary-section">
+    <div class="summary-label">今日摘要</div>
+    <div class="summary-text">
+      <strong>7月20日，2026世界人工智能大会在上海闭幕，1100多家企业携4486项展品参展，32个重点项目集中签约总投资超409亿元，世界人工智能合作组织(WAICO)正式成立并落户上海；Kimi K3因需求过载48小时内逼近算力上限，被迫暂停新订阅，阿里同步发布Qwen3.8-Max-Preview。</strong>台积电以2650亿美元加码美国亚利桑那产能，三星美国裁员739人并将总部由新泽西迁往德州；证监会主席吴清召开投资者座谈会，A股掀起回购分红潮，长鑫科技579亿元科创板IPO打新火爆。六部委协同推出楼市"史诗级"新政，首套房首付最低降至15%；工信部披露上半年规上工业增加值增长5.4%、38款创新药获批国产占比超80%。三星生物18亿美元收购瑞士PolyPeptide，诺兰《奥德赛》首周末全球票房2.64亿美元。
+    </div>
+  </div>
+
+  <!-- 科技与互联网 -->
+  <div class="section theme-tech">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">台积电以2650亿美元加码美国产能，CFO称AI"超级趋势"驱动需求</div>
+      <div class="news-summary">台积电CFO黄忠谋接受CNBC采访时表示，公司正加快亚利桑那州工厂建设进度，以把握AI带来的"超级趋势"(megatrend)和强劲客户需求。Asharq Business同日报道指出，台积电正以高达<em>2650亿美元</em>的美国本土投资追赶AI浪潮，在亚利桑那大幅扩产并贴近客户，加剧了其与英特尔及马斯克旗下芯片项目的竞争，反映出AI需求已将半导体制造能力转化为地缘战略筹码。</div>
+      <div class="news-source">来源：<a href="https://www.cnbc.com/2026/07/20/tsmc-arizona-fab-capacity-ai-chip-demand.html" target="_blank" rel="noopener noreferrer">CNBC</a> · <a href="https://asharqbusiness.com/technology/141074/tsmc-%D8%AA%D8%AA%D8%AD%D8%AF%D9%89-%D8%A5%D9%86%D8%AA%D9%84-%D9%88%D9%85%D8%A7%D8%B3%D9%83-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1-265-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D8%A7/" target="_blank" rel="noopener noreferrer">Asharq Business</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">大会闭幕</span>
+      <div class="news-title">2026世界人工智能大会在上海闭幕，32个重点项目签约超409亿元</div>
+      <div class="news-summary">2026 WAIC于7月20日在上海世博中心闭幕。大会展览面积首次突破<em>10万平方米</em>，<em>1100多家</em>企业携<em>4486项</em>展品参展，<em>351款</em>产品全球首发，线下参观超40万人次，全球线上流量超30亿。闭幕式上32个上海AI重点项目集中签约，总投资超<em>409亿元</em>；中国联通启动"UniAI·智联申城"项目，将在上海投资超<em>250亿元</em>加强智算基建。大会期间成立世界人工智能合作组织(WAICO)，总部落户上海。</div>
+      <div class="news-source">来源：<a href="https://english.news.cn/20260720/e2550c55ecfd413188eb965e304c8be2/c.html" target="_blank" rel="noopener noreferrer">新华社</a> · <a href="http://m.toutiao.com/group/7664571204245701139/" target="_blank" rel="noopener noreferrer">人民网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">三星美国裁员739人并将总部由新泽西迁往德州，消费业务承压</div>
+      <div class="news-summary">三星电子在美国新泽西州Englewood Cliffs裁员<em>739人</em>，德州Plano约100人被裁，同时将其美国总部从新泽西迁往德州。此举凸显三星内部业务分化：半导体业务受益于AI存储芯片需求强劲、利润预计大幅增长，而手机、电视等消费电子业务面临成本上升及来自苹果、中国厂商的激烈竞争。三星否认这是全球消费业务大规模重组，称迁移旨在加强团队协作。</div>
+      <div class="news-source">来源：<a href="https://techstartups.com/2026/07/20/top-tech-news-today-july-20-2026-alibaba-bezos-blackstone-google-moonshot-ai-nvidia-samsung-more/" target="_blank" rel="noopener noreferrer">TechStartups</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">印度Skyroot成功发射Vikram-1，成全球第三个拥有私营轨道火箭发射能力的国家</div>
+      <div class="news-summary">印度私营航天公司Skyroot Aerospace的Vikram-1火箭首次发射即成功入轨，使印度成为继美国和中国之后<em>第三个</em>拥有私营轨道火箭发射能力的国家。这一里程碑式突破显示出商业航天发射能力正向美中之外的国家扩展，标志着全球私营航天生态的多元化发展。</div>
+      <div class="news-source">来源：<a href="https://www.independent.co.uk/space/india-rocket-launch-vikram-1-first-private-satellite-skyroot-b3017376.html" target="_blank" rel="noopener noreferrer">The Independent</a></div>
+    </div>
+  </div>
+
+  <!-- 金融与投资 -->
+  <div class="section theme-finance">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">证监会主席吴清召开投资者座谈会，国家队与上市公司掀起回购分红潮</div>
+      <div class="news-summary">7月20日，证监会主席吴清赴北京证券营业部调研并主持召开投资者座谈会，与8名大中小投资者代表面对面交流，强调"投资者是市场之本"，全力维护市场平稳运行。同日，中国国新动用超<em>500亿元</em>、中国诚通累计买入近<em>100亿元</em>央企股票资产，三峡能源控股股东三峡集团公告拟增持<em>15亿—30亿元</em>，多家上市公司密集披露回购与中期分红方案。当日上证指数收涨0.85%，全市场成交额<em>2.72万亿元</em>。</div>
+      <div class="news-source">来源：<a href="https://finance.ifeng.com/c/8uuoAxTRW94" target="_blank" rel="noopener noreferrer">凤凰财经(中国证券报)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">市场数据</span>
+      <div class="news-title">美股周五收盘大跌，AI芯片抛售引发风险规避，VIX大涨12.2%</div>
+      <div class="news-summary">7月20日(周五)，华尔街三大指数全线下挫，道指跌0.8%收于52,146.42点，纳斯达克综合指数跌1.4%至25,520.24点，标普500跌1%至7,457.69点。半导体与AI相关股票遭遇抛售，VIX恐慌指数大涨<em>12.2%</em>至18.77；伊朗地缘紧张局势进一步打压市场情绪。全周纳指累跌<em>2.9%</em>，标普500累跌1.6%。</div>
+      <div class="news-source">来源：<a href="https://www.nasdaq.com/articles/stock-market-news-july-20-2026" target="_blank" rel="noopener noreferrer">Nasdaq.com</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">长鑫科技579亿元科创板IPO打新火爆，马云或浮盈约1300亿元</div>
+      <div class="news-summary">上交所科创板迎来史上最大IPO——长鑫科技，发行价<em>8.66元/股</em>，预计募资<em>579.19亿元</em>。公司2026年上半年预计营收破千亿，归母净利润大幅增长。市场预计其上市后估值可达3万亿—4万亿元，马云或浮盈约<em>1300亿元</em>。打新冻结资金1.7万亿元已于7月20日全额解冻回流二级市场。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-20/doc-iniimeam3020043.shtml" target="_blank" rel="noopener noreferrer">新浪财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">盘面观察</span>
+      <div class="news-title">A股尾盘拉升沪指涨0.85%，油气煤炭白酒大涨，贵州茅台涨近6%</div>
+      <div class="news-summary">7月20日A股尾盘拉升，沪指涨0.85%、创业板指涨0.42%、科创50涨0.19%，但深成指跌0.71%、科创综指跌2.28%。沪深两市成交<em>2.7万亿元</em>，较前一日放量472亿元。油气股中国海油、中曼石油涨停，煤炭股兖矿能源涨停，贵州茅台涨近<em>6%</em>；芯片、PCB概念股大幅调整，全市场超3700只个股下跌、超200股跌停。</div>
+      <div class="news-source">来源：<a href="https://news.ifeng.com/c/8uunHiARl4h" target="_blank" rel="noopener noreferrer">凤凰资讯(每日经济新闻)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">兴业证券提议中期分红，三一重工、京东方等密集披露回购方案</div>
+      <div class="news-summary">7月20日，兴业证券(601377)董事长苏军良提议实施2026年中期利润分配方案，拟每10股派发现金红利0.50元(含税)，股价当日上涨1.31%收于6.2元，总市值535.43亿元。同日三一重工、山东高速、中泰证券、京东方等密集披露回购或首次回购方案，京东方首次回购支付约<em>4990万元</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664582282065363497/" target="_blank" rel="noopener noreferrer">证券时报</a></div>
+    </div>
+  </div>
+
+  <!-- 人工智能 -->
+  <div class="section theme-ai">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">Kimi K3因需求过载48小时逼近算力上限，被迫暂停新订阅</div>
+      <div class="news-summary">中国AI初创公司月之暗面于7月20日宣布，其新发布的Kimi K3模型在48小时内需求已逼近算力容量上限，被迫暂停接受新订阅用户，现有用户仍可正常使用。Kimi K3参数规模达<em>2.8万亿</em>，是目前全球最大的开源AI模型，在前端编码能力排行榜(Arena)上超越Anthropic Fable 5。事件反映出算力供给而非模型质量，正成为全球AI竞争的决定性因素。</div>
+      <div class="news-source">来源：<a href="https://apnews.com/article/kimi-k3-china-ai-model-us-4c66a2e0f557ce79d3cc2d769c9a6226" target="_blank" rel="noopener noreferrer">Associated Press</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">模型发布</span>
+      <div class="news-title">阿里巴巴发布Qwen3.8-Max-Preview，称仅次于Anthropic Fable 5</div>
+      <div class="news-summary">阿里巴巴Qwen团队在WAIC 2026上预览了Qwen3.8-Max-Preview模型，参数规模<em>2.4万亿</em>，是Qwen家族首个万亿级多模态模型，可处理文本、图像、视频和文档。阿里巴巴声称该模型在内部测试中仅次于Anthropic的Fable 5，在编码、全栈开发、数据分析等方面优于前代旗舰。预览版已在Token Plan、Qoder、QoderWork平台上线，完整开源权重"即将"发布。受此消息影响，阿里巴巴股价周一上涨<em>5.4%</em>。</div>
+      <div class="news-source">来源：<a href="https://thenextweb.com/news/alibaba-qwen38-second-only-fable5-open-weight" target="_blank" rel="noopener noreferrer">The Next Web</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">融资动态</span>
+      <div class="news-title">贝索斯联合英伟达投资CuspAI 4.5亿美元，用AI寻找芯片制造新材料</div>
+      <div class="news-summary">AI材料发现初创公司CuspAI完成<em>4.5亿美元</em>融资，估值达<em>26亿美元</em>，投资方包括杰夫·贝索斯、英伟达、贝莱德等。CuspAI旨在打造"材料的AI搜索引擎"，通过反向科学搜索流程发现新材料，主要应用于半导体制造、清洁能源和先进制造领域。英伟达的战略参与被视为符合其在芯片材料领域的协同逻辑，反映出"科学AI"正成为新的投资热点。</div>
+      <div class="news-source">来源：<a href="https://www.cnbc.com/2026/07/20/bezos-cuspai-new-chip-materials-nvidia.html" target="_blank" rel="noopener noreferrer">CNBC</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">阿里云WAIC发布Agent-Native创新，首推Qwen驱动耳机</div>
+      <div class="news-summary">阿里云在WAIC 2026上发布一系列"Agent-Native"技术，包括AgentLoop、AgentTeams、TokenWorks等产品，用于多智能体工作流的治理、优化和编排。旗下芯片部门平头哥开源AI软件栈T-Head SAIL，适配其"仲谋"AI芯片(截至2026年4月累计出货<em>56万颗</em>，服务400+客户、20+行业)。同时推出首款Qwen驱动耳机"Qwen Clip"(与Bose联合调音)以及"Agent Glasses"AI眼镜升级版。</div>
+      <div class="news-source">来源：<a href="https://www.alibabacloud.com/blog/alibaba-cloud-unveils-agent-native-innovations-at-waic-2026_603377" target="_blank" rel="noopener noreferrer">Alibaba Cloud</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">上海物理智能与机器人研究院在WAIC闭幕式上揭牌</div>
+      <div class="news-summary">7月20日在2026世界人工智能大会闭幕式上，"上海物理智能与机器人研究院"正式揭牌，聚焦物理智能与机器人领域的研发与产业化。这是本届WAIC闭幕式上一系列重磅成果之一，同期还包括启动"2026国际具身智能技能大赛"、32个上海AI重点项目集中签约(总投资超409亿元)等。这显示出上海正加速布局具身智能这一AI产业核心赛道。</div>
+      <div class="news-source">来源：<a href="https://m.weibo.cn/detail/5322800222964448" target="_blank" rel="noopener noreferrer">科创板日报</a></div>
+    </div>
+  </div>
+
+  <!-- 医疗健康 -->
+  <div class="section theme-health">
+    <div class="section-header">
+      <div class="section-icon">⚕️</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">三星生物18亿美元全现金要约收购瑞士PolyPeptide，创韩国药企史上最大并购</div>
+      <div class="news-summary">7月20日，韩国三星生物宣布以每股44.31瑞郎全现金要约收购瑞士多肽CDMO龙头PolyPeptide Group 100%股份，隐含股权价值约14.6亿瑞郎(约<em>18亿美元</em>/122亿元人民币)，系韩国制药生物行业史上最大并购。PolyPeptide董事会一致推荐接受要约，控股股东55.65%已签署不可撤销承诺，交易预计2026年底完成。此举标志三星生物从抗体、ADC领域延伸至GLP-1等多肽疗法赛道。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-20/doc-iniimuyc2944971.shtml" target="_blank" rel="noopener noreferrer">新浪财经(科创板日报)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">工信部：上半年38款创新药获批，国产占比超80%，多个"全球首个"集中落地</div>
+      <div class="news-summary">7月20日国新办新闻发布会上，工业和信息化部新闻发言人陶青介绍，2026年上半年我国共有<em>38款</em>创新药获批上市，其中国产创新药31款，占比超<em>80%</em>；全球首个抗丁型肝炎抗体药物、全球首款实体瘤CAR-T疗法、全球首款狂犬病双抗、全球首款侵入式脑机接口医疗器械等"全球首个"集中获批。1—6月规模以上医药工业增加值同比增长6.4%，创新药对外技术授权交易总额超<em>1000亿美元</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664503619571532330/" target="_blank" rel="noopener noreferrer">中国网(中国发布)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">礼来38亿美元收购AtaiBeckley，迷幻药赛道获巨头战略背书</div>
+      <div class="news-summary">7月20日，H.C. Wainwright发布研报称，礼来拟以最高<em>38亿美元</em>收购迷幻药生物科技公司AtaiBeckley，是"迄今为止迷幻药作为新兴制药品类最明确的战略验证"。AtaiBeckley主打资产BPL-003(5-MeO-DMT合成类似物，鼻喷剂型)用于难治性抑郁症，IIa期试验中66.7%患者第二天即出现抗抑郁反应。该交易继AbbVie 12亿美元收购Gilgamesh之后，标志大药企从合作/期权转向直接拥有迷幻药平台。</div>
+      <div class="news-source">来源：<a href="https://www.biospace.com/business/lillys-ataibeckley-buy-validates-space-as-big-pharma-takes-note-of-psychedelics" target="_blank" rel="noopener noreferrer">BioSpace</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">BlossomHill、Latigo同日申请纳斯达克上市，2026年IPO班级成2021年来最大</div>
+      <div class="news-summary">7月20日，加州两家生物科技公司BlossomHill Therapeutics(拟挂牌BLSM)和Latigo Biotherapeutics(拟挂牌LTGO)分别向纳斯达克全球精选市场提交IPO申请。2026年上半年已有<em>18家</em>生物科技公司上市，超过去年全年8家的两倍，若两家成功上市，2026年IPO班级将成2021年疫情驱动高峰以来最大规模。Latigo主打NaV1.8抑制剂LTG-001(非阿片类镇痛)，BlossomHill聚焦EGFR抑制剂BH-30643等肿瘤资产。</div>
+      <div class="news-source">来源：<a href="https://www.biospace.com/business/2026-ipo-class-blooms-again-as-blossomhill-latigo-set-sights-on-nasdaq" target="_blank" rel="noopener noreferrer">BioSpace</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">Vertex IgA肾病药povetacicept受益于诺华、Vera获批利好，UPCR降低49.8%</div>
+      <div class="news-summary">7月20日报道，FDA正在审查Vertex制药povetacicept用于IgA肾病(IgAN)，目标行动日期为11月30日。此前一周内，FDA先后批准Vera Therapeutics的Trutakna(atacicept)和授予诺华Fabhalta(iptacopan)IgAN完全批准，BMO Capital Markets认为这两款竞品的市场教育将形成"顺风"。Povetacicept III期数据显示UPCR(尿蛋白肌酐比)较安慰剂降低<em>49.8%</em>，优于Fabhalta的44%。</div>
+      <div class="news-source">来源：<a href="https://www.biospace.com/drug-development/vertexs-iga-nephropathy-drug-derisked-after-novartis-vera-approvals" target="_blank" rel="noopener noreferrer">BioSpace</a></div>
+    </div>
+  </div>
+
+  <!-- 新能源与汽车 -->
+  <div class="section theme-energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">特斯拉柏林工厂2025年报：产能利用率仅54%，净利润反增36%</div>
+      <div class="news-summary">Tesla Manufacturing Brandenburg SE发布的年度报告显示，2025年特斯拉德国柏林工厂产能利用率仅<em>54%</em>，产量较上年下滑，但净利润仍同比增长<em>36%</em>至7710万欧元。该报告反映出即便在欧洲需求承压、产能未充分利用的情况下，柏林工厂通过效率提升与成本控制仍实现了利润增长。</div>
+      <div class="news-source">来源：<a href="https://evxl.co/2026/07/20/tesla-giga-berlin-profit-2025/" target="_blank" rel="noopener noreferrer">EVXL</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">出口数据</span>
+      <div class="news-title">乘联分会：上半年中国汽车出口918亿美元同比增54%，锂电池出口487亿美元</div>
+      <div class="news-summary">乘联分会秘书长崔东树援引海关总署数据称，2026年1-6月中国汽车出口达<em>918亿美元</em>，同比增长<em>54%</em>；其中6月单月出口182亿美元，同比大增70%。同期锂电池出口<em>487亿美元</em>，同比增长43%，6月单月87亿美元同比增32%。该数据印证中国汽车与动力电池出口持续高速增长。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664403978876125702/" target="_blank" rel="noopener noreferrer">财联社汽车早报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">行业分化</span>
+      <div class="news-title">光伏全产业链价格跌破现金成本，储能逆变器出口暴增72%成新主线</div>
+      <div class="news-summary">7月20日盘后分析指出，光伏硅料价格跌至32.5元/kg(现金成本38-45元)，组件报价0.67-0.7元/W(现金成本0.75元)，全产业链亏损10%-22%；行业第一梯队龙头上半年预亏48-54亿元。与之形成鲜明对比的是，上半年新型储能新增装机同比增长18%，储能逆变器出口暴增<em>72%</em>；财政部新出台的消费税新政对钙钛矿、叠层等新一代光伏技术2026年9月起免征，传统硅基路线2027年起征2%。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664559942501696044/" target="_blank" rel="noopener noreferrer">市场资讯</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">国家能源局启动村镇微能网试点，要求可再生能源占比不低于50%</div>
+      <div class="news-summary">7月20日，国家能源局官网发布《关于深入推进农村能源革命开展村镇微能网建设试点工作的通知》。目标是到2028年底在全国建成一批试点项目，要求试点区域内可再生能源占比不低于<em>50%</em>、年自发自用电量不低于40%；到2030年底成熟模式在农村地区全面推开。文件提出通过经济激励引导用户动态调整用电时序，促进新能源就地消纳。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664538575999861254/" target="_blank" rel="noopener noreferrer">世纪储能(转载国家能源局通知)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">国能山西临猗100MW光储一体化项目光伏组件招标(14.63MWp)</div>
+      <div class="news-summary">7月20日"国能e招"发布招标公告，国家能源集团下属国能山西新能源产业投资开发有限公司临猗分公司就临猗县100MW光储一体化项目采购14.63MWp单晶硅双面590Wp光伏组件(共<em>24797块</em>)。项目位于山西运城临猗县耽子镇，占地3000余亩，交流侧容量100MW、安装容量120MWp，投标截止时间为2026年8月10日。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664559037509321279/" target="_blank" rel="noopener noreferrer">光伏产业网(转载国能e招公告)</a></div>
+    </div>
+  </div>
+
+  <!-- 消费与零售 -->
+  <div class="section theme-consumer">
+    <div class="section-header">
+      <div class="section-icon">🛍️</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">永辉自有品牌节7月20日启动，年内新品将达200款</div>
+      <div class="news-summary">永辉自有品牌节于7月20日启动，持续至31日，全国门店集中首发近40款新品，覆盖酒饮、休闲食品、杂粮等品类。带有"小黑标"的商品代表永辉全链路品质管控。自去年推出近60款商品以来，春节档销售额环比增长超<em>70%</em>；2026年上市商品总数将增至<em>200款</em>，加速自有品牌布局。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664551915304305167/" target="_blank" rel="noopener noreferrer">今日要点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">突发</span>
+      <div class="news-title">塔斯汀外卖封签拼出辱骂字样登热搜，门店十倍赔偿并开除员工</div>
+      <div class="news-summary">7月20日，"顾客凌晨点塔斯汀外卖被贴封签辱骂"话题登上热搜。福建龙岩一消费者因坚持要求临近打烊的门店正常出餐，收到外卖后发现封签被拼凑出辱骂字样。门店随后安排涉事员工当面道歉并予以开除，同时按订单实付金额的<em>十倍</em>进行赔偿。塔斯汀为经营中国汉堡的连锁品牌，目前全国在营门店数近<em>13000家</em>。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664551915304305167/" target="_blank" rel="noopener noreferrer">今日要点</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">业绩预喜</span>
+      <div class="news-title">19家A股食品饮料上市公司半年报预喜，洽洽净利最高预增近199%</div>
+      <div class="news-summary">截至7月20日，Wind数据显示已披露2026年半年度业绩预告的A股食品饮料上市公司中，有<em>19家</em>预喜(13家预增、6家扭亏)。洽洽食品预计上半年净利润2.4亿-2.65亿元，同比增长<em>170.75%-198.96%</em>；中信尼雅预增1016.90%-1523.23%；香飘飘预计扭亏为盈。背景是上半年社会消费品零售总额248722亿元，同比增长1.3%，餐饮收入增长2.8%。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664646076447719982/" target="_blank" rel="noopener noreferrer">证券日报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">赛事消费</span>
+      <div class="news-title">世界杯拉动香港餐饮增收约5亿港元，商场人流同比涨10%-15%</div>
+      <div class="news-summary">2026年美加墨世界杯决赛于香港时间7月20日凌晨开赛，西班牙击败阿根廷夺冠。香港餐饮联业协会会长黄家和表示，自6月30日至今世界杯赛事为香港餐饮行业带来约<em>5亿港元</em>新增营业额。香港约150家餐饮门店、10间大型商场设置观赛大屏；信和集团旗下三大旗舰商场整体人流同比上涨<em>10%-15%</em>，营业额获双位数增幅。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664463483613872691/" target="_blank" rel="noopener noreferrer">中新社香港</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">多元品牌扎堆成都：FENDI、周大福、FENTY BEAUTY相继落地</div>
+      <div class="news-summary">7月20日，多个国际品牌重磅体验空间在成都落地。FENDI 2026-27秋冬系列限时店登陆成都太古里中庭，呈现首席创意官Maria Grazia Chiuri回归后首个成衣系列；周大福启幕"夏调 感官艺境"限时体验空间，并宣布赵露思为全球品牌代言人；FENTY BEAUTY BY RIHANNA西南首家概念店"巴适公社"于成都万象城开业，并邀请国家级非遗蜀绣传承人刁娟共创《蕾哈娜肖像蜀绣作品》。</div>
+      <div class="news-source">来源：<a href="https://news.ifeng.com/c/8uuzFmJPEO4" target="_blank" rel="noopener noreferrer">红星新闻</a></div>
+    </div>
+  </div>
+
+  <!-- 房地产 -->
+  <div class="section theme-realestate">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">六大中央部委罕见协同发声，楼市"史诗级"新政7月全国落地</div>
+      <div class="news-summary">7月20日新浪财经发布权威解读，住建部、央行、财政部、国家金融监管总局、税务总局、自然资源部六大部委同步发声，推出覆盖需求、金融、税费、土地、房企纾困、保障房的一揽子新政。核心包括：首套房首付最低降至<em>15%</em>、二套25%；5年期以上LPR维持3.5%低位，首套商贷利率3.05%-3.45%，公积金首套2.6%；二手房增值税满2年免征；"卖旧买新"个税退税延续至2027年底；央行落地<em>3000亿元</em>保障性住房专项再贷款(利率1.75%)。截至6月上旬已有70多个城市启动收储，意向房源突破12万套。</div>
+      <div class="news-source">来源：<a href="https://finance.sina.com.cn/roll/2026-07-20/doc-iniimzha9728266.shtml" target="_blank" rel="noopener noreferrer">新浪财经(大伟看楼市)</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">区域数据</span>
+      <div class="news-title">大湾区楼市周报：广州首发"好房子"52项标准，深圳上半年量价齐升</div>
+      <div class="news-summary">7月20日发布的大湾区楼市周报(7.14-7.20)显示：7月17日广州住建局公布首批"好房子"试点项目，覆盖荔湾、天河、番禺，配套<em>52项</em>硬性评价指标；二季度广州二手住宅网签29149套，环比大涨20.41%；核心六区新房均价突破6万元/㎡，同比上涨8%。深圳上半年一手住宅网签18416套，环比上涨15%，成交均价5.67万元/㎡，环比上涨7%，为近三年少见的量价同步上涨。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664435092630110746/" target="_blank" rel="noopener noreferrer">大湾区楼市周报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">海外市场</span>
+      <div class="news-title">旧金山公寓租金夏季飙升，空置率收紧推动全美领先涨幅</div>
+      <div class="news-summary">CoStar 7月20日报道，旧金山多户型住宅市场进入夏季租赁旺季，租金增长加速至全美最快水平之一。空置率收紧、新增供应有限以及科技/AI产业人口回流共同推动租金上涨。该报道反映出在供给受限背景下，美国核心科技城市租赁市场韧性强劲。</div>
+      <div class="news-source">来源：<a href="https://www.costar.com/article/1734728006/san-francisco-apartment-rents-surge-into-summer-as-tight-supply-fuels-nation-leading-growth" target="_blank" rel="noopener noreferrer">CoStar News</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">海外市场</span>
+      <div class="news-title">多伦多GTHA地区Q2新公寓销量同比涨52%，但供应"快速变薄"</div>
+      <div class="news-summary">BNN Bloomberg 7月20日报道，Urbanization最新报告显示，大金马蹄地区(GTHA)二季度新公寓销售702套，同比增长<em>52%</em>，为2023年以来首次同比正增长。增长主要受益于HST退税取消及机构批量买入；但预售项目销量暴跌80%仅50套，新开工项目连续两个季度为零，开发商库存升至纪录高位超5000套。报告警告，由于缺乏新开工，未来几年公寓供应将出现史上最大降幅，市场可能"严重供不应求"。</div>
+      <div class="news-source">来源：<a href="https://www.bnnbloomberg.ca/business/real-estate/2026/07/20/new-condo-sales-in-the-gtha-rose-last-quarter-and-supply-now-thinning-quickly-amid-slowdown-in-construction-report/" target="_blank" rel="noopener noreferrer">BNN Bloomberg</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">海外市场</span>
+      <div class="news-title">美国6月活跃挂牌量110万套同比仅增2%，房贷利率仍顽固在6.75%</div>
+      <div class="news-summary">Inman 7月20日刊登Windermere首席经济学家Jeff Tucker的分析。截至6月末美国全国活跃挂牌量为<em>110.3万套</em>，同比仅增2%(5月2025年同期曾增32%)，pending挂牌同比增5%。但房贷利率顽固不下，7月13日MND数据显示30年期固定利率<em>6.75%</em>，Freddie Mac周度数据6.49%。油价回升至78美元/桶、汽油3.87美元/加仑，以及美联储鹰派信号使降息预期落空，制约买家购买力。</div>
+      <div class="news-source">来源：<a href="https://www.inman.com/2026/07/20/listings-mortgage-rates-and-the-price-of-oil-numbers-to-know/" target="_blank" rel="noopener noreferrer">Inman</a></div>
+    </div>
+  </div>
+
+  <!-- 制造业与工业 -->
+  <div class="section theme-manufacturing">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">宏观数据</span>
+      <div class="news-title">国新办：上半年规上工业增加值同比增长5.4%，工业对经济增长贡献率超35%</div>
+      <div class="news-summary">7月20日上午，国务院新闻办公室举行新闻发布会，工信部总工程师王卫明介绍2026年上半年工业和信息化发展情况。上半年规模以上工业增加值同比增长<em>5.4%</em>，工业对经济增长贡献率超<em>35%</em>；前5个月规模以上工业企业利润总额同比增长18.8%。规模以上装备制造业、高技术制造业增加值同比分别增长9.3%、13.3%，工业出口同比增长13.4%。</div>
+      <div class="news-source">来源：<a href="https://www.cnii.com.cn/yw/202607/t20260720_749845.html" target="_blank" rel="noopener noreferrer">中国网/中国工业报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">产业突破</span>
+      <div class="news-title">工信部：我国人形机器人整机产品超全球半数，四足机器人占全球销量近70%</div>
+      <div class="news-summary">7月20日国新办发布会上，工信部总工程师王卫明透露，智能机器人领域我国研发的四足机器人占全球销量份额接近<em>70%</em>，人形机器人整机产品达400余款、超全球半数。1—5月造船新接订单量占全球总量<em>81.2%</em>，新能源汽车、商业航天、新材料(T1200级碳纤维)等领域均取得重大突破。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664452175960588851/" target="_blank" rel="noopener noreferrer">中国新闻网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">全国工信主管部门座谈会：着力整治"内卷式"竞争，加快人形机器人普及</div>
+      <div class="news-summary">7月20日，全国工业和信息化主管部门负责同志座谈会在京召开。会议强调要保持制造业合理比重，深入实施"人工智能+制造"行动，加快推动人形机器人、脑机接口等新一代智能设备普及；加强数字经济、人工智能、低空经济等新兴领域立法研究储备，着力整治<em>"内卷式"竞争</em>。</div>
+      <div class="news-source">来源：<a href="https://m.yicai.com/brief/103283788.html" target="_blank" rel="noopener noreferrer">人民财讯/第一财经</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">Saronic 32亿美元自主船舶造船厂落户得州布朗斯维尔港</div>
+      <div class="news-summary">7月20日，Saronic Technologies宣布将在得克萨斯州布朗斯维尔港(Port of Brownsville)建设一座价值<em>32亿美元</em>的自主船舶造船厂。该制造基地位于美国最大的对外贸易区之一，将打造名为"Port Alpha"的大型海事制造枢纽，旨在批量生产自主水面舰艇。</div>
+      <div class="news-source">来源：<a href="https://www.manufacturingdive.com/news/saronic-technologies-3b-shipyard-port-alpha-maritime-brownsville-texas/825600/" target="_blank" rel="noopener noreferrer">Manufacturing Dive</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">龙头企业</span>
+      <div class="news-title">福特通过加拿大劳资协议，投资4.99亿美元扩建温莎发动机工厂</div>
+      <div class="news-summary">7月20日，福特汽车与Unifor工会通过了针对约5000名加拿大员工的三年劳资协议，包括三年内<em>9%</em>的加薪及正式员工约7130美元(1万加元)的批准奖金。福特将投资<em>4.99亿美元</em>(7亿加元)扩建位于安大略省温莎的Essex发动机工厂，扩大5.0升发动机及更大排量发动机的生产，配套美国组装厂需求。</div>
+      <div class="news-source">来源：<a href="https://www.cbtnews.com/ford-ratifies-canadian-labor-deal/" target="_blank" rel="noopener noreferrer">CBT News</a></div>
+    </div>
+  </div>
+
+  <!-- 教育 -->
+  <div class="section theme-education">
+    <div class="section-header">
+      <div class="section-icon">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">招生录取</span>
+      <div class="news-title">上海考生代表走进2026高招录取现场，零距离见证公平公正</div>
+      <div class="news-summary">7月20日，10名上海考生代表走进上海市普通高校招生本科普通批次录取现场实地参观。今年共有800余所高校在沪招生，其中本科普通批次招生高校630余所，<em>4.2万余名</em>考生在该批次投档录取。录取结果经"双校验"系统确认，预计7月23日全部审核完成后开通查询。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664554818677129728/" target="_blank" rel="noopener noreferrer">新民晚报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">大学生AI金融实训营在沪启动，上财牵头培养"能战"型复合人才</div>
+      <div class="news-summary">7月20日，2026年全国大学生AI金融研学实训营在上海财经大学开营，来自国内外<em>109所</em>高校的200名本科生展开为期8天7晚的AI金融沉浸式实训。实训营依托上海财大自研匡时财经教育大模型、Fin-R1金融大模型，聚焦股票、期货AI量化策略开发，一等奖团队可获头部金融机构暑期实习直通面试资格。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664626958910734890/" target="_blank" rel="noopener noreferrer">文汇报</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">WAIC青少年人工智能创新发展论坛举办，启动AI共创行动计划</div>
+      <div class="news-summary">7月20日下午，2026世界人工智能大会青少年人工智能创新发展论坛在上海世博中心红厅举行，主题为"AI向善，少年有为"。论坛发布《走进人工智能》第二版科普读本，并启动"AI向善，少年有为"青少年AI共创行动计划，覆盖全市青少年宫、中小学AI基地校及校园科创社团，推动青少年人工智能教育"四位一体"升级。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664619257405194792/" target="_blank" rel="noopener noreferrer">上观新闻</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">国际交流</span>
+      <div class="news-title">2026中美(海南-夏威夷)友城青少年交流启动，美国师生学做海南粉</div>
+      <div class="news-summary">7月20日，2026中美(海南-夏威夷)友城青少年交流活动在海南华侨中学启动，来自美国夏威夷州的<em>12名</em>师生与海南学生同跳竹竿舞、学画团扇、学做海南粉。海南与夏威夷自1992年缔结友好省州，未来五天美国师生将走访海口、儋州、五指山、三亚，之后还将赴北京探寻中华文脉。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664613895369261595/" target="_blank" rel="noopener noreferrer">中国新闻网</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">重大政策</span>
+      <div class="news-title">美国《劳动力佩尔助学金》最终规则7月20日正式生效</div>
+      <div class="news-summary">7月20日，美国教育部《劳动力佩尔助学金》(Workforce Pell Grants)最终规则正式生效，将佩尔助学金资格扩展至8周以上、不足15周的短期职业技能项目(150-599学时)。项目须保持至少<em>70%</em>的完成率和70%的就业率，并满足"增值收入"(VAE)要求。该规则落实2025年7月4日签署的《工薪家庭减税法》，允许各州主导定义高技能、高薪或缺岗位。</div>
+      <div class="news-source">来源：<a href="https://wcet.wiche.edu/frontiers/2026/05/29/workforce-pell-final-rules-turning-policy-into-practice-for-the-digital-learning-community/" target="_blank" rel="noopener noreferrer">WCET</a></div>
+    </div>
+  </div>
+
+  <!-- 文化娱乐 -->
+  <div class="section theme-entertainment">
+    <div class="section-header">
+      <div class="section-icon">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">票房数据</span>
+      <div class="news-title">2026暑期档票房(含预售)破45亿，《功夫女足》14.7亿元领跑</div>
+      <div class="news-summary">7月20日，据猫眼专业版数据，2026暑期档票房(含预售)突破<em>45亿元</em>。其中《功夫女足》贡献14.7亿元名列第一，《给阿嬷的情书》《八仙！》分列二三位。截至7月20日17时52分，悬疑惊悚片《恐怖游轮》(2009年英国/澳大利亚合拍)票房突破3000万元。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664590347921670696/" target="_blank" rel="noopener noreferrer">猫眼专业版/灯塔专业版</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">市场逆袭</span>
+      <div class="news-title">排片少三成却拿下上座率第一：《八仙！》逆袭，暑期档正在变天</div>
+      <div class="news-summary">7月20日晚9点实时票房显示，《八仙！》排片占比22.7%、上座率达<em>21%</em>，反超排片44.2%、上座率17.3%的《功夫女足》。当日大盘3.38亿元，《功夫女足》拿下1.81亿元，《八仙！》报收9800万元。截至7月19日，2026年度电影总票房突破<em>200亿元</em>，暑期档贡献超42亿元，票务平台已将《八仙！》最终预测上调至15亿-20亿元。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664507647030346280/" target="_blank" rel="noopener noreferrer">影视行业观察</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-breaking">国际票房</span>
+      <div class="news-title">诺兰《奥德赛》首周末夺冠：北美1.245亿美元，全球2.641亿美元</div>
+      <div class="news-summary">7月20日报道，克里斯托弗·诺兰第13部长片《奥德赛》(The Odyssey)首周末北美票房<em>1.245亿美元</em>，全球票房<em>2.641亿美元</em>，成为2026年真人电影最大开画及诺兰个人全球最高开画纪录。该Universal神话史诗由马特·达蒙主演，是首部全程使用IMAX胶片摄影机拍摄的故事长片，同时刷新了高级制式观影的新标杆。</div>
+      <div class="news-source">来源：<a href="https://thecinemagroup.co/news/2026/7/20-christopher-nolans-the-odyssey-seizes-1245m-opening-weekend-with-record-breaking-global-debut" target="_blank" rel="noopener noreferrer">The Cinema Group</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">演出市场</span>
+      <div class="news-title">7月20日演唱会抢票提醒：汪苏泷、许嵩、张韶涵等歌手同日开票</div>
+      <div class="news-summary">7月20日，汪苏泷、许嵩、张韶涵、周兴哲、王源、周华健、十个勤天、徐良、陈小春、Tizzy T、陈粒、艾志恒、游鸿明、井胧井迪等歌手演唱会同日开票。其中汪苏泷北京站8月28-30日连开三场登陆鸟巢，票价380-1680元；许嵩杭州站7月24-26日在杭州奥体大莲花，票价318-1618元。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664414079188009523/" target="_blank" rel="noopener noreferrer">演唱会资讯</a></div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">重大项目</span>
+      <div class="news-title">第36届青岛国际啤酒节崂山会场首个周末：以"游乐园"标准重构节庆空间</div>
+      <div class="news-summary">7月20日《青岛日报》报道，第36届青岛国际啤酒节崂山会场首个周末以"游乐园"标准重构节庆空间，推出"啤酒+演艺""啤酒+科技"等多元场景。7月18日晚"如歌的旅程·夏夜山海局"主题演唱会登陆南广场主舞台；现场还引入VR沉浸式大空间、太空舱机器人文创超市等"硬科技"场景，并设儿童友好区域与萌宠乐园，打造全龄化夏日休闲盛宴。</div>
+      <div class="news-source">来源：<a href="http://m.toutiao.com/group/7664388694580724265/" target="_blank" rel="noopener noreferrer">青岛日报/观海新闻</a></div>
+    </div>
+  </div>
+
+  <div class="data-box">
+    <div class="data-box-title">📊 数据观察</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <div class="data-value">2650亿美元</div>
+        <div class="data-label">台积电美国本土投资规模</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">409亿元</div>
+        <div class="data-label">WAIC闭幕32个AI项目签约投资</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">1100+</div>
+        <div class="data-label">WAIC参展企业数(展品4486项)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">2.8万亿</div>
+        <div class="data-label">Kimi K3参数规模(全球最大开源)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">579亿元</div>
+        <div class="data-label">长鑫科技科创板IPO募资(史上最大)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">2.72万亿</div>
+        <div class="data-label">7月20日A股全市场成交额</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">18亿美元</div>
+        <div class="data-label">三星生物收购PolyPeptide(韩国药企最大并购)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">38款</div>
+        <div class="data-label">上半年获批创新药(国产占80%)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">918亿美元</div>
+        <div class="data-label">上半年中国汽车出口额(同比增54%)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">5.4%</div>
+        <div class="data-label">上半年规上工业增加值增速</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">81.2%</div>
+        <div class="data-label">1-5月中国造船新接订单全球占比</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">15%</div>
+        <div class="data-label">六部委新政首套房首付最低比例</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">3000亿元</div>
+        <div class="data-label">央行保障性住房专项再贷款</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">45亿元</div>
+        <div class="data-label">2026暑期档票房(含预售)</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">2.641亿美元</div>
+        <div class="data-label">《奥德赛》首周末全球票房</div>
+      </div>
+      <div class="data-item">
+        <div class="data-value">5亿港元</div>
+        <div class="data-label">世界杯拉动香港餐饮新增营业额</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="focus-box">
+    <div class="focus-box-title">🎯 重点关注</div>
+    <div class="focus-item">
+      <strong>【重大项目】</strong>2026世界人工智能大会闭幕：展览面积首破10万平方米，1100多家企业携4486项展品参展，351款产品全球首发；32个上海AI重点项目集中签约总投资超409亿元，中国联通"UniAI·智联申城"投资超250亿元；世界人工智能合作组织(WAICO)成立并落户上海，上海物理智能与机器人研究院揭牌。
+    </div>
+    <div class="focus-item">
+      <strong>【龙头动态】</strong>Kimi K3因需求过载48小时内暂停新订阅，凸显算力供给成AI竞争决定性因素；阿里同步发布Qwen3.8-Max-Preview(2.4万亿参数)及Agent-Native技术栈，股价单日上涨5.4%；台积电以2650亿美元加码美国亚利桑那产能挑战英特尔与马斯克；三星美国裁员739人并将总部由新泽西迁往德州。
+    </div>
+    <div class="focus-item">
+      <strong>【重大政策】</strong>六部委协同推出楼市"史诗级"新政：首套房首付最低降至15%、二套25%，二手房增值税满2年免征，央行落地3000亿元保障性住房专项再贷款；全国工信座谈会强调着力整治"内卷式"竞争，加快人形机器人、脑机接口普及；工信部披露上半年38款创新药获批、国产占比超80%。
+    </div>
+    <div class="focus-item">
+      <strong>【跨境并购】</strong>三星生物以18亿美元全现金要约收购瑞士多肽CDMO龙头PolyPeptide，创韩国制药生物行业史上最大并购，标志其延伸至GLP-1多肽疗法赛道；礼来38亿美元收购迷幻药公司AtaiBeckley，大药企从合作/期权转向直接拥有迷幻药平台。
+    </div>
+    <div class="focus-item">
+      <strong>【资本市场】</strong>长鑫科技579亿元科创板IPO打新火爆，打新冻结1.7万亿元已于7月20日全额解冻回流二级市场；证监会主席吴清召开投资者座谈会，国家队与上市公司掀起回购分红潮，A股全市场成交2.72万亿元；美股周五收跌，AI芯片抛售致纳指跌1.4%，VIX大涨12.2%。
+    </div>
+    <div class="focus-item">
+      <strong>【文娱热点】</strong>2026暑期档票房(含预售)破45亿元，《功夫女足》14.7亿元领跑；诺兰《奥德赛》首周末北美1.245亿美元、全球2.641亿美元，创2026年真人电影最大开画及诺兰个人全球最高开画纪录；《八仙！》排片少三成却拿下上座率第一，暑期档格局生变。
+    </div>
+  </div>
+
+  <div class="outlook-section">
+    <h2>综合市场观察与本周看点</h2>
+    <div class="outlook-sub">MARKET OUTLOOK · WEEK AHEAD</div>
+
+    <div class="outlook-item">
+      <strong>1. AI竞赛进入"算力供给"瓶颈期，模型能力让位于落地效率。</strong>Kimi K3发布48小时即因需求过载暂停新订阅，阿里同步祭出Qwen3.8-Max-Preview，两大中国厂商同台角力背后折射出残酷现实——决定竞争胜负的不再是模型参数规模，而是算力供给与落地效率。受美国出口管制影响，先进Nvidia芯片获取受限正成为中国AI厂商的关键瓶颈。WAIC闭幕确立"智能体(Agent)"为下一阶段主航道，阿里云Agent-Native技术栈、世界人工智能合作组织(WAICO)落户上海，显示中国正从"模型追赶者"转向"生态组织者"。
+    </div>
+
+    <div class="outlook-item">
+      <strong>2. 半导体地缘博弈升级，产能成为战略筹码。</strong>台积电以2650亿美元加码美国亚利桑那产能，CFO直言AI"超级趋势"驱动需求，此举加剧了与英特尔、马斯克芯片项目的直接竞争。与此同时三星内部业务分化加剧——半导体业务受益AI存储芯片需求强劲，消费电子业务却因裁员739人并迁总部至德州而承压。AI需求已将半导体制造能力从商业资源转化为地缘战略筹码，全球半导体产业链分工与博弈进入新阶段。
+    </div>
+
+    <div class="outlook-item">
+      <strong>3. A股政策托底+回购分红潮形成"双保险"，但结构性分化加剧。</strong>证监会主席吴清亲自召开投资者座谈会强调"投资者是市场之本"，中国国新500亿元、诚通100亿元增持央企，三峡集团增持15-30亿元，叠加密集回购与中期分红方案——政策托底信号强烈。然而市场结构性分化显著：沪指涨0.85%但深成指跌0.71%，芯片PCB概念大幅调整、超3700只个股下跌超200股跌停。长鑫科技579亿元IPO打新资金1.7万亿元解冻回流，或为后续行情提供流动性支撑。
+    </div>
+
+    <div class="outlook-item">
+      <strong>4. 楼市"史诗级"新政能否托底，关键看落地与预期修复。</strong>六大部委罕见协同发声推出一揽子新政——首套首付最低15%、二手房增值税满2年免征、3000亿元保障房专项再贷款，力度空前。大湾区数据已现回暖迹象：深圳上半年量价齐升、广州二季度二手网签环比大涨20.41%。但政策效果仍取决于居民收入预期与就业信心修复，以及"卖旧买新"链条能否真正打通。海外市场则呈现分化：旧金山租金因AI人才回流飙升，多伦多新公寓供应"快速变薄"预警未来供不应求。
+    </div>
+
+    <div class="outlook-item">
+      <strong>5. 本周值得关注的看点：</strong>①长鑫科技科创板挂牌上市表现，及打新资金1.7万亿元解冻后的市场流动性效应；②WAIC闭幕后世界人工智能合作组织(WAICO)运作机制及上海物理智能研究院产业化进展；③Kimi K3算力扩容与订阅恢复节奏，及阿里Qwen3.8完整开源权重发布时间表；④美联储7月议息会议及美股AI芯片板块调整后续；⑤六部委楼市新政在各地的落地细则与70余城收储进展；⑥三星生物收购PolyPeptide交易推进及礼来迷幻药并购后续；⑦2026暑期档票房能否突破60亿，及《奥德赛》全球票房走势；⑧工信部"内卷式"竞争整治对光伏、新能源车等过剩行业的政策落地。
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-text">全球每日资讯简报 · 每日精选 · 信息准确 · 来源可靠</div>
+    <a href="../index.html" class="back-link">← 返回首页</a>
+  </footer>
+</div>
+
+</body>
+</html>
