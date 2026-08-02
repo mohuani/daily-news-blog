@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年8月3日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .news-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .news-title a:hover {
+    color: var(--accent-teal);
+  }
+
+  .news-title .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-policy { background: #EBF5F3; color: var(--accent-teal); }
+  .tag-major { background: #FBF3E0; color: var(--accent-gold); }
+  .tag-enterprise { background: #F0EBE7; color: var(--accent-orange); }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  .news-source {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .news-source a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.15s ease;
+  }
+
+  .news-source a:hover {
+    color: var(--accent-teal-light);
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #FBF7ED 0%, #F5EFDC 100%);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-top: 40px;
+  }
+
+  .highlight-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .highlight-item {
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(196,153,59,0.25);
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .highlight-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .highlight-item strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+  }
+
+  .data-box {
+    background: linear-gradient(135deg, #EEF4F3 0%, #E6EEEC 100%);
+    border-left: 3px solid var(--accent-teal);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-top: 40px;
+  }
+
+  .data-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .data-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .data-value .unit {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 2px;
+  }
+
+  .data-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .data-card.positive .data-value { color: var(--accent-teal); }
+  .data-card.gold .data-value { color: var(--accent-gold); }
+  .data-card.rose .data-value { color: var(--accent-rose); }
+  .data-card.blue .data-value { color: var(--accent-blue); }
+
+  .outlook-box {
+    background: linear-gradient(135deg, #ECEEF5 0%, #E3E7F2 100%);
+    border-left: 3px solid var(--accent-purple);
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .outlook-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-purple);
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .outlook-item {
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(123,107,174,0.2);
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .outlook-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .outlook-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: var(--accent-purple);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-brand {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: all 0.2s;
+  }
+
+  .back-home:hover {
+    background: var(--accent-teal);
+    color: #FFFFFF;
+    border-color: var(--accent-teal);
+  }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .summary-section { padding: 24px 20px; }
+    .news-card { padding: 18px 20px; }
+    .data-grid { grid-template-columns: 1fr 1fr; }
+    .highlight-box, .data-box, .outlook-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <div class="brand-tag">Global Daily Briefing</div>
+      <div class="date-tag">2026年8月3日 · 星期一</div>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">昨日精选 · 十大行业 · 结构化呈现</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<!-- Summary -->
+<div class="container">
+  <a href="../index.html" class="back-home">← 返回首页</a>
+
+  <div class="summary-section">
+    <div class="summary-label">📋 摘要</div>
+    <div class="summary-text">
+      <strong>8月2日，政策新规与产业资本形成共振。</strong>8月首日三大全国性新规密集落地：充电桩CCC强制认证筑牢新能源汽车安全底线，《医药代表管理办法》彻底终结"带金销售"时代，退役军人就业创业条例全面实施定向招录与税费减免。金融与AI深度交织，摩根士丹利预判AI投资进入"半场休整"，资金从算力上游转向应用端与HALO资源配套两大新主线；美联储按兵不动，AI概念驱动云计算三巨头单周市值暴增10万亿元，而华尔街00后"AI股神"高杠杆爆仓亏损超400亿美元则敲响风险警钟。房地产市场出现积极信号，政治局会议再度强调稳楼市，47城新房成交环比大涨31.8%，上海杨浦滨江地块以161.2亿元总价创区域历史纪录。宇树科技8月10日科创板上市在即，人形机器人野外通行能力惊艳全球；暑期档国风动画《八仙！》票房突破9.2亿元，国漫产业与"网生代"观众双向奔赴。
+    </div>
+  </div>
+
+  <!-- Section 1: 科技与互联网 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #2D8B7A 0%, #3AA895 100%); color: #fff;">💻</div>
+      <div class="section-title">科技与互联网</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">龙头企业</span>
+        <a href="http://m.toutiao.com/group/7667876549021975059/" target="_blank">宇树科技G1人形机器人展示复杂地形高速通行能力 海外舆论热议技术代差优势</a>
+      </div>
+      <div class="news-summary">宇树科技最新发布的G1人形机器人视频展示其可在峭壁、碎石、浅河等复杂地形快速移动，步伐稳定、摔倒后可迅速调整，引发海外科技界高度关注。日本日经xTECH工程师团队拆解后公开表态：中国人形机器人已跨过仅用于展会样机阶段，日本短期缩小产业与技术差距不现实。G1整机带电池约35kg，双臂短时极限负载5kg，最大移动速度2m/s，支持浅水涉水与沙尘环境作业。目前商用场景集中在工业巡检、仓储物流辅助、高校教学三大领域。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7667876549021975059/" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-enterprise">产业动态</span>
+        <a href="http://m.toutiao.com/group/7669334592205193770/" target="_blank">宇树科技8月10日科创板IPO发行 90后王兴兴持股33%成就百亿身家</a>
+      </div>
+      <div class="news-summary">杭州宇树科技将于8月10日开启科创板IPO发行，距公司2016年8月26日成立刚好10周年。上市前创始人王兴兴（90后）直接及间接持股33.36%，稀释后仍约30%，按400亿估值计算身家将过百亿。公司最近一轮融资（2025年6月）投后估值127亿元，本次拟募资42亿元用于智能机器人研发与生产。过去三年主要产品销售业绩与净利润均呈高速增长态势。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7669334592205193770/" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-enterprise">市场行情</span>
+        <a href="http://m.toutiao.com/group/7669472352229245467/" target="_blank">消费级显卡价格快速上涨 RTX 5060四天涨约800元 RTX 5080较7月初涨约1700元</a>
+      </div>
+      <div class="news-summary">继内存、硬盘涨价后，深圳华强北电脑硬件市场7月底以来消费级显卡价格快速上行。热门型号RTX 5060报价从2300-2500元升至2700-3100元，短短四天最高涨约800元，涨幅超三成；高端型号RTX 5080报价已破1.1万元，较7月初上涨约1700元。商户反映显卡"一日一价"，不少观望消费者在决策窗口期内遭遇价格变动。</div>
+      <div class="news-source">来源：上证报·财联社 / <a href="http://m.toutiao.com/group/7669472352229245467/" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">龙头企业</span>
+        <a href="http://m.toutiao.com/group/7669240765603709503/" target="_blank">特朗普旗下Truth Social推出付费"Truth API" 每月10万美元向华尔街提供帖文高速通道</a>
+      </div>
+      <div class="news-summary">当地时间8月1日，美国总统特朗普旗下社交媒体Truth Social推出名为"Truth API"的高速信息服务，以每月10万美元定价向华尔街高频交易机构提供帖文快速访问渠道，引发内幕交易与利益冲突广泛质疑。由于特朗普经常通过该平台发布涉及关税、战争、央行人事等重大政策消息，内容往往引发股市、债市、汇市和大宗商品价格剧烈波动。批评者指出付费客户通过自动交易系统可较普通投资者提前数毫秒采取行动。4月特朗普发文后Palantir、英特尔等公司股价均立即出现异动。</div>
+      <div class="news-source">来源：央视财经 / <a href="http://m.toutiao.com/group/7669240765603709503/" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="http://m.toutiao.com/group/7667575345150837250/" target="_blank">"十五五"两大电网投资突破5万亿元 智能电网数字化改造迎来大规模落地周期</a>
+      </div>
+      <div class="news-summary">据公开规划信息，"十五五"阶段国家电网、南方电网合计投资规模突破5万亿元，超半数预算倾斜配网智能化、电网自动化、电力数字化系统。2026上半年国网固定资产投资3100亿元同比+12.6%，南网投资893亿元同比+14.79%，电网投资增速居基建板块前列。国网今年特高压招标总额已超去年全年水平。国网近期明确推进"人工智能+电网"专项行动，电力大模型、智能巡检、数字孪生电网从试点走向规模化推广。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7667575345150837250/" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 2: 金融与投资 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #C4993B 0%, #E8C97A 100%); color: #fff;">📊</div>
+      <div class="section-title">金融与投资</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">机构研判</span>
+        <a href="https://cj.sina.cn/article/norm_detail?froms=ttmp&url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Ft%2F2026-08-02%2Fdoc-inikyaqz6525306.shtml%3Ffinpagefr=ttzz" target="_blank">摩根士丹利最新研判：AI投资进入"半场休整" 主线从算力上游转向AI应用端与HALO资源配套</a>
+      </div>
+      <div class="news-summary">摩根士丹利中国首席经济学家邢自强表示，近期AI赛道波动并非基本面恶化，而是交易拥挤、大厂融资抽水、油价推升加息预期共振所致。AI投资逻辑正从追逐算力芯片上游，转向两大新主线：AI应用端（降本兑收）与HALO资源配套（能源、储能、原材料）。</div>
+      <div class="news-source">来源：财联社·新浪财经 / <a href="https://cj.sina.cn/article/norm_detail?froms=ttmp&url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Ft%2F2026-08-02%2Fdoc-inikyaqz6525306.shtml%3Ffinpagefr=ttzz" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">央行政策</span>
+        <a href="https://www.cfi.net.cn/p20260802000504.html" target="_blank">美联储维持联邦基金利率3.50%-3.75%不变 AI概念驱动纳指周涨1.59%</a>
+      </div>
+      <div class="news-summary">美联储最新议息会议按兵不动，投票出现3票反对加息的罕见分歧。美国二季度GDP环比折年率增长1.5%低于预期，但个人消费+3.2%、非住宅商业投资+8.4%、私人国内最终销售+3.9%表现强劲。核心PCE价格指数+3.4%。美伊局势阶段性缓和，原油风险溢价回落。研报认为私人需求韧性与AI投资强劲构成重要支撑，AI产业链设备、软件、研发投资保持高景气，云计算和AI商业化预期升温带动大型科技平台财报改善，纳斯达克指数周涨1.59%。</div>
+      <div class="news-source">来源：中财网 / <a href="https://www.cfi.net.cn/p20260802000504.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">市场事件</span>
+        <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">华尔街00后"AI股神"高杠杆爆仓 亏损超400亿美元出局 抛售次日持仓暴涨</a>
+      </div>
+      <div class="news-summary">华尔街年仅20余岁的"AI股神"因高杠杆操作爆仓，亏损超400亿美元（约合人民币2800亿元）被迫出局。令人扼腕的是，就在他爆仓抛售的第二天，其此前大量持仓的存储芯片与AI概念股集体暴涨。原定本周末结婚的他同时面临职业与个人双重打击。市场人士再度警示杠杆交易在高波动板块的极端风险。</div>
+      <div class="news-source">来源：华夏时报·新浪财经 / <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-enterprise">回购潮</span>
+        <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">A股科技股史上罕见回购潮 7月以来回购金额上限超770亿元 多家"回购+增持"双管齐下</a>
+      </div>
+      <div class="news-summary">7月以来A股市场调整，上证指数一度回撤至3800点以下、科创50一度跌破1600点。面对快速下跌，科技类上市公司密集推出大额回购计划，合计回购金额上限超770亿元。部分公司同步启动控股股东或实控人增持，"回购+增持"双管齐下增强市场信心。兆易创新拟10-20亿元回购股份全部注销；中创智领拟3-4亿元回购，其中50%用于注销。</div>
+      <div class="news-source">来源：新浪财经 / <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">机构调研</span>
+        <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">海康威视获203家机构集中调研 上半年净利78.96亿元同比+39.57% 毛利率首次突破50%</a>
+      </div>
+      <div class="news-summary">近一周海康威视（002415）获203家机构调研，包括43家基金、31家券商、75家私募。公司上半年营业收入468.23亿元同比+11.97%，归母净利润78.96亿元同比+39.57%。二季度毛利率首次超过50%并连续六个季度上升，公司解释除低价存货转收入影响外，产品竞争力增强、产品线梳理与行业反内卷带来的毛利率中枢上移更为关键，硬盘涨价毛利增加与人民币升值汇兑损失基本对冲。国金证券指业绩持续超预期。</div>
+      <div class="news-source">来源：新浪财经 / <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">券商策略</span>
+        <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">8月券商金股名单出炉：彻底告别电子赛道单一扎堆 配置思路转向均衡布局</a>
+      </div>
+      <div class="news-summary">7月A股震荡走弱，券商月度金股组合业绩分化明显，仅华西证券金股组合斩获正收益月度+5.34%，大幅跑赢大盘。8月各大券商密集发布最新金股名单，荐股行业结构显著优化，彻底告别此前电子赛道单一扎堆现象，配置思路由极致赛道化转向均衡布局。</div>
+      <div class="news-source">来源：环球网 / <a href="https://k.sina.cn/article_7857201856_1d45362c001908hw5s.html" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 3: 人工智能 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #7B6BAE 0%, #9B8BCE 100%); color: #fff;">🤖</div>
+      <div class="section-title">人工智能</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">龙头企业</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">美股财报季AI赛道赢家显现：云计算三巨头亚马逊、微软、Alphabet本周市值暴增10万亿元</a>
+      </div>
+      <div class="news-summary">三大超大规模云服务商亚马逊、微软、Alphabet公布云业务强劲增长财报后市值大幅攀升。投资者认为在各家公司承诺投入巨额资金布局AI之后，回报有望逐步兑现。市场定价正从资本开支预期转向收入、利润和自由现金流兑现，AI产业链有望持续获得资金关注。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-enterprise">板块行情</span>
+        <a href="https://caifuhao.eastmoney.com/news/20260802174048938021070" target="_blank">AI应用端机构资金集中下注 AI视频板块单日+8.10%净流入56.8亿 智谱AI净流入73.4亿</a>
+      </div>
+      <div class="news-summary">上一交易日AI视频板块单日涨幅高达8.10%，资金净流入56.8亿；智谱AI板块涨幅7.44%，净流入73.4亿；快手概念涨幅7.64%，净流入62.1亿。创业板指收+3.06%，科创50收+2.99%，成长风格全面碾压价值。中信证券研报认为错过本轮加息时点后，无论美联储9月加息与否，加息落地有望释放估值压制，叠加AI积极取向，美股AI叙事有望长期延续。资金正从确定性溢价转向成长性溢价，博弈下一阶段从算力基建到场景落地的传导。</div>
+      <div class="news-source">来源：东方财富 / <a href="https://caifuhao.eastmoney.com/news/20260802174048938021070" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">全球治理</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">开放权重模型升温 7月全球人工智能治理显著提速</a>
+      </div>
+      <div class="news-summary">7月全球人工智能治理提速，开放权重模型（Open-Weight Models）成为国际协同治理的热点议题。各国监管机构在模型透明度、安全评估标准、跨境数据流等方面的协调步伐明显加快，旨在在创新发展与风险可控之间寻求平衡。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">宏观拉动</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">算力需求强力支撑 上半年规上工业企业利润快速增长 AI贡献8.5个百分点</a>
+      </div>
+      <div class="news-summary">上半年人工智能与各领域加速融合，算力需求大幅增长，直接拉动全部规模以上工业企业利润增长8.5个百分点，是规上工业利润较快增长的重要支撑力量。TGV玻璃基板（高端芯片封装基材）伴随AI算力产业高速爆发加速量产，头部企业纷纷布局，传输效率、精度与稳定性升级需求凸显其产业化价值。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 4: 医疗健康 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #C4686B 0%, #E08B8E 100%); color: #fff;">⚕️</div>
+      <div class="section-title">医疗健康</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="http://finance.sina.cn/2026-08-02/detail-inikxwic6638849.d.html" target="_blank">七部门联合《医药代表管理办法》8月1日施行 终结"带金销售" 医药代表不得承担销售任务</a>
+      </div>
+      <div class="news-summary">国家药监局、公安部、国家卫健委等七部门联合发布的《医药代表管理办法》8月1日起正式施行，取代此前试行版。核心规定：医药代表不得承担药品销售任务，严禁以任何名义向医生及其亲属送回扣、送财物；医药代表需医学药学相关大专以上学历，培训考核合格持证备案上岗；药品上市许可持有人须对每一位医药代表行为承担主体责任，不得甩锅"临时工"。违规者信息纳入信用记录终身禁入，还可能面临限制药品采购、移送司法等处罚。</div>
+      <div class="news-source">来源：界面新闻 / <a href="http://finance.sina.cn/2026-08-02/detail-inikxwic6638849.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="http://m.toutiao.com/group/7669359370920067628/" target="_blank">退役军人就业创业促进条例8月1日全面实施 定向招录、税费减免、创业担保贷款贴息全到位</a>
+      </div>
+      <div class="news-summary">《退役军人就业创业促进条例》8月1日起全面实施。机关、国企招人对退役军人年龄学历可适当放宽、同等条件优先录用，国企需拿出一定比例岗位定向招聘；基层公务员专门面向服役满5年的高校毕业生退役军人招考，选调生注重选调有服役经历的优秀大学生。创业老兵从事个体经营享受税收优惠，创业担保贷款有贴息；各地政务大厅设退役军人绿色通道；符合条件者职业技能培训免费；服役经历算基层工作经历、工龄连续计算。国家已连续21年提高定期抚恤补助标准。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7669359370920067628/" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">新规落地</span>
+        <a href="http://finance.sina.cn/2026-08-02/detail-inikxwic6638849.d.html" target="_blank">《生态环境法典》8月15日施行 系我国第二部法典、世界首部生态环境命名法典</a>
+      </div>
+      <div class="news-summary">《中华人民共和国生态环境法典》将于2026年8月15日正式施行，是我国第二部以"法典"命名的法律、世界上第一部以"生态环境"命名的法典，标志生态环境治理迈入体系化、法治化新阶段。法典共5编：总则、污染防治、生态保护、绿色低碳发展、法律责任与附则。生态环境部正统筹配套制度完善、标准制修订、生态环境损害赔偿改革深化等准备工作。</div>
+      <div class="news-source">来源：界面新闻 / <a href="http://finance.sina.cn/2026-08-02/detail-inikxwic6638849.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">个人金融</span>
+        <a href="http://m.toutiao.com/group/7669238931950567980/" target="_blank">《个人贷款业务明示综合融资成本规定》8月1日施行 告别"低利息"陷阱 息费全部阳光化</a>
+      </div>
+      <div class="news-summary">国家金融监督管理总局、央行联合发布的《个人贷款业务明示综合融资成本规定》8月1日起施行，共11条。要求银行、消费金融公司、信托公司等贷款人办理个人贷款业务时，必须向借款人展示"综合融资成本明示表"，本金、利息、各种手续费、服务费全部白纸黑字写清，最终算出一个年化综合融资成本。借款人办房贷、车贷、消费贷前可明确总还款金额，不再被"低利息"宣传误导。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7669238931950567980/" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 5: 新能源与汽车 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #4A7FB5 0%, #6BA0D5 100%); color: #fff;">🚗</div>
+      <div class="section-title">新能源与汽车</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="https://www.xhby.net/content/s6a6eb5bfe4b0eb7bb0f9af0d.html" target="_blank">电动汽车充电桩CCC强制认证8月1日实施 未获认证不得出厂销售 防触电/短路保护/耐火耐燃全检测</a>
+      </div>
+      <div class="news-summary">市场监管总局（国家认监委）对电动汽车供电设备（充电桩）强制性产品CCC认证管理8月1日起强制实施。通过防触电、短路保护、耐火耐燃等关键安全指标测试与企业现场质量保证能力、产品一致性检查，筑牢质量安全底线。8月1日起未获CCC认证的充电桩不得出厂、销售、进口或其他经营使用。8月1日前已投运的旧桩经营者须保证符合安全要求。接下来将严打无证销售、冒用认证标志等违法行为。</div>
+      <div class="news-source">来源：新华社·新华日报 / <a href="https://www.xhby.net/content/s6a6eb5bfe4b0eb7bb0f9af0d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">《新能源汽车维修作业安全要求》国标8月1日实施 填补高压系统与氢燃料维修安全规范空白</a>
+      </div>
+      <div class="news-summary">《新能源汽车维修作业安全要求》（GB/T 47439—2026）国家标准8月1日起正式实施，主要规定新能源汽车维修的人员与场地、作业准备、风险排查与处置、作业流程和操作安全等要求，重点规范高压系统和氢燃料汽车供氢系统的维修安全，填补了国内新能源汽车维修作业安全领域的标准空白。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">产业政策</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">工信部将持续实施新一轮汽车行业稳增长方案 做好《智能网联新能源汽车产业发展"十五五"规划》宣贯落实</a>
+      </div>
+      <div class="news-summary">工信部总工程师王卫明在国新办发布会上表示，将紧扣"十五五"国家规划纲要，做好《智能网联新能源汽车产业发展"十五五"规划》宣贯和落实，持续实施新一轮机械、汽车、电力装备等行业稳增长工作方案。全方位扩大优质供给和有效需求，持续开展新能源汽车下乡活动、智能网联汽车"车路云一体化"应用试点与准入上路通行试点，激活大宗商品消费潜力。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">政策调整</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">节能汽车与新能源汽车车船税优惠政策调整 2027年起取消节能减半与新能源商用车免征</a>
+      </div>
+      <div class="news-summary">财政部、税务总局、工信部联合公告：自2027年1月1日起，取消节能汽车减半征收车船税政策；取消纯电动商用车、插电式（含增程式）混合动力汽车、燃料电池商用车免征车船税政策。本次优惠退坡是行业成熟化的重要信号，标志国内新能源汽车产业正式告别政策红利依赖，全面迈入市场化竞争新阶段。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">行业标准</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">《中国汽车行业整车成本测算规则》团体标准发布 结束成本核算口径不一历史</a>
+      </div>
+      <div class="news-summary">中国汽车工业协会牵头、18家主流整车企业共同编制的《中国汽车行业整车成本测算规则》团体标准正式发布，系国内首套面向汽车整车领域的统一成本测算规则，结束了行业长期以来成本核算"口径不一、对标无据"的历史，为整治无序价格竞争、推进高质量发展提供重要基础工具。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 6: 消费与零售 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #D08B4B 0%, #E8AA6B 100%); color: #fff;">🛒</div>
+      <div class="section-title">消费与零售</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">便民政策</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">国税总局在停车场、商超零售、餐饮住宿等民生领域试点推行"支付即开票"</a>
+      </div>
+      <div class="news-summary">国家税务总局在国新办发布会上介绍，今年以来持续提升办税缴费便利度。在停车场、商超零售、餐饮住宿等民生高频消费场景试点推行"支付即开票"，消费者支付完成即可自动获取电子发票，大幅提升用票效率与消费体验，简化传统开票繁琐流程。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">消费促进</span>
+        <a href="http://m.toutiao.com/group/7669238931950567980/" target="_blank">中央财政安排1000亿元推出财政金融协同促内需一揽子政策 中小微与个人消费贷款贴息</a>
+      </div>
+      <div class="news-summary">发改委7月31日发布会确认：上半年GDP增长4.7%，增量3.6万亿元；新动能对经济增长贡献率超四成。"十五五"规划的"六张网"（水网、新型电网、算力网、新一代通信网、城市地下管网、物流网）正在加快落地，其中算力网新增直接投资4万亿元、新型电网拟投资超5万亿元。中央财政专门安排1000亿元推出财政金融协同促内需一揽子政策，包括中小微企业贷款贴息、个人消费贷款贴息等，降低普通人贷款成本、增强消费底气。</div>
+      <div class="news-source">来源：头条号 / <a href="http://m.toutiao.com/group/7669238931950567980/" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 7: 房地产 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #5A8C7A 0%, #7AACA7 100%); color: #fff;">🏠</div>
+      <div class="section-title">房地产</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">重大政策</span>
+        <a href="http://m.hibor.com.cn/wap_detail.aspx?id=ddd8d1785d8869d2ce2d74fae60a3631" target="_blank">政治局会议强调稳定房地产市场 实施一揽子化债方案 推进地方中小金融机构改革化险</a>
+      </div>
+      <div class="news-summary">中共中央政治局会议将房地产置于"安全"框架下部署，继续强调"稳定房地产市场"，彰显中央坚定决心，后续政策有望持续发力。国务院常务会议审议通过《国务院关于修改〈住房公积金管理条例〉的决定（草案）》，指出要拓宽住房公积金提取和使用范围、扩大制度覆盖面，更好满足居民多样化住房消费需求。</div>
+      <div class="news-source">来源：开源证券研报·和讯 / <a href="http://m.hibor.com.cn/wap_detail.aspx?id=ddd8d1785d8869d2ce2d74fae60a3631" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">数据观察</span>
+        <a href="http://estate.cfi.cn/p20260802000628.html" target="_blank">47城新房成交环比+31.8%同比降幅收窄至2.9% 新房销量边际显著回暖</a>
+      </div>
+      <div class="news-summary">机构最新数据：本周47个重点城市新房成交面积环比增长31.8%，同比降幅大幅收窄至2.9%；22城二手房成交量季节性回落，同比涨幅收窄至11.7%；7月以来挂牌量较6月末增加0.4%。研报认为虽然挂牌量小幅回升带来一定供给压力，但新房成交环比大幅反弹仍是重要积极信号，表明市场下行趋势趋缓，跷跷板效应下部分需求向新房转移。</div>
+      <div class="news-source">来源：中财网 / <a href="http://estate.cfi.cn/p20260802000628.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">重大项目</span>
+        <a href="http://stock.hexun.com/2026-08-02/224751209.html" target="_blank">上海杨浦八埭头地块161.2亿元总价、35.83%溢价率成交 刷新杨浦滨江土拍历史纪录</a>
+      </div>
+      <div class="news-summary">上海六批次土拍收官，杨浦八埭头地块以161.2亿元总价、35.83%溢价率成交，总价、单价均刷新杨浦滨江土拍历史纪录，彰显核心区稀缺土地资源在调整周期中的强劲抗跌性与资本吸引力。全六批次上海土拍收金235.14亿元。同期北京3宗地块竞拍现场竞价均超百轮，多家房企激烈争夺。</div>
+      <div class="news-source">来源：和讯·中信建投研报 / <a href="http://stock.hexun.com/2026-08-02/224751209.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">史诗级新政</span>
+        <a href="https://cj.sina.cn/article/norm_detail?froms=ttmp&url=https%3A%2F%2Ffinance.sina.com.cn%2Froll%2F2026-08-02%2Fdoc-inikxwif9771839.shtml%3Ffinpagefr=ttzz" target="_blank">六部委系统性楼市新政全面落地 首套首付15%、二套25% 存量房贷批量下调 住房纳入大宗耐用消费品</a>
+      </div>
+      <div class="news-summary">7月上旬住建部、央行、财政部、金融监管总局、税务总局、自然资源部六大核心部委同步发声，一套覆盖信贷、税费、存量盘活、土地供给、房企融资、保障房建设的全链条新政全国统一落地。首套首付比例从30%降至15%，二套从40%降至25%；5年期以上LPR维持3.5%历史低位，首套商贷普遍执行3.05%-3.45%优惠利率，部分城市低至2.3%，公积金首套利率下调至2.6%。多地银行已批量下调存量房贷利率。国务院首次将住房正式划入大宗耐用消费品范畴。</div>
+      <div class="news-source">来源：大伟看楼市·新浪财经 / <a href="https://cj.sina.cn/article/norm_detail?froms=ttmp&url=https%3A%2F%2Ffinance.sina.com.cn%2Froll%2F2026-08-02%2Fdoc-inikxwif9771839.shtml%3Ffinpagefr=ttzz" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-policy">地方动态</span>
+        <a href="http://m.hibor.com.cn/wap_detail.aspx?id=ddd8d1785d8869d2ce2d74fae60a3631" target="_blank">上海收购二手住房转保租房试点5个月 三区已收购551套 16户完成置换购新房 广州首推全现房地</a>
+      </div>
+      <div class="news-summary">地方政策工具箱持续丰富：上海收购二手住房转保租房试点5个月，三区已收购551套，16户完成置换购买新房；广州南沙珠江街道地块成为全市首个将现房销售承诺制纳入出让条件的住宅项目，现房销售破冰；北京规自局构建街区控规+地块实施方案两级体系。上海上线"新就业青年安居服务"进一步降低青年租房成本。</div>
+      <div class="news-source">来源：开源证券研报 / <a href="http://m.hibor.com.cn/wap_detail.aspx?id=ddd8d1785d8869d2ce2d74fae60a3631" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 8: 制造业与工业 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #6B7A8C 0%, #8B9AAC 100%); color: #fff;">🏭</div>
+      <div class="section-title">制造业与工业</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">行业数据</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">上半年汽车行业利润同比下降近2成 原材料、汇率、竞争三重挤压企业业绩分化加剧</a>
+      </div>
+      <div class="news-summary">上半年汽车行业利润同比下降接近20%，原材料成本持续提升、汇率波动、市场竞争加剧是车企利润下滑的三大主要原因。机构指出企业需进一步提升核心零部件自产能力以应对供应链成本压力。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">行业整合</span>
+        <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">市场监管总局上半年完成经营者集中反垄断审查298件 汽车制造业与化学原料制品集中数量并列第一</a>
+      </div>
+      <div class="news-summary">市场监管总局公布上半年反垄断审查数据：共审结经营者集中案件298件，其中无条件批准283件。制造业细分领域中，化学原料和化学制品制造业、汽车制造业的集中数量并列最多，均为17件，约占制造业总数的16.2%，反映两大行业并购整合、资源集中的发展趋势。</div>
+      <div class="news-source">来源：中国汽车报·腾讯新闻 / <a href="http://news.qq.com/rain/a/20260802A03ZT200" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">光伏行业</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">《光伏行业成本核算标准通则》发布 "硅料—硅片—电池—组件"全产业链成本核算首次贯通</a>
+      </div>
+      <div class="news-summary">中国光伏行业协会发布《光伏行业成本核算模型通则》，统一了"硅料—硅片—电池—组件"全产业链的成本计算范围、系数与模型，形成贯通上下游的成本核算框架，有望破除行业内口径不一、各自表述的乱象。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">重大安全</span>
+        <a href="https://caifuhao.eastmoney.com/news/20260802174048938021070" target="_blank">包钢股份子公司事故调查报告公布 造成10人死亡 直接经济损失6723万元</a>
+      </div>
+      <div class="news-summary">包钢股份子公司事故调查报告正式公布，事故造成10人死亡，直接经济损失6723万元。分析指出这类尾部风险事件对钢铁板块冲击有限，整体市场并未交易系统性避险情绪。</div>
+      <div class="news-source">来源：东方财富 / <a href="https://caifuhao.eastmoney.com/news/20260802174048938021070" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 9: 教育 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #8B6BAE 0%, #AB8BCE 100%); color: #fff;">📚</div>
+      <div class="section-title">教育</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">重要赛事</span>
+        <a href="https://money.163.com/keywords/6/5/655980b2/1.html?spssid=9c0523df7683a6125a2143ffb06c51f5&spsw=16&spss=other" target="_blank">首届全国青少年人工智能大赛决赛在上海开赛 院士与头部企业创始人共话AI时代人才培养</a>
+      </div>
+      <div class="news-summary">由全国青少年人工智能大赛组委会主办的首届决赛在上海举行。同期《智擎时代·育见未来——青少年人工智能教育创新对话》同步举办，多位中科院院士、知名专家、头部科技企业创始人围绕AI背景下青少年培养、教育体系革新、学科价值重构等核心议题深入探讨。</div>
+      <div class="news-source">来源：网易·IT之家 / <a href="https://money.163.com/keywords/6/5/655980b2/1.html?spssid=9c0523df7683a6125a2143ffb06c51f5&spsw=16&spss=other" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">教育共识</span>
+        <a href="http://finance.sina.cn/stock/jdts/2026-08-02/detail-inikxrzf6714909.d.html" target="_blank">院士与宇树科技创始人共识：青少年接触前沿科技越早越好 文科生价值不减但需升级培养要求</a>
+      </div>
+      <div class="news-summary">中科院院士褚君浩认为中小学AI教育三要点：夯实全学科基础、构建复合知识结构、主动熟练运用AI工具解决问题，"问题+AI"的过程本身就是思维深度锤炼。宇树科技CEO王兴兴指出童年接触机器人编程但多停留在浅层，未来创新人才需具备持续更新知识体系与自主创新的能力与毅力。关于文科生价值，褚君浩明确表示AI时代文科生依旧不可或缺，但培养要求更高：翻译、基础金融等重复性岗位会被替代，但清晰观点表达、学术写作、核心提炼、深度思考能力无法被机器取代。复旦金亚秋院士倡议高校实验室向广大中学生开放，加强大中校地联动。</div>
+      <div class="news-source">来源：文汇报·新浪财经 / <a href="http://finance.sina.cn/stock/jdts/2026-08-02/detail-inikxrzf6714909.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">国际交流</span>
+        <a href="http://finance.sina.cn/2026-08-02/detail-inikxfmf2936321.d.html" target="_blank">中澳青少年文化艺术交流专场演出在悉尼歌剧院举行 约2000名观众到场</a>
+      </div>
+      <div class="news-summary">当地时间7月27日，"让世界充满爱"2026年中澳青少年文化艺术交流专场演出在悉尼歌剧院举行，吸引约2000名观众到场。演出汇聚北京市学生金帆艺术团、上海宋庆龄学校与澳大利亚悉尼多所学校青少年，通过管乐、舞蹈、合唱等形式展现青春风采。中方学生表演了《在希望的田野上》《盛世敦煌》《舟中晓望》等节目，澳方学生献上现代舞、室内乐、合唱，整场高潮迭起。</div>
+      <div class="news-source">来源：中新网·新浪财经 / <a href="http://finance.sina.cn/2026-08-02/detail-inikxfmf2936321.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">红色教育</span>
+        <a href="https://money.163.com/keywords/6/5/655980b2/1.html?spssid=9c0523df7683a6125a2143ffb06c51f5&spsw=16&spss=other" target="_blank">全国青少年红色文化传承与实践创新大赛湖南省赛在岳阳开赛</a>
+      </div>
+      <div class="news-summary">全国青少年红色文化传承与实践创新大赛湖南省赛区比赛在岳阳正式开赛，旨在通过赛事形式推动青少年深入了解红色文化、传承红色基因，提升实践与创新能力。</div>
+      <div class="news-source">来源：中国日报网·网易 / <a href="https://money.163.com/keywords/6/5/655980b2/1.html?spssid=9c0523df7683a6125a2143ffb06c51f5&spsw=16&spss=other" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">评价改革</span>
+        <a href="http://finance.sina.cn/stock/jdts/2026-08-02/detail-inikxrzf6714909.d.html" target="_blank">教育部信科课程专家组组长建议：中小学评价体系全面革新 从单一终结性转向过程性多元化综合评价</a>
+      </div>
+      <div class="news-summary">教育部义务教育信息科技课程专家组组长、北航熊璋教授提出，培育未来人才中小学评价体系必须全面革新：依托信息技术将单一试卷终结性评价升级为过程性、多元化评价；打破学科割裂，转向基于学生综合素养的综合性评价；摒弃只衡量阶段性成果的静态评价，建立着眼长远发展的发展性评价体系。</div>
+      <div class="news-source">来源：文汇报 / <a href="http://finance.sina.cn/stock/jdts/2026-08-02/detail-inikxrzf6714909.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- Section 10: 文化娱乐 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background: linear-gradient(135deg, #AE6B8B 0%, #CE8BAB 100%); color: #fff;">🎬</div>
+      <div class="section-title">文化娱乐</div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">票房黑马</span>
+        <a href="https://m.yunnan.cn/system/2026/08/02/034106014.shtml" target="_blank">国风动画《八仙！》暑期档票房突破9.2亿元 成都高新区6000+文创企业支撑产业生态</a>
+      </div>
+      <div class="news-summary">2026暑期档国风动画《八仙！》自上映以来票房稳步走高，截至7月30日11时票房超9.2亿元，成为暑期档大"黑马"。影片主要制作方此前均无独立主控动画长片经历，却能交出高质量答卷，依托日趋完善的产业链。诞生地成都高新区聚集数字文创企业6000余家，孕育"哪吒"系列电影。2025年全年动画电影票房突破250亿元，占电影市场近半壁江山。</div>
+      <div class="news-source">来源：央广网·云南网 / <a href="https://m.yunnan.cn/system/2026/08/02/034106014.shtml" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">产业观察</span>
+        <a href="https://m.yunnan.cn/system/2026/08/02/034106014.shtml" target="_blank">国漫"双向成就"时代：制作生态去"运气化" 叙事主动"下凡"贴近职场情感 《八仙！》观众二刷三刷</a>
+      </div>
+      <div class="news-summary">《八仙！》现象折射国漫三大变化：一是产业链日趋完善让好作品不再依赖"运气"；二是动画主动抛弃"流量包袱"，叙事"下凡"贴近大众——片中八仙不再高高在上而是被生活磨平棱角的凡人，需上班打卡、为KPI发愁，铁拐李操川普约火锅，精准击中当代年轻人职场与生活情感共鸣；三是"网生代"观众从学生步入社会，既会直指技术短板也愿意"请坚持下去，等第二部"，专业耐心并存。特邀导演郭帆："电影一半由创作者完成，另一半则是观众完成的。"</div>
+      <div class="news-source">来源：央广网 / <a href="https://m.yunnan.cn/system/2026/08/02/034106014.shtml" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">跨国演出</span>
+        <a href="http://finance.sina.cn/2026-08-02/detail-inikxfmf2936321.d.html" target="_blank">"让世界充满爱"中澳青少年艺术交流专场登陆悉尼歌剧院 中国驻悉尼总领馆支持</a>
+      </div>
+      <div class="news-summary">本次演出由北京市教育学会、北京圣陶教育发展与创新研究院主办，北京圣陶国际教育文化交流中心、澳大利亚瑞安文化承办，并得到中国驻悉尼总领馆支持。主办方表示艺术跨越语言与地域，此次演出为中澳两国青少年搭建展示才华平台，也在音乐和舞蹈中增进了解、深化友谊。</div>
+      <div class="news-source">来源：中新网 / <a href="http://finance.sina.cn/2026-08-02/detail-inikxfmf2936321.d.html" target="_blank">查看原文 →</a></div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-title">
+        <span class="tag tag-major">影视业绩</span>
+        <a href="https://www.cnfin.com/stock/index.html" target="_blank">传媒行业中期业绩前瞻：游戏股利润领跑 世纪华通、巨人网络、恺英网络、吉比特上半年净利居前</a>
+      </div>
+      <div class="news-summary">2026上半年传媒行业中期业绩显示游戏板块利润表现领跑。世纪华通、巨人网络、恺英网络、吉比特预计净利润位居行业前列；贵广网络、广电网络、湖北广电等企业上半年预亏，广电系公司业绩承压明显。</div>
+      <div class="news-source">来源：新华财经 / <a href="https://www.cnfin.com/stock/index.html" target="_blank">查看原文 →</a></div>
+    </div>
+  </section>
+
+  <!-- 重点关注 -->
+  <div class="highlight-box">
+    <div class="highlight-label">⭐ 重点关注 · 重大政策/项目/龙头</div>
+
+    <div class="highlight-item">
+      <strong>【重大政策·金融治理】</strong>摩根士丹利最新研判：AI投资逻辑从算力上游转向<strong>"AI应用端（降本兑收）+ HALO资源配套（能源/储能/原材料）"</strong>两大新主线，建议重点跟踪"半场休整"后的结构性机会。
+    </div>
+
+    <div class="highlight-item">
+      <strong>【重大政策·产业监管】</strong>七部门联合《医药代表管理办法》终结"带金销售"、充电桩CCC强制认证、新能源车维修作业安全国标、退役军人就业创业条例、个人贷款明示综合融资成本——<strong>8月1日五项全国性新规同日生效</strong>，影响医疗、出行、民生金融多领域。
+    </div>
+
+    <div class="highlight-item">
+      <strong>【重大项目·基建投资】</strong>"十五五"六大网投资规划明确：<strong>新型电网5万亿元+算力网4万亿元</strong>合计超9万亿直接投资，叠加中央财政1000亿元财政金融协同促内需贴息资金，下半年基建与内需组合拳全面发力。
+    </div>
+
+    <div class="highlight-item">
+      <strong>【龙头企业·机器人产业】</strong>宇树科技8月10日科创板上市，90后创始人王兴兴身家百亿在即。G1人形机器人野外复杂地形通行能力震惊海外，<strong>日本工程师团队拆机后坦言短期难以追赶</strong>，人形机器人全产业链竞争优势形成。
+    </div>
+
+    <div class="highlight-item">
+      <strong>【龙头企业·AI算力】</strong>美股云计算三巨头（亚马逊、微软、Alphabet）公布财报后<strong>单周市值合计暴增10万亿元</strong>，AI商业化落地预期升温；海康威视毛利率首破50%获203家机构集中调研，AI视频板块单日净流入56.8亿元。
+    </div>
+
+    <div class="highlight-item">
+      <strong>【重大政策·房地产】</strong>政治局会议将房地产提升至"安全屏障"层面，六部委系统性新政全面落地（首套首付15%、二套25%、商贷利率低至2.3%），<strong>上海杨浦滨江地王161.2亿元创历史纪录</strong>，47城新房成交环比+31.8%边际回暖信号明确。
+    </div>
+  </div>
+
+  <!-- 数据观察 -->
+  <div class="data-box">
+    <div class="data-label">📈 数据观察 · 关键指标一览</div>
+    <div class="data-grid">
+
+      <div class="data-card positive">
+        <div class="data-value">3100<span class="unit">亿元</span></div>
+        <div class="data-desc">国网2026上半年固定资产投资 · 同比+12.6%</div>
+      </div>
+
+      <div class="data-card positive">
+        <div class="data-value">893<span class="unit">亿元</span></div>
+        <div class="data-desc">南网2026上半年投资 · 同比+14.79%</div>
+      </div>
+
+      <div class="data-card gold">
+        <div class="data-value">161.2<span class="unit">亿元</span></div>
+        <div class="data-desc">上海杨浦八埭头地块成交总价 · 溢价率35.83% 创区域纪录</div>
+      </div>
+
+      <div class="data-card rose">
+        <div class="data-value">400+<span class="unit">亿美元</span></div>
+        <div class="data-desc">华尔街00后"AI股神"高杠杆爆仓亏损金额 · 约2800亿人民币</div>
+      </div>
+
+      <div class="data-card blue">
+        <div class="data-value">31.8<span class="unit">%</span></div>
+        <div class="data-desc">47城本周新房成交面积环比涨幅 · 同比降幅收窄至2.9%</div>
+      </div>
+
+      <div class="data-card positive">
+        <div class="data-value">770+<span class="unit">亿元</span></div>
+        <div class="data-desc">7月以来A股科技类上市公司回购金额上限 · 史上罕见回购潮</div>
+      </div>
+
+      <div class="data-card gold">
+        <div class="data-value">9.2<span class="unit">亿元</span></div>
+        <div class="data-desc">国风动画《八仙！》暑期档票房 · 截至7月30日 成黑马</div>
+      </div>
+
+      <div class="data-card positive">
+        <div class="data-value">8.10<span class="unit">%</span></div>
+        <div class="data-desc">AI视频板块单日涨幅 · 机构级资金净流入56.8亿元</div>
+      </div>
+
+      <div class="data-card blue">
+        <div class="data-value">10<span class="unit">万美元/月</span></div>
+        <div class="data-desc">Truth Social API定价 · 面向华尔街高频交易机构</div>
+      </div>
+
+      <div class="data-card rose">
+        <div class="data-value">1700<span class="unit">元</span></div>
+        <div class="data-desc">RTX 5080较7月初累计涨幅 · RTX 5060四天涨约800元</div>
+      </div>
+
+      <div class="data-card positive">
+        <div class="data-value">+39.57<span class="unit">%</span></div>
+        <div class="data-desc">海康威视上半年归母净利润同比 · 毛利率首破50%</div>
+      </div>
+
+      <div class="data-card gold">
+        <div class="data-value">250<span class="unit">亿元</span></div>
+        <div class="data-desc">2025年动画电影年票房 · 占全年电影市场近半壁江山</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 综合市场观察与本周看点 -->
+  <div class="outlook-box">
+    <div class="outlook-label">🔭 综合市场观察与本周值得关注</div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">1</span>
+      <strong>AI主线"先调后稳"，关注"应用兑现"胜于"算力预期"。</strong>摩根士丹利"半场休整论"与AI应用端板块单日超百亿资金净流入形成呼应，7月以来科技股密集回购也为市场提供了安全垫。短期关注AI视频、多模态、电力AI等落地确定性强的细分方向，规避纯概念炒作。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">2</span>
+      <strong>房地产政策底夯实，结构性修复从核心城市启动。</strong>政治局"安全屏障"定调+六部委全链条新政+首套首付15%+存量房贷降息，政策力度为近四年之最；47城新房环比+31.8%与上海地王高溢价成交是首批积极信号。本周重点观察核心一二线城市成交是否延续回暖、公积金贷款细则是否进一步落地。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">3</span>
+      <strong>新能车全链条标准体系闭环成形，产业进入品质竞争时代。</strong>CCC强制认证+维修国标+整车成本测算规则+车船税优惠退坡"四箭齐发"，短期可能扰动部分供应链利润率，长期将加速行业出清，利好研发能力强、全链条品质过硬的头部车企。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">4</span>
+      <strong>人形机器人商业化倒计时，关注宇树IPO前后催化。</strong>8月10日宇树科技科创板发行是本周资本市场核心事件之一，400亿估值与90后创始人百亿身家之外，更值得关注的是其"工业巡检/仓储/高校"三大商用场景的订单兑现节奏以及IPO募投项目进展，有望带动整个机器人板块估值重估。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">5</span>
+      <strong>宏观政策进入"密集落地季"。</strong>中央政治局定调"更加积极的财政政策+适度宽松的货币政策"、1000亿财政金融协同促内需资金、"十五五"六张网9万亿投资规划、公积金条例修订，预计本月起将有配套细则陆续出台，关注基建链（电网+算力）、消费链（大宗+服务）受益方向。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">6</span>
+      <strong>医药行业"关系营销"终结，创新药与仿制药企估值分化或加剧。</strong>《医药代表管理办法》正式实施后，医药行业从"关系营销"全面转向"证据营销"，拼的是产品价值与学术能力。继续关注本月创新药审批节奏，尤其是国产创新靶点与出海品种的License-out动态。
+    </div>
+
+    <div class="outlook-item">
+      <span class="outlook-num">7</span>
+      <strong>消费内容双循环：国漫+暑期档持续验证文化消费韧性。</strong>《八仙！》票房破9亿只是起点，2025年动画票房250亿占电影市场近半壁江山，产业基础扎实。关注暑期档下半场新片表现及国庆档片单，文化IP开发与衍生消费链路是否进一步延长。
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">全球每日资讯简报</div>
+    <div class="footer-text">每日精选 · 信息准确 · 来源可靠 · 结构化呈现</div>
+  </div>
+</footer>
+
+</body>
+</html>
