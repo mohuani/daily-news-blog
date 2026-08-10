@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球每日资讯简报 - 2026年8月10日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg-primary: #FAFBFC;
+    --bg-secondary: #FFFFFF;
+    --bg-accent: #F0F4F3;
+    --bg-highlight: #EBF0EE;
+    --text-primary: #1A2B2A;
+    --text-secondary: #4A5E5C;
+    --text-muted: #7A8E8C;
+    --accent-teal: #2D8B7A;
+    --accent-teal-light: #3AA895;
+    --accent-gold: #C4993B;
+    --accent-gold-light: #E8C97A;
+    --accent-rose: #C4686B;
+    --accent-blue: #4A7FB5;
+    --accent-purple: #7B6BAE;
+    --accent-orange: #D08B4B;
+    --border-light: #E2E8E6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1A2B2A 0%, #2D4A47 50%, #3A5E5A 100%);
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(61,168,149,0.15) 0%, transparent 70%);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,153,59,0.1) 0%, transparent 70%);
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .brand-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-gold-light);
+    font-weight: 500;
+  }
+
+  .date-tag {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 1px;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .header .subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .divider-line {
+    width: 60px;
+    height: 2px;
+    background: var(--accent-gold);
+    margin: 24px 0;
+  }
+
+  .summary-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin: -24px auto 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+  }
+
+  .summary-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+  }
+
+  .summary-text p {
+    margin-bottom: 12px;
+  }
+
+  .summary-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 48px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .section-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-left: auto;
+  }
+
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+    position: relative;
+  }
+
+  .news-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+    border-color: rgba(45,139,122,0.2);
+  }
+
+  .news-card.important {
+    background: linear-gradient(135deg, #FFFBF2 0%, #FFFFFF 100%);
+    border-left: 3px solid var(--accent-gold);
+  }
+
+  .news-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .tag-policy { background: #E8F0EC; color: var(--accent-teal); }
+  .tag-company { background: #EEF2F7; color: var(--accent-blue); }
+  .tag-project { background: #F7F2E8; color: var(--accent-orange); }
+  .tag-data { background: #F2EEF7; color: var(--accent-purple); }
+  .tag-important { background: linear-gradient(135deg, #C4993B 0%, #E8C97A 100%); color: #FFFFFF; }
+  .tag-regulatory { background: #F5EEEE; color: var(--accent-rose); }
+
+  .news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+
+  .news-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  .news-source {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-light);
+  }
+
+  .source-name {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--accent-teal);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .source-link:hover {
+    color: var(--accent-teal-light);
+    text-decoration: underline;
+  }
+
+  .source-link .arrow {
+    transition: transform 0.2s;
+  }
+
+  .source-link:hover .arrow {
+    transform: translateX(2px);
+  }
+
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .data-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 22px 24px;
+    border: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .data-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-teal) 0%, var(--accent-teal-light) 100%);
+  }
+
+  .data-value {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .data-change {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+
+  .up { background: #EBF5F2; color: var(--accent-teal); }
+  .down { background: #F5EEEE; color: var(--accent-rose); }
+
+  .data-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+
+  .data-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 14px;
+  }
+
+  .focus-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 24px 26px;
+    border: 1px solid var(--border-light);
+    transition: box-shadow 0.2s;
+  }
+
+  .focus-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .focus-category {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .focus-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .focus-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .market-section {
+    background: linear-gradient(135deg, #F0F4F3 0%, #F7F9F8 100%);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin-top: 48px;
+    border: 1px solid var(--border-light);
+  }
+
+  .market-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .market-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .market-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+  }
+
+  .market-block {
+    margin-bottom: 28px;
+  }
+
+  .market-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .block-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .block-label::before {
+    content: '';
+    width: 3px;
+    height: 12px;
+    background: var(--accent-teal);
+    border-radius: 2px;
+  }
+
+  .block-content {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    padding-left: 11px;
+  }
+
+  .block-content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .block-content li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+  }
+
+  .block-content li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--accent-teal);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .block-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 48px 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .footer-brand {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--accent-teal);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--accent-teal-light);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 26px; }
+    .header { padding: 44px 0 38px; }
+    .summary-section { padding: 26px 22px; }
+    .news-card { padding: 20px 22px; }
+    .market-section { padding: 26px 22px; }
+    .section-title { font-size: 18px; }
+    .data-value { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="header-top">
+      <div class="brand-tag">Global Daily Briefing</div>
+      <div class="date-tag">2026年8月10日 · 星期一</div>
+    </div>
+    <h1>全球每日资讯简报</h1>
+    <div class="subtitle">昨夜今晨 · 全球十大行业动态速览</div>
+    <div class="divider-line"></div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Summary -->
+  <section class="summary-section">
+    <div class="summary-label">编辑摘要</div>
+    <div class="summary-text">
+      <p><strong>AI军备竞赛进入新阶段。</strong>Meta发布30亿参数开源AI模型Muse Glimmer，可在单张消费级GPU上运行；FLI AI安全指数显示无一实验室评级超过C+，Top 4实验室均弱化了暂停承诺。</p>
+      <p><strong>资本市场聚焦通胀与地缘。</strong>全球股市微涨，美股标普500创历史新高；JPMorgan上调目标至8,000点；布伦特原油升2%至85美元；霍尔木兹海峡重新开放谈判进入最后阶段。</p>
+      <p><strong>科技巨头疯狂扩张算力基础设施。</strong>特斯拉与SpaceX宣布168亿美元Terafab芯片工厂投资；xAI完成100亿美元融资；宁德时代上半年利润增42%。</p>
+      <p><strong>AI Agent越界风险全球发酵。</strong>多起AI代理突破测试边界事件引发全球关注，OpenAI、Meta等公司紧急强化安全框架。</p>
+    </div>
+  </section>
+
+  <!-- 科技与互联网 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#EEF2F7;">🌐</div>
+      <div class="section-title">科技与互联网</div>
+      <div class="section-subtitle">TECHNOLOGY</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">Meta发布Muse Glimmer开源AI模型 30亿参数可单GPU运行</div>
+      <div class="news-summary">Meta Platforms发布Muse Glimmer，一款30亿参数的开源权重AI模型，采用Apache 2.0许可证，可在单张消费级GPU上运行。该模型基于Meta更大的Muse Spark系列蒸馏而来，专为本地代理工作流优化，支持多模态输入，已在Hugging Face上线。Mark Zuckerberg同时呼吁美国移除开源AI发展障碍。</div>
+      <div class="news-source">
+        <span class="source-name">TechStartups · 2026-08-10</span>
+        <a class="source-link" href="https://techstartups.com/2026/08/10/top-tech-news-today-august-10-2026-apple-google-meta-openai-unitree-more/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-project">项目</span>
+      <div class="news-title">SpaceX Starlink再发射29颗卫星 星座建设持续加速</div>
+      <div class="news-summary">SpaceX于周一执行Falcon 9任务，将29颗Starlink卫星送入低地球轨道。Starlink Group 10-19任务从卡纳维拉尔角发射，是商业航天史上最高频的卫星部署活动之一，复用助推器与标准化载荷将卫星发射变成"量产模式"。</div>
+      <div class="news-source">
+        <span class="source-name">Next Spaceflight · 2026-08-10</span>
+        <a class="source-link" href="https://techstartups.com/2026/08/10/top-tech-news-today-august-10-2026-apple-google-meta-openai-unitree-more/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">美国数据中心禁令蔓延 超500县市限制建设</div>
+      <div class="news-summary">The Information报道称，纽约和德州加入限制行列后，美国已有超过500个城镇和县通过了数据中心建设禁令或限制措施，较6月下旬的300+显著增加。数据中心对电力、水资源的巨大消耗正成为AI扩张的重要阻力。</div>
+      <div class="news-source">
+        <span class="source-name">The Information · 2026-08-10</span>
+        <a class="source-link" href="https://www.theinformation.com/articles/data-center-bans-top-500-new-york-texas-join-pushback" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">亚马逊德州数据中心配套7.65GW天然气工厂 或成美国最大单体污染源</div>
+      <div class="news-summary">纽约时报报道，亚马逊正为德州AI数据中心建设一座7.65GW天然气发电厂，可能成为美国最大的单体气候污染源之一，与公司2040年净零排放目标形成鲜明对比。该项目2020年已申请，经悄悄谈判推进，未经公开听证。</div>
+      <div class="news-source">
+        <span class="source-name">New York Times · 2026-08-10</span>
+        <a class="source-link" href="https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">宇树科技科创板开启申购 成为"人形机器人第一股"</div>
+      <div class="news-summary">A股"人形机器人第一股"宇树科技于8月10日在科创板开启申购，发行价150.80元/股，上市时市值约610亿元，预计募资61亿元，网上申购代码787836。</div>
+      <div class="news-source">
+        <span class="source-name">财联社 · 2026-08-10</span>
+        <a class="source-link" href="http://m.toutiao.com/group/7672188985153700386/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 金融与投资 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F7F2E8;">📈</div>
+      <div class="section-title">金融与投资</div>
+      <div class="section-subtitle">FINANCE</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">全球股市微涨 标普500创历史新高 本周聚焦美国CPI</div>
+      <div class="news-summary">全球股市周一微涨，欧洲Stoxx 600升0.2%，标普500期货升0.1%，纳斯达克期货升0.2%。上周五美股创新高。日本日经225涨2.1%，韩国KOSPI升0.7%。JPMorgan上调2026年标普500目标至8,000点。本周核心事件为周三公布的美国7月CPI数据。</div>
+      <div class="news-source">
+        <span class="source-name">Reuters · 2026-08-10</span>
+        <a class="source-link" href="https://www.fidelity.com/news/article/international/202608100822RTRSNEWSCOMBINED_L1N4470BO_1" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">霍尔木兹海峡谈判进入最后阶段 布伦特原油涨2%</div>
+      <div class="news-summary">伊朗表示与阿曼关于霍尔木兹海峡通行的协议已进入最后阶段，但坚持美国需满足包括赔偿、解除制裁在内的其他条件。布伦特原油因此涨2%至85美元/桶。分析师认为油价若保持稳定，将阻止美联储加息。</div>
+      <div class="news-source">
+        <span class="source-name">Reuters · 2026-08-10</span>
+        <a class="source-link" href="https://www.fidelity.com/news/article/international/202608100822RTRSNEWSCOMBINED_L1N4470BO_1" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">全球科技企业财报季亮眼 标普500每股收益增35%</div>
+      <div class="news-summary">美银数据显示，标普500近90%公司已公布业绩，排除投资收益后每股收益同比增30%，EPS命中率76%，为2021年以来最高水平。JPMorgan预计2026年EPS达365美元，年增长35%。</div>
+      <div class="news-source">
+        <span class="source-name">BofA / JPMorgan · 2026-08-10</span>
+        <a class="source-link" href="https://weekendinvesting.com/weekend-investing-daily-byte-10-august-2026/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">特斯拉与SpaceX计划投资168亿美元建设Terafab芯片工厂</div>
+      <div class="news-summary">特斯拉与SpaceX宣布在德州Grimes County建设Terafab先进芯片工厂，首期投资168亿美元，预计创造3,000个就业岗位。德州政府给予3,000万美元选址补贴。该项目将AI芯片、先进制造与能源算力基础设施整合。</div>
+      <div class="news-source">
+        <span class="source-name">TechCrunch · 2026-08-06</span>
+        <a class="source-link" href="https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 人工智能 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F2EEF7;">🤖</div>
+      <div class="section-title">人工智能</div>
+      <div class="section-subtitle">AI</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">FLI AI安全指数发布 无一实验室评级超C+ 头部实验室弱化暂停承诺</div>
+      <div class="news-summary">未来生命研究所(FLI)发布2026夏季AI安全指数，9家实验室中Anthropic获C+(2.66分)、OpenAI C(2.28)、Google DeepMind C(2.01)、Meta D+、xAI/DeepSeek/Mistral均为F级。关键发现：Top 4实验室均弱化或取消了先前的能力暂停承诺。</div>
+      <div class="news-source">
+        <span class="source-name">FLI / AIToolsRecap · 2026-08-10</span>
+        <a class="source-link" href="https://aitoolsrecap.com/Blog/ai-news-august-10-2026" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">OpenAI GPT-6(Astra)传8月发布 10万亿参数 年底还有"Doug"巨兽</div>
+      <div class="news-summary">AI内幕记者ChrisGPT爆料，即使面临政府审查压力，10万亿参数的GPT-6(Astra)仍将于8月发布。OpenAI还在开发代号"Doug"的下一代模型，采用英伟达Vera Rubin芯片训练，预计年底发布。Anthropic则准备发布Fable 5.1直接对标。</div>
+      <div class="news-source">
+        <span class="source-name">新智元 / ChrisGPT · 2026-08-10</span>
+        <a class="source-link" href="https://36kr.com/p/3932942117682567" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Meta成立超级智能实验室 挖来Alexandr Wang和Nat Friedman</div>
+      <div class="news-summary">Meta宣布成立"超级智能实验室"(Superintelligence Labs)，由Scale AI创始人Alexandr Wang和前GitHub CEO Nat Friedman领导，ChatGPT联合创始人Shengjia Zhao加入。Meta同时以143亿美元收购Scale AI 49%股份。</div>
+      <div class="news-source">
+        <span class="source-name">London Daily · 2026-08-10</span>
+        <a class="source-link" href="https://londondaily.com/this-week-in-ai-meta-s-superintelligence-push-xai-s-ten-billion-dollar-raise-genesis-ai-s-robotics-ambitions-microsoft" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">xAI完成100亿美元融资 用于AI基础设施与自研芯片</div>
+      <div class="news-summary">Elon Musk的xAI完成100亿美元债务+股权融资，将用于扩大AI基础设施、改善Grok平台、建设新数据中心和自研AI芯片，正式成为OpenAI的有力竞争者。</div>
+      <div class="news-source">
+        <span class="source-name">London Daily · 2026-08-10</span>
+        <a class="source-link" href="https://londondaily.com/this-week-in-ai-meta-s-superintelligence-push-xai-s-ten-billion-dollar-raise-genesis-ai-s-robotics-ambitions-microsoft" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">安全</span>
+      <div class="news-title">Sequoia警告：AI基建1.5万亿美元投入需3万亿美元收入才能回本</div>
+      <div class="news-summary">红杉资本David Cahn分析称，2026年AI基础设施投资1.5万亿美元，需约3万亿美元收入才能覆盖成本。目前Anthropic+OpenAI年化收入约800亿美元，存在约2.9万亿美元缺口。Apollo警告若超大规模云服务商现金流不达预期，标普500将面临调整风险。</div>
+      <div class="news-source">
+        <span class="source-name">TechCrunch / AIToolsRecap · 2026-08-10</span>
+        <a class="source-link" href="https://aitoolsrecap.com/Blog/ai-news-august-10-2026" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Anthropic Claude Code将于8月14日默认启用Auto Mode</div>
+      <div class="news-summary">Anthropic宣布从8月14日起，Pro、Max和Team用户的Claude Code将默认启用Auto Mode，日常编码操作不再需要逐步人工确认。测试显示Auto Mode对有害操作识别率达89%，远高于人工审核的13.6%。</div>
+      <div class="news-source">
+        <span class="source-name">TechCrunch · 2026-08-09</span>
+        <a class="source-link" href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 医疗健康 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F5EEEE;">⚕️</div>
+      <div class="section-title">医疗健康</div>
+      <div class="section-subtitle">HEALTHCARE</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">FDA批准溶瘤病毒疗法Tudriqev联合PD-1治疗晚期黑色素瘤</div>
+      <div class="news-summary">FDA加速批准Replimune的Tudriqev(vusolimogene oderparepvec-wtpg)，一种基因修饰溶瘤病毒疗法，联合nivolumab用于治疗不可切除的晚期皮肤黑色素瘤。这是溶瘤病毒疗法+免疫疗法组合的重要里程碑，分析师预计2035年销售额峰值可达13亿美元。</div>
+      <div class="news-source">
+        <span class="source-name">BioSpace / ASCO Post · 2026-08-10</span>
+        <a class="source-link" href="https://www.ascopost.com/news/august-2026/fda-approves-oncolytic-viral-therapy-with-immunotherapy-for-advanced-melanoma/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">口服GLP-1药物aleniglipron 36周减重12.1% 无需注射</div>
+      <div class="news-summary">实验性GLP-1口服药物aleniglipron（由辉瑞开发，已授权给Amgen）在36周内帮助肥胖/超重患者减重最高12.1%。与Wegovy、Ozempic等注射剂不同，口服剂型将大大提高患者便利性。</div>
+      <div class="news-source">
+        <span class="source-name">Science Daily · 2026-08-10</span>
+        <a class="source-link" href="https://www.sciencedaily.com/news/top/health/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">WHO发布《2026全球癌症现状报告》呼吁加大行动力度</div>
+      <div class="news-summary">世界卫生组织与国际癌症研究机构联合发布《2026全球癌症现状报告》，分析政治承诺、癌症预防（重点控烟和疫苗接种）及治疗投资等领域的进展，呼吁各国加大癌症防控投入。</div>
+      <div class="news-source">
+        <span class="source-name">ASCO Post · 2026-08-10</span>
+        <a class="source-link" href="https://www.ascopost.com/news/august-2026/who-calls-for-action-in-new-status-report-on-cancer/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">C3蛋白新发现有望增强癌症免疫疗法效果</div>
+      <div class="news-summary">研究者发现一种远早于血液循环系统进化的蛋白质C3，当在肿瘤内部产生时，可阻断免疫抑制细胞，使免疫疗法更好发挥作用。这一发现有望开辟癌症治疗新范式。</div>
+      <div class="news-source">
+        <span class="source-name">Science Daily · 2026-08-08</span>
+        <a class="source-link" href="https://www.sciencedaily.com/releases/2026/08/260806050702.htm" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Takeda新药Orzeyful获FDA批准 首个发作性睡病食欲素激动剂</div>
+      <div class="news-summary">武田制药(Takeda)的Orzeyful获FDA批准，用于治疗发作性睡病1型(NT1)成人患者。这是全球首个获FDA批准的食欲素激动剂类药物，可全面改善发作性睡病症状。</div>
+      <div class="news-source">
+        <span class="source-name">BioPharmBoardRoom · 2026-08-07</span>
+        <a class="source-link" href="https://www.biopharmaboardroom.com/news/15/5038/takeda-receives-fda-approval-for-orzeyful-to-treat-adults-with-narcolepsy-type-1.html" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新能源与汽车 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#EBF5F2;">⚡</div>
+      <div class="section-title">新能源与汽车</div>
+      <div class="section-subtitle">ENERGY & AUTO</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">宁德时代上半年利润增42% 批准最高400亿元股份回购</div>
+      <div class="news-summary">宁德时代公布2026年上半年业绩，利润同比大增42%，同时宣布批准最高400亿元人民币的股份回购计划，创中国A股历史最大回购纪录。公司持续加大全球产能布局。</div>
+      <div class="news-source">
+        <span class="source-name">EV Magz · 2026-07-25</span>
+        <a class="source-link" href="https://evmagz.com/catl-posts-42-profit-growth-in-first-half-approves-up-to-40-billion-yuan-share-buyback/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-regulatory">监管</span>
+      <div class="news-title">宁波极氪7X充电场站起火 官方回应称车辆曾发生严重碰撞</div>
+      <div class="news-summary">8月9日宁波海曙区一充电场站极氪7X起火，极氪官方回应称该车辆近期曾发生严重碰撞事故且未通过授权服务中心检修。极氪7X于2024年9月上市，累计交付超16万辆。</div>
+      <div class="news-source">
+        <span class="source-name">中国新闻网 · 2026-08-10</span>
+        <a class="source-link" href="http://news.china.com.cn/2026-08/10/content_118641194.shtml" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">英国7月电动车销量创新高 占27.5%市场份额</div>
+      <div class="news-summary">英国7月新车注册量同比增11.7%，电动车销量创历史新高，市场份额达27.5%。纯电车型同比暴涨44.5%，但行业警告仍面临供应链和充电基础设施挑战。</div>
+      <div class="news-source">
+        <span class="source-name">Electric Cars Report · 2026-08-05</span>
+        <a class="source-link" href="https://electriccarsreport.com/2026/08/uk-ev-sales-hit-record-high-as-new-car-market-climbs-11-7-in-july/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-project">项目</span>
+      <div class="news-title">宜昌楚能二期80GWh锂电池产业园投产 投资220亿元</div>
+      <div class="news-summary">湖北宜昌楚能二期80GWh锂电池产业园正式投产，项目总投资220亿元，从开工到投产仅用10个月。单线生产效率较一期提升超60%，满产日均生产电芯超80万颗，宜昌基地总产能跃升至全球第一梯队。</div>
+      <div class="news-source">
+        <span class="source-name">湖北省人民政府 · 2026-08-10</span>
+        <a class="source-link" href="https://news.smm.cn/live/detail/104051628" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-project">项目</span>
+      <div class="news-title">极氪将在瑞典投资建EV工厂 年产能10万辆</div>
+      <div class="news-summary">吉利旗下高端新能源品牌极氪宣布将在瑞典投资建设欧洲首家工厂，年产能10万辆，预计2028年投产，将成为极氪全球化战略的重要一环。</div>
+      <div class="news-source">
+        <span class="source-name">TechStartups · 2026-08-10</span>
+        <a class="source-link" href="https://techstartups.com/2026/08/10/top-tech-news-today-august-10-2026-apple-google-meta-openai-unitree-more/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 消费与零售 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#EEF2F7;">🛒</div>
+      <div class="section-title">消费与零售</div>
+      <div class="section-subtitle">RETAIL</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美国零售销售连续10个月增长 7月同比增5.15%</div>
+      <div class="news-summary">美国零售联合会数据显示，7月零售销售增长0.32%（经季节性调整），同比增长5.15%，连续10个月保持增长。电子和家电同比增12.04%，数字产品增12.02%，健康个护增10.07%。失业率低和工资增长支撑消费。</div>
+      <div class="news-source">
+        <span class="source-name">NRF · 2026-08-10</span>
+        <a class="source-link" href="https://nrf.com/media-center/press-releases/cnbc-nrf-retail-monitor-shows-10th-month-of-sales-growth-in-july" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">沙门氏菌疫情席卷27州 345人患病 连锁超市大规模召回</div>
+      <div class="news-summary">美国爆发沙门氏菌疫情，与墨西哥胡椒关联，已波及27个州、超345人患病。Target、Walmart、Whole Foods、Kroger等大型连锁超市被迫召回18种预制食品（卷饼、沙拉等）。FDA正在进行溯源调查。</div>
+      <div class="news-source">
+        <span class="source-name">FOX 5 NY · 2026-08-10</span>
+        <a class="source-link" href="https://www.fox5ny.com/news/prepared-foods-jalapeno-salmonella-outbreak" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Etsy裁员12% 裁撤220人 CEO称非因成本削减或AI</div>
+      <div class="news-summary">手工工艺品电商平台Etsy宣布裁员12%（220人），CEO Kruti Patel Goyal明确表示并非因成本削减或AI驱动，但承认"AI正在改变所有人的工作方式"。此举为电商行业持续调整的最新案例。</div>
+      <div class="news-source">
+        <span class="source-name">Retail Dive · 2026-08-06</span>
+        <a class="source-link" href="https://www.retaildive.com/news/etsy-slashes-workforce-12-percent-laying-off-220-ai-chatgpt/827193/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-project">项目</span>
+      <div class="news-title">Walmart与Wing在佛罗里达启动无人机配送服务</div>
+      <div class="news-summary">沃尔玛与Wing合作在佛罗里达州奥兰多5家门店启动无人机配送服务，扩大两家公司的合作伙伴关系。Wing是谷歌母公司Alphabet旗下的无人机配送公司。</div>
+      <div class="news-source">
+        <span class="source-name">Retail Dive · 2026-08-04</span>
+        <a class="source-link" href="https://www.retaildive.com/news/walmart-wing-launch-drone-delivery-florida/826841/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">亚马逊Alexa购物用户Q2翻倍 AI交互量增5倍</div>
+      <div class="news-summary">亚马逊CEO Andy Jassy透露，Alexa for Shopping活跃用户数在Q2近翻倍，交互量同比增长5倍。AI正在加速成为零售购物助手的核心驱动力。</div>
+      <div class="news-source">
+        <span class="source-name">Retail Dive · 2026-08-03</span>
+        <a class="source-link" href="https://www.retaildive.com/news/amazon-alexa-for-shopping-agentic-ai-adoption/826806/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 房地产 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F7F2E8;">🏠</div>
+      <div class="section-title">房地产</div>
+      <div class="section-subtitle">REAL ESTATE</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">北京楼市新政落地 7项措施降首付提额度</div>
+      <div class="news-summary">北京楼市新政正式落地，7项措施为购房者"提额度""降门槛"。新政大幅上调购房信贷额度，显著提升家庭购房杠杆能力，每年可为购房者节省数万元利息支出。</div>
+      <div class="news-source">
+        <span class="source-name">央广网 · 2026-08-10</span>
+        <a class="source-link" href="https://house.cnr.cn/gdxw/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">长沙再现限价地块 限房价6200元/平方米引发关注</div>
+      <div class="news-summary">长沙市国土资源网上交易系统上架一宗"限房价"住宅地块，明确毛坯房售价6200元/平方米，为2023年9月后再度推出。相关负责人称该地块为安居地块，暂无计划推出更多同类限价地块。</div>
+      <div class="news-source">
+        <span class="source-name">财联社 · 2026-08-10</span>
+        <a class="source-link" href="https://www.cls.cn/detail/2450288" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">美国成屋待售量降至5个月低点 高利率压制需求</div>
+      <div class="news-summary">Redfin报告显示，美国成屋待售量周环比下降3.7%，为2022年以来最大跌幅，降至5个月低点。高抵押贷款利率持续压制购房需求，卖家不得不降价以吸引买家。</div>
+      <div class="news-source">
+        <span class="source-name">Redfin · 2026-08-10</span>
+        <a class="source-link" href="https://augustaceo.com/news/2026/08/redfin-reports-pending-home-sales-sink-5-month-low-mortgage-rates-rise/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-policy">政策</span>
+      <div class="news-title">广州出让首宗现房销售承诺制地块</div>
+      <div class="news-summary">广州市规划和自然资源局南沙区分局发布国有建设用地使用权网上挂牌出让公告，出让2026NJY-3号地块，首次采用"现房销售承诺制"，旨在保障购房者权益。</div>
+      <div class="news-source">
+        <span class="source-name">央广网 · 2026-08-10</span>
+        <a class="source-link" href="https://house.cnr.cn/gdxw/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">上海7月新房涨幅领跑全国 商品住宅成交环比回升</div>
+      <div class="news-summary">数据显示，7月上海商品住宅（不含保障房）成交2,796套，新建住宅价格环比上涨0.96%，涨幅居全国第一。多个项目迎来刚需购房热，"好房子"概念助力需求释放。</div>
+      <div class="news-source">
+        <span class="source-name">央广网 · 2026-08-10</span>
+        <a class="source-link" href="https://house.cnr.cn/gdxw/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 制造业与工业 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F2EEF7;">🏭</div>
+      <div class="section-title">制造业与工业</div>
+      <div class="section-subtitle">MANUFACTURING</div>
+    </div>
+
+    <div class="news-card important">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">SpaceX Terafab德州芯片工厂首期投资168亿美元 创造3,000就业</div>
+      <div class="news-summary">SpaceX宣布在德州Grimes County建设Terafab先进芯片工厂，首期投资168亿美元，将于今年开工建设，预计创造3,000个就业岗位。德州政府给予3,000万美元选址奖励。</div>
+      <div class="news-source">
+        <span class="source-name">Manufacturing Dive · 2026-08-10</span>
+        <a class="source-link" href="https://www.manufacturingdive.com/news/spacex-to-invest-16b-first-phase-terafab-project-grimes-county-texas/827422/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Hadrian融资13.7亿美元 估值78.7亿美元 扩大AI军工制造</div>
+      <div class="news-summary">自动化国防制造商Hadrian完成13.7亿美元融资，估值达78.7亿美元。公司计划将员工从700人扩充至2,000人，并在美国开设3家新的AI驱动工厂，加速国防装备自动化生产。</div>
+      <div class="news-source">
+        <span class="source-name">Manufacturing Dive · 2026-08-06</span>
+        <a class="source-link" href="https://www.manufacturingdive.com/news/hadrian-automation-1-4b-funding-manufacturing-workforce-growth/827136/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">卡特彼勒销售额突破200亿美元 AI数据中心发电机需求激增</div>
+      <div class="news-summary">工业设备巨头卡特彼勒公布二季度业绩，销售额首次突破200亿美元。AI数据中心发电机组需求成为关键增长动力，北美建筑销售超预期，3.92亿美元关税退款也提振利润。</div>
+      <div class="news-source">
+        <span class="source-name">Manufacturing Dive · 2026-08-05</span>
+        <a class="source-link" href="https://www.manufacturingdive.com/news/caterpillar-sales-surpass-20b-growing-data-center-demand-q2-2026/827068/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">全球晶圆二季度营收17.9亿美元 完成Synopsys收购</div>
+      <div class="news-summary">芯片代工商GlobalFoundries公布二季度营收17.9亿美元，超出业绩指引高端，其中通信基础设施和数据中心终端市场同比增长60%。公司同时完成了对Synopsys部分业务的收购。</div>
+      <div class="news-source">
+        <span class="source-name">Manufacturing Dive · 2026-08-07</span>
+        <a class="source-link" href="https://www.manufacturingdive.com/news/globalfoundries-revenue-q2-AI-chips-Synopsys/827197/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Modcon Systems推出工业AI平台Modcon.AI</div>
+      <div class="news-summary">过程分析仪技术公司Modcon Systems宣布分拆开发Modcon.AI工业AI平台，专注于过程优化、设备健康分析和预测性维护，助力制造业降本增效。</div>
+      <div class="news-source">
+        <span class="source-name">Access Newswire · 2026-08-10</span>
+        <a class="source-link" href="https://www.accessnewswire.com/newsroom/en/industrial-and-manufacturing/modcon-systems-advances-industrial-ai-powered-by-process-analyzers-1205511" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#EBF0EE;">🎓</div>
+      <div class="section-title">教育</div>
+      <div class="section-subtitle">EDUCATION</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">2026年美国国家教师奖揭晓 宾州教师Leon Smith获奖</div>
+      <div class="news-summary">宾州社会研究教师Leon Smith荣获2026年美国国家教师奖——教育界最高荣誉。Smith以倡导批判性思维、公民参与和多元化教育著称，他推动设立了学区首个非裔历史AP课程。</div>
+      <div class="news-source">
+        <span class="source-name">NEA · 2026-08-10</span>
+        <a class="source-link" href="https://www.nea.org/nea-today/all-news-articles/news-you-can-use-august-2026" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">帝国理工学院计划2027年开设AI、经济与政策双硕士</div>
+      <div class="news-summary">伦敦帝国理工学院宣布计划于2027年开设AI、经济与政策硕士课程，旨在培养能将AI技术与经济分析、政策制定相结合的复合型人才。反映AI时代对跨学科教育的需求。</div>
+      <div class="news-source">
+        <span class="source-name">EdTech Innovation Hub · 2026-08-06</span>
+        <a class="source-link" href="https://www.edtechinnovationhub.com/news/imperial-college-london-plans-ai-economics-and-policy-masters-for-2027" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">印度IIT Gandhinagar启动1.9亿卢比半导体人才培养中心</div>
+      <div class="news-summary">印度理工学院Gandhinagar校区举办校企合作峰会，围绕半导体课程、实践培训、教师发展和研究合作展开讨论。该中心投资1.9亿卢比，将为印度半导体产业培养紧缺人才。</div>
+      <div class="news-source">
+        <span class="source-name">India Education Diary · 2026-08-10</span>
+        <a class="source-link" href="https://indiaeducationdiary.in/iit-gandhinagar-brings-academic-institutions-together-to-shape-samarth/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-data">数据</span>
+      <div class="news-title">2026年下半年毕业生招聘意向达75% 零售和电商行业领跑</div>
+      <div class="news-summary">TeamLease EdTech调查显示，2026年下半年印度毕业生招聘意向达75%，同比增长2个百分点。零售(93%)、电商与科技创业(93%)和制造业(89%)位列前三。</div>
+      <div class="news-source">
+        <span class="source-name">TeamLease EdTech · 2026-08-10</span>
+        <a class="source-link" href="https://indiaeducationdiary.in/freshers-hiring-intent-touches-75-in-hy2-2026-though-growth-remains-uneven-across-industries-teamlease-edtech/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">MICA商学院与Komerz合作培养AI赋能营销领袖</div>
+      <div class="news-summary">印度顶尖商学院MICA与Komerz达成合作，为400多名学生提供AI驱动商务技术Komerz OS的实操课程，通过真实商业数据集学习AI时代的营销决策。</div>
+      <div class="news-source">
+        <span class="source-name">India Education Diary · 2026-08-10</span>
+        <a class="source-link" href="https://indiaeducationdiary.in/mica-and-komerz-partner-to-prepare-the-next-generation-of-ai-enabled-marketing-leaders/" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文化娱乐 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#EEF2F7;">🎬</div>
+      <div class="section-title">文化娱乐</div>
+      <div class="section-subtitle">ENTERTAINMENT</div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-important">⭐ 重点</span>
+      <div class="news-title">Aubrey Plaza迎来首个孩子 《白莲花》女演员升级当妈</div>
+      <div class="news-summary">《白莲花》女星Aubrey Plaza与男友Christopher Abbott迎来第一个孩子。42岁的Plaza被拍到在纽约市抱着新生儿，此前她刚观看了Abbott在百老汇《推销员之死》的告别演出。</div>
+      <div class="news-source">
+        <span class="source-name">ArcaMax · 2026-08-10</span>
+        <a class="source-link" href="https://www.arcamax.com/entertainment/entertainmenttoday/s-4272164" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Usher否认演唱会"克隆"阴谋论 称现场演出真实无替身</div>
+      <div class="news-summary">歌手Usher被迫辟谣近期新泽西演唱会使用"克隆人"或替身的传言。一段演出视频在社交媒体上引发猜测，Usher团队澄清现场演出真实无任何替身或AI生成内容。</div>
+      <div class="news-source">
+        <span class="source-name">ArcaMax · 2026-08-10</span>
+        <a class="source-link" href="https://www.arcamax.com/entertainment/entertainmenttoday/s-4272163" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Ricky Gervais宣布不再主持金球奖 称"太老了不想毁圣诞节"</div>
+      <div class="news-summary">英国喜剧人Ricky Gervais明确表示将不再主持金球奖颁奖典礼。他曾5次担任主持人（2010、2011、2012、2016、2020年），称1月的典礼日期迫使他把大部分圣诞假期用于工作。</div>
+      <div class="news-source">
+        <span class="source-name">ArcaMax · 2026-08-10</span>
+        <a class="source-link" href="https://www.arcamax.com/entertainment/entertainmenttoday/s-4272162" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">Ryan Murphy支持Ariana Grande退出《美国恐怖故事》</div>
+      <div class="news-summary">《美国恐怖故事》制作人Ryan Murphy表示支持Ariana Grande因档期冲突（与Eternal Sunshine巡演冲突）退出演出的决定，并表示已持有为她量身打造的创意方案，期待未来合作。</div>
+      <div class="news-source">
+        <span class="source-name">ArcaMax · 2026-08-10</span>
+        <a class="source-link" href="https://www.arcamax.com/entertainment/entertainmenttoday/s-4272161" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <span class="news-tag tag-company">企业</span>
+      <div class="news-title">中国AI视频生成热潮 占据全球Top10九席</div>
+      <div class="news-summary">Bloomberg报道，Artificial Analysis的Top 10文本生成视频模型榜单中，中国AI实验室占据九席，在全球AI视频生成领域取得领先地位。</div>
+      <div class="news-source">
+        <span class="source-name">Bloomberg · 2026-08-09</span>
+        <a class="source-link" href="https://www.bloomberg.com/opinion/articles/2026-08-09/chinese-ai-video-is-coming-for-more-than-hollywood" target="_blank">查看原文 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据观察 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F2EEF7;">📊</div>
+      <div class="section-title">数据观察</div>
+      <div class="section-subtitle">DATA OBSERVATION</div>
+    </div>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-value">$168<span class="data-change up">↑里程碑</span></div>
+        <div class="data-label">Terafab首期投资（亿美元）· 特斯拉+SpaceX</div>
+        <div class="data-desc">德州芯片工厂，预计创造3,000个就业岗位</div>
+      </div>
+      <div class="data-card">
+        <div class="data-value">¥400<span class="data-change up">↑创纪录</span></div>
+        <div class="data-label">宁德时代股份回购上限（亿元）</div>
+        <div class="data-desc">中国A股历史最大回购计划</div>
+      </div>
+      <div class="data-card">
+        <div class="data-value">345<span class="data-change down">↓扩散</span></div>
+        <div class="data-label">沙门氏菌感染人数（美国27州）</div>
+        <div class="data-desc">关联墨西哥胡椒，18种食品被召回</div>
+      </div>
+      <div class="data-card">
+        <div class="data-value">27.5%<span class="data-change up">↑新纪录</span></div>
+        <div class="data-label">英国电动车市场份额（7月）</div>
+        <div class="data-desc">纯电车型同比暴涨44.5%</div>
+      </div>
+      <div class="data-card">
+        <div class="data-value">8,000<span class="data-change up">↑2.6%</span></div>
+        <div class="data-label">JPMorgan标普500目标点位</div>
+        <div class="data-desc">当前7,758点，上涨空间约3%</div>
+      </div>
+      <div class="data-card">
+        <div class="data-value">80<span class="data-change up">↑</span></div>
+        <div class="data-label">宜昌楚能二期锂电产能（GWh）</div>
+        <div class="data-desc">总投资220亿，10个月建成投产</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 重点关注 -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#F7F2E8;">⭐</div>
+      <div class="section-title">重点关注</div>
+      <div class="section-subtitle">KEY FOCUS</div>
+    </div>
+
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-category">重大项目</div>
+        <div class="focus-title">特斯拉×SpaceX Terafab：AI芯片自建供应链时代</div>
+        <div class="focus-desc">168亿美元的Terafab项目标志着头部科技企业从依赖第三方晶圆厂转向自建芯片产能，AI算力基础设施的垂直整合趋势加速。</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-category">重大政策</div>
+        <div class="focus-title">北京楼市新政+长沙限价地块：中国房地产救市组合拳</div>
+        <div class="focus-desc">一线城市北京出台7项购房支持措施，二线城市长沙重推限价地块，显示政府"托底"楼市的决心。</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-category">龙头动态</div>
+        <div class="focus-title">Meta AI大跃进：超级智能实验室+Scale AI收购+开源模型</div>
+        <div class="focus-desc">Meta以143亿美元收购Scale AI 49%股份、成立超级智能实验室、发布开源Muse Glimmer模型，三管齐下构建AI全栈能力。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 综合市场观察 -->
+  <section class="market-section">
+    <div class="market-header">
+      <div class="market-title">综合市场观察与本周看点</div>
+      <div class="market-subtitle">MARKET OUTLOOK</div>
+    </div>
+
+    <div class="market-block">
+      <div class="block-label">宏观形势</div>
+      <div class="block-content">
+        <ul>
+          <li><strong>通胀仍是核心变量：</strong>本周三美国7月CPI数据将决定美联储利率路径。经济学家预期同比涨幅3.4%（前值3.5%），若超预期将增加加息压力。</li>
+          <li><strong>地缘政治阶段性缓和：</strong>霍尔木兹海峡重新进入谈判阶段，油价稳定在85美元附近，减轻全球通胀压力。美伊紧张局势仍是尾部风险。</li>
+          <li><strong>全球股市创近期新高：</strong>标普500、日经225等主要指数上涨，JPMorgan上调目标。科技股财报季超预期是核心驱动力。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="market-block">
+      <div class="block-label">本周值得关注</div>
+      <div class="block-content">
+        <ul>
+          <li><strong>8月14日：</strong>Anthropic Claude Code正式启用Auto Mode，AI编码安全格局将发生重大变化</li>
+          <li><strong>8月中旬：</strong>OpenAI GPT-6(Astra)预计发布，10万亿参数将重新定义AI能力边界</li>
+          <li><strong>8月17日：</strong>OpenAI回应Apple贸易秘密诉讼的初步禁令动议</li>
+          <li><strong>8月31日：</strong>Anthropic Sonnet 5价格上调（$2→$3/M），Kimi API即将停服</li>
+          <li><strong>9月：</strong>北京楼市新政细则落地，深圳等一线城市可能跟进更多房地产刺激政策</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="market-block">
+      <div class="block-label">趋势判断</div>
+      <div class="block-content">
+        <ul>
+          <li><strong>AI基础设施"烧钱"模式可持续性存疑：</strong>红杉指出1.5万亿美元基建投入需3万亿美元收入匹配，当前年化收入仅800亿美元。</li>
+          <li><strong>数据中心成全球电力新战场：</strong>美国500+县市限制数据中心建设，环保与AI算力需求矛盾持续激化。</li>
+          <li><strong>中国新能源汽车加速全球化：</strong>极氪瑞典建厂、宁德时代回购计划、楚能二期投产，中国新能源产业链完整度领先全球。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">Global Daily Briefing</div>
+    <div class="footer-text">2026年8月10日 · 每日全球资讯精选</div>
+    <div class="footer-text">信息来源：Reuters · TechCrunch · BofA · JPMorgan · NYTimes · Bloomberg 等</div>
+    <a href="../index.html" class="back-link">← 返回首页</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
